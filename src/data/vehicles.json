@@ -64,6 +64,68 @@
     ]
   },
   {
+    "slug": "9-seater-limousine",
+    "title": "9-Seater DCar VIP Limousine Rental with Driver",
+    "shortTitle": "9-Seater VIP Limousine",
+    "badge": "Executive VIP Experience",
+    "models": "Ford Transit & Hyundai Solati DCar President",
+    "capacity": "5 to 7 VIP Passengers",
+    "luggage": "5 to 6 Medium Suitcases (24-inch) + Golf Bags",
+    "description": "Executive first-class transport featuring Maybach-style reclining massage leather captain seats, starlight ambient ceiling, high-speed Wi-Fi, and private bilingual chauffeur.",
+    "features": [
+      "First-class Maybach-style leather massage seats with electric footrests",
+      "Starlight ambient fiber-optic ceiling illumination with mood lighting",
+      "Individual USB fast charging ports and 220V power outlets at every seat",
+      "Smart TV entertainment screen and high-fidelity surround sound system",
+      "Executive privacy curtains and high-capacity on-board refrigerator",
+      "Senior VIP protocol English-speaking chauffeur with defensive driving certificate"
+    ],
+    "sampleRates": [
+      {
+        "route": "Noi Bai Airport VIP Transfer",
+        "price": "$45 USD"
+      },
+      {
+        "route": "Hanoi to Halong Bay (Round-trip)",
+        "price": "$160 USD"
+      },
+      {
+        "route": "Hanoi to Sapa (Round-trip 2D1N)",
+        "price": "$220 USD"
+      },
+      {
+        "route": "Hanoi to Ninh Binh Day Tour",
+        "price": "$120 USD"
+      },
+      {
+        "route": "Hanoi Golf Club VIP Day Transfer",
+        "price": "$95 USD"
+      }
+    ],
+    "suitability": "Ideal for business executives, VIP delegations, golf enthusiasts, and luxury family getaways.",
+    "image": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",
+    "imageAlt": "9-Seater DCar VIP Limousine Rental with Driver in Hanoi - Executive Black Exterior Profile",
+    "interiorImage": "/images/vehicles/9-seater-dcar-limousine-maybach-seats-interior-01.webp",
+    "luggageImage": "/images/vehicles/9-seater-dcar-limousine-vip-luggage-trunk-space-01.webp",
+    "gallery": [
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-executive-cabin-overview-02.webp",
+        "alt": "9-Seater DCar VIP Limousine Executive Passenger Cabin Suite with Diamond-Quilted Leather Seats",
+        "label": "Executive VIP Cabin Suite"
+      },
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-driver-cockpit-front-seats-01.webp",
+        "alt": "9-Seater DCar VIP Limousine Modern Chauffeur Cockpit, Digital Cockpit Display and Premium Seats",
+        "label": "Modern Driver Cockpit"
+      },
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-safety-equipment-cabin-02.webp",
+        "alt": "9-Seater DCar VIP Limousine Safety Features, On-Board Fire Extinguisher and Clean Floor Mats",
+        "label": "Certified Safety & Comfort"
+      }
+    ]
+  },
+  {
     "slug": "7-seater-car",
     "title": "7-Seater SUV & Car Rental with Driver",
     "shortTitle": "7-Seater SUV & MPV",
@@ -146,10 +208,37 @@
       }
     ],
     "suitability": "Perfect for organized tour groups, foreign school trips, and corporate outings.",
-    "image": "/images/vehicles/29-seater-midi-bus-rental-hanoi-thaco-exterior.webp",
-    "imageAlt": "29-Seater Tourist Midi Bus Rental with Driver in Hanoi",
-    "interiorImage": "",
-    "luggageImage": ""
+    "image": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
+    "imageAlt": "29-Seater Midi Bus Rental with Driver in Hanoi - Thaco Cruiser Panoramic Exterior Profile",
+    "interiorImage": "/images/vehicles/29-seater-midi-bus-thaco-passenger-cabin-interior-01.webp",
+    "luggageImage": "",
+    "gallery": [
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-exterior-02.webp",
+        "alt": "29-Seater Tourist Midi Bus - High-Deck Aerodynamic Front Body & Tinted Windshield",
+        "label": "High-Deck Front Fascia"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-rear-exterior-03.webp",
+        "alt": "29-Seater Tourist Midi Bus - Clean White Rear Body with High-Mount Spoiler",
+        "label": "Rear Aerodynamic Profile"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-cabin-entertainment-tv-02.webp",
+        "alt": "29-Seater Midi Bus Interior Overlooking Front LCD Entertainment Screen and Parcel Racks",
+        "label": "Cabin Media & Entertainment"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-passenger-boarding-entrance-01.webp",
+        "alt": "29-Seater Midi Bus Illuminated Boarding Steps with Non-Slip Mats and Tour Guide Entry",
+        "label": "Boarding Entrance & Steps"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-reclining-leather-seats-03.webp",
+        "alt": "29-Seater Midi Bus Ergonomic Reclining Leather Seats with Integrated Neck Support",
+        "label": "Comfort Headrests & Rear Seats"
+      }
+    ]
   },
   {
     "slug": "35-seater-bus",
@@ -226,9 +315,41 @@
       }
     ],
     "suitability": "Large international congresses, incoming MICE tour groups, and university groups.",
-    "image": "/images/vehicles/45-seater-universe-coach-rental-hanoi-exterior.webp",
-    "imageAlt": "45-Seater Hyundai Universe Coach Rental with Driver in Hanoi",
-    "interiorImage": "",
-    "luggageImage": ""
+    "image": "/images/vehicles/45-seater-universe-coach-hyundai-noble-front-exterior-01.webp",
+    "imageAlt": "45-Seater Hyundai Universe Coach Rental with Driver in Hanoi - Front Exterior Profile",
+    "interiorImage": "/images/vehicles/45-seater-universe-coach-hyundai-passenger-cabin-interior-01.webp",
+    "luggageImage": "",
+    "gallery": [
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-noble-rear-exterior-02.webp",
+        "alt": "45-Seater Hyundai Universe Coach - Aerodynamic High-Deck Body and Rear Profile",
+        "label": "Rear Aerodynamic Profile"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-passenger-entrance-steps-01.webp",
+        "alt": "45-Seater Universe Coach Boarding Entrance Steps with Tour Guide Foldable Seat",
+        "label": "Boarding Entrance & Guide Seat"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-driver-cockpit-dashboard-01.webp",
+        "alt": "45-Seater Hyundai Universe Modern Driver Cockpit, Multi-Function Controls & Panoramic Windshield",
+        "label": "Driver Cockpit & Controls"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-reclining-leather-seats-01.webp",
+        "alt": "45-Seater Universe Coach Ergonomic Reclining Leather Seats with Upholstered Headrest Covers",
+        "label": "Ergonomic Reclining Seats"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-cabin-rear-view-02.webp",
+        "alt": "45-Seater Universe Coach Full Cabin View from Rear Rows Overlooking Dual Aisle and Roof Vents",
+        "label": "Panoramic Cabin View"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-ambient-lighting-aisle-01.webp",
+        "alt": "45-Seater Universe Coach Multicolor Ambient LED Ceiling Lights for Relaxing Night Travel",
+        "label": "Nighttime Ambient Lighting"
+      }
+    ]
   }
 ]

@@ -6,7 +6,7 @@ const { hasInlineWizard = false } = Astro.props;
 
 <aside class="mobile-sticky-bar" aria-label="Quick Actions">
   <div class="sticky-bar-inner">
-    <a href="https://wa.me/84900000000" class="p-btn p-btn-ghost sticky-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://wa.me/84934615595" class="p-btn p-btn-ghost sticky-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     <button type="button" class="p-btn p-btn-primary sticky-btn" data-open-quote aria-haspopup="dialog" aria-controls="mobile-quote-dialog">Get a Quote</button>
     <button type="button" class="p-btn p-btn-ghost sticky-btn" data-back-to-top>Back to top</button>
   </div>
@@ -17,7 +17,7 @@ const { hasInlineWizard = false } = Astro.props;
 <dialog class="p-quote-dialog" id="mobile-quote-dialog" aria-labelledby="mobile-quote-title">
   <div class="p-quote-dialog-toolbar">
     <h2 id="mobile-quote-title">Get a Quote</h2>
-    <button type="button" class="p-btn p-btn-outline" data-close-quote>Close</button>
+    <button type="button" class="p-quote-close-btn" data-close-quote aria-label="Close quote form">✕</button>
   </div>
   <div class="p-quote-dialog-body" data-quote-dialog-body></div>
 </dialog>
@@ -35,22 +35,21 @@ const { hasInlineWizard = false } = Astro.props;
     if (!dialog || !dialogBody || !wizard || dialog.open) return;
     savedScroll = window.scrollY;
     placeholder = document.createComment('Booking form original position');
-    wizard.before(placeholder);
+    wizard.parentElement?.insertBefore(placeholder, wizard);
     document.documentElement.classList.add('p-quote-open');
     // Move the existing form, preserving its values, step and listeners.
-    dialogBody.append(wizard);
+    dialogBody.appendChild(wizard);
     dialog.showModal();
     dialogBody.scrollTop = 0;
     closeButton?.focus({ preventScroll: true });
   });
   closeButton?.addEventListener('click', () => dialog?.close());
-  dialog?.addEventListener('click', event => {
-    const bounds = dialog.getBoundingClientRect();
-    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
-  });
+  // Note: Outside click dismissal removed per user requirement. Close via X button only.
   // Native dialog also handles Escape and keeps keyboard focus inside.
   dialog?.addEventListener('close', () => {
-    if (placeholder && wizard) placeholder.replaceWith(wizard);
+    if (placeholder && wizard && placeholder.parentNode) {
+      placeholder.parentNode.replaceChild(wizard, placeholder);
+    }
     placeholder = null;
     document.documentElement.classList.remove('p-quote-open');
     window.scrollTo({ top: savedScroll, behavior: 'instant' });
