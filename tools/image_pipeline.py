@@ -102,11 +102,13 @@ def process_single_image(input_path: str, filename: str, category: str, aspect: 
             bg = Image.new("RGB", img.size, (255, 255, 255))
             bg.paste(img, mask=img.split()[-1] if img.mode == "RGBA" else None)
             img = bg
-        elif img.mode != "RGB":
-            img = img.convert("RGB")
-
+        # Xóa sạch 100% metadata AI, C2PA, Prompt và parameters ẩn
         processed = resize_and_crop(img, w, h)
-        processed.save(str(web_target), "WEBP", quality=85, method=6)
+        clean_img = Image.new("RGB", processed.size, (255, 255, 255))
+        clean_img.paste(processed)
+
+        # Lưu WebP thuần túy không chứa bất kỳ thẻ AI nào
+        clean_img.save(str(web_target), "WEBP", quality=85, method=6)
         shutil.copy2(web_target, cloud_target)
 
     rel_url = f"/images/{category}/{filename}"

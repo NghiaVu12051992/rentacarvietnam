@@ -286,9 +286,13 @@ def main():
                 elif img.mode != "RGB":
                     img = img.convert("RGB")
 
+                # Xóa sạch 100% metadata AI, C2PA, Prompt, ComfyUI parameters
                 processed = resize_and_crop(img, target_w, target_h)
-                # Lưu vào public/images (xem offline)
-                processed.save(str(web_target), "WEBP", quality=85, method=6)
+                clean_img = Image.new("RGB", processed.size, (255, 255, 255))
+                clean_img.paste(processed)
+
+                # Lưu vào public/images (xem offline) thuần pixel
+                clean_img.save(str(web_target), "WEBP", quality=85, method=6)
                 # Lưu bản sao sang D:\Anh_Cloud_R2_RentACarVietnam
                 shutil.copy2(web_target, cloud_target)
 
