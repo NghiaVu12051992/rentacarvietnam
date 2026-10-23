@@ -3380,15 +3380,14 @@ html.p-quote-open, html.p-quote-open body { overflow: hidden; }
     position: relative;
     width: 100%;
     aspect-ratio: var(--aspect-photo, 3 / 2);
-    background: #0b1120;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--color-bg);
     cursor: pointer;
     overflow: hidden;
 }
 
 .p-album-viewport img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -3399,10 +3398,11 @@ html.p-quote-open, html.p-quote-open body { overflow: hidden; }
 
 .p-album-viewport img.is-contain {
     object-fit: contain;
+    background: var(--color-navy);
 }
 
 .p-album-viewport:hover img {
-    transform: scale(1.015);
+    transform: scale(1.02);
 }
 
 .p-album-badge {
@@ -3465,7 +3465,7 @@ html.p-quote-open, html.p-quote-open body { overflow: hidden; }
     border-radius: var(--radius-xs);
     overflow: hidden;
     cursor: pointer;
-    background: #0b1120;
+    background: var(--color-bg);
     transition: all var(--transition-fast);
 }
 
