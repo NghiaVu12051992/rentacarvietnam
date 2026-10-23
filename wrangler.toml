@@ -4,16 +4,17 @@ compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "dist"
 
 # ==============================================================================
-# Cloudflare D1 Database Binding (Dùng lưu trữ đơn đặt xe / báo giá)
+# Cloudflare D1 & R2 Bindings
+# Lưu ý: Khi deploy qua Cloudflare Pages, bạn có thể liên kết trực tiếp
+# qua Dashboard (Settings -> Functions -> Bindings) bằng menu dropdown.
+# Nếu muốn cấu hình tại đây, hãy bỏ dấu # và thay bằng UUID thật của D1:
 # ==============================================================================
-[[d1_databases]]
-binding = "DB"
-database_name = "rentacarvietnam-db"
-database_id = "dien_database_id_vao_day"
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "rentacarvietnam-db"
+# database_id = "dien_database_id_vao_day"
 
-# ==============================================================================
-# Cloudflare R2 Storage Binding (Dùng lưu trữ ảnh xe, tour và cẩm nang)
-# ==============================================================================
-[[r2_buckets]]
-binding = "R2_BUCKET"
-bucket_name = "rentacarvietnam-media"
+# [[r2_buckets]]
+# binding = "R2_BUCKET"
+# bucket_name = "rentacarvietnam-media"
+
