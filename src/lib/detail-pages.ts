@@ -55,6 +55,7 @@ export function vehicleDetail(vehicle: (typeof vehicles)[number]): DetailPageDat
 }
 
 export function routeDetail(route: (typeof routes)[number]): DetailPageData {
+  const customSections = (route as any).sections as DetailSection[] | undefined;
   return {
     title: route.name,
     metaDescription: `${route.description} Distance: ${route.distance}, approx ${route.duration}. Transparent private transfer with toll fees and driver included.`,
@@ -62,7 +63,8 @@ export function routeDetail(route: (typeof routes)[number]): DetailPageData {
     breadcrumbs: [{ label: 'Routes', href: '/routes/' }, { label: route.name }],
     badges: [route.distance, route.duration, route.highway],
     image: { src: route.image, alt: route.imageAlt, label: route.name },
-    sections: [
+    gallery: (((route as any).gallery || []) as DetailImage[]),
+    sections: customSections || [
       { type: 'journey', title: 'Journey Details & Key Highlights', steps: [
         { label: 'Departure', text: 'Door-to-door pickup from your hotel in Hanoi Old Quarter, West Lake, or Noi Bai Airport.' },
         { label: 'En Route', text: `Smooth travel via modern expressway (${route.highway}). Rest stop available on request.` },

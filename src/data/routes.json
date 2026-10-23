@@ -2,68 +2,302 @@
   {
     "slug": "hanoi-to-sapa",
     "name": "Hanoi to Sapa Private Transfer",
-    "distance": "315 km",
-    "duration": "3.5 to 4.0 Hours",
-    "highway": "Noi Bai - Lao Cai Expressway (CT05)",
-    "description": "Direct expressway private transfer from Hanoi Old Quarter or Noi Bai Airport to Sapa town. Smooth, comfortable, avoiding cramped buses or slow trains.",
+    "distance": "315 km (195 miles)",
+    "duration": "4.5 to 5.0 Hours",
+    "highway": "Noi Bai - Lao Cai Expressway (CT05) & Mong Sen Viaduct",
+    "description": "Direct, private door-to-door transfer from Hanoi Old Quarter or Noi Bai International Airport (HAN) to Sapa town. Travel smoothly via the 245 km Noi Bai – Lao Cai Expressway (CT05) and ascend via the newly opened Mong Sen Viaduct—the tallest highway viaduct in Vietnam—completely bypassing the hazardous hairpin curves of old National Highway 4D.",
     "pricing": [
       {
-        "vehicle": "7-Seater SUV",
-        "oneWay": "$80 USD",
-        "roundTrip": "$150 USD"
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
+        "oneWay": "$85 USD",
+        "roundTrip": "$160 USD"
       },
       {
-        "vehicle": "16-Seater Van",
-        "oneWay": "$95 USD",
-        "roundTrip": "$180 USD"
+        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
+        "oneWay": "$140 USD",
+        "roundTrip": "$260 USD"
       },
       {
-        "vehicle": "29-Seater Bus",
-        "oneWay": "$170 USD",
-        "roundTrip": "$320 USD"
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
+        "oneWay": "$105 USD",
+        "roundTrip": "$200 USD"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
+        "oneWay": "$185 USD",
+        "roundTrip": "$350 USD"
+      },
+      {
+        "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
+        "oneWay": "$280 USD",
+        "roundTrip": "$520 USD"
       }
     ],
     "highlights": [
-      "100% via CT05 Expressway with all tolls included",
-      "Rest stop at Km117 for clean restrooms, coffee, and local snacks",
-      "Door-to-door drop-off right at your hotel lobby in Sapa",
-      "Mountain-certified driver skilled on the 30 km Lao Cai - Sapa pass"
+      "100% via CT05 Expressway and Mong Sen Viaduct with all tolls included",
+      "Door-to-door hotel drop-off in Sapa Town, Fansipan Cable Car, or valley resorts",
+      "Midpoint rest stop at Km117 (Tan Quy, Yen Bai) for hot pho, coffee, and restrooms",
+      "Mountain-certified chauffeurs with 5+ years experience on high-altitude passes",
+      "Flexible departure timing avoiding early train transfers or cramped sleeper buses"
     ],
-    "image": "",
-    "imageAlt": "Hanoi to Sapa Private Transfer"
+    "image": "/images/routes/hanoi-to-sapa-private-transfer-expressway-mountain-pass.webp",
+    "imageAlt": "Hanoi to Sapa Private Transfer - Scenic Winding Mountain Highway through Muong Hoa Valley Terraced Fields",
+    "gallery": [
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-maybach-seats-interior-01.webp",
+        "alt": "9-Seater DCar VIP Limousine First-Class Leather Reclining Massage Seats for Sapa Highway",
+        "label": "VIP Limousine Massage Seats"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-ford-transit-exterior-high-roof.webp",
+        "alt": "16-Seater Van for Group and Family Transfers from Hanoi to Sapa",
+        "label": "16-Seater Group Minivan"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
+        "alt": "29-Seater Tourist Midi Bus with Pneumatic Air Suspension for Smooth Riding to Sapa",
+        "label": "29-Seater Midi Bus"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Route Specifications & Mountain Travel Details",
+        "items": [
+          { "label": "Total Distance", "value": "315 km from Hanoi Center / 285 km from Noi Bai Airport (HAN)" },
+          { "label": "Expressway & Infrastructure", "value": "CT05 Expressway (245 km) + Mong Sen Viaduct (Vietnam's tallest bridge, 83m height)" },
+          { "label": "Average Travel Time", "value": "4.5 to 5.0 hours door-to-door (including 15-20 min comfort rest stop)" },
+          { "label": "Mountain Incline Safety", "value": "Smooth gentle ascent via viaduct; bypasses the notorious 'Doc 3 Tang' hairpin curves" },
+          { "label": "Hotel Drop-off Coverage", "value": "All Sapa town center hotels, Sun Plaza, Fansipan cable car station, and valley resort gates" },
+          { "label": "Deep Valley Access (Ta Van / Lao Chai)", "value": "Accessible by private SUV or 16-seat van (large buses cannot enter narrow valley roads)", "full": true }
+        ]
+      },
+      {
+        "type": "journey",
+        "title": "Detailed Step-by-Step Mountain Transfer",
+        "steps": [
+          {
+            "label": "1. Hotel / Airport Pickup",
+            "text": "Your dedicated chauffeur greets you at your hotel lobby in Hanoi Old Quarter, West Lake, or arrival gate at Noi Bai Airport with a name sign and assists with luggage."
+          },
+          {
+            "label": "2. CT05 Expressway Cruise",
+            "text": "Depart the city onto the 4-lane Noi Bai – Lao Cai Expressway (CT05), traveling smoothly across the flat Red River Delta plain through Vinh Phuc and Phu Tho provinces."
+          },
+          {
+            "label": "3. Midpoint Rest Stop at Km117",
+            "text": "Enjoy an optional 15-to-20-minute comfort break at Tan Quy Station (Km117 Yen Bai) featuring clean restrooms, authentic hot Vietnamese noodle soup, iced coffee, and fresh tropical fruit."
+          },
+          {
+            "label": "4. Lao Cai Border Gate Footprint",
+            "text": "Pass through Lao Cai city near the border with Yunnan, approaching the dramatic foothills of the Hoang Lien Son mountain range."
+          },
+          {
+            "label": "5. Scenic Ascent via Mong Sen Viaduct",
+            "text": "Cross the newly constructed 612-meter Mong Sen Viaduct towering up to 83 meters above the valley floor. Soak in sweeping views of cascading terraced rice paddies before reaching your hotel entrance in Sapa."
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Transparent Vehicle Rates for Hanoi to Sapa",
+        "note": "All rates include electronic expressway tolls, Mong Sen viaduct fees, fuel, driver wage, and passenger insurance.",
+        "rows": [
+          { "label": "7-Seater SUV (Toyota Fortuner / Innova / Xpander)", "values": [{ "label": "One-Way", "value": "$85 USD" }, { "label": "Round-Trip", "value": "$160 USD", "accent": true }] },
+          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "One-Way", "value": "$140 USD" }, { "label": "Round-Trip", "value": "$260 USD", "accent": true }] },
+          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "One-Way", "value": "$105 USD" }, { "label": "Round-Trip", "value": "$200 USD", "accent": true }] },
+          { "label": "29-Seater Midi Bus (Thaco Cruiser Pneumatic Air Suspension)", "values": [{ "label": "One-Way", "value": "$185 USD" }, { "label": "Round-Trip", "value": "$350 USD", "accent": true }] },
+          { "label": "45-Seater Coach (Hyundai Universe Flagship Luxury)", "values": [{ "label": "One-Way", "value": "$280 USD" }, { "label": "Round-Trip", "value": "$520 USD", "accent": true }] }
+        ]
+      },
+      {
+        "type": "features",
+        "title": "Hotel Drop-off & Mountain Travel Advice",
+        "items": [
+          "Town Center Hotels: Direct drop-off at Hotel de la Coupole - MGallery, Sun Plaza, Sapa Stone Church, Pistachio Hotel, and Cau May street accommodations.",
+          "Resorts Outside Town: Seamless drop-off at Silk Path Grand Resort & Spa, Pao's Sapa Leisure Hotel, and Ville De Mont Mountain Resort.",
+          "Topas Ecolodge & Deep Valley Homestays: Located in Ban Lach (~18 km south of Sapa), roads are narrow and steep. A private 7-seat SUV or 16-seat van is strongly recommended for direct lodge gate drop-off.",
+          "Fansipan Cable Car Station: Your chauffeur can drop your group directly at the Sun World Fansipan Legend cable car terminal upon arrival if you wish to start your ascent immediately.",
+          "Mountain-Certified Drivers: Every chauffeur assigned to Sapa has at least 5 years of mountain pass driving experience, certified defensive driving training, and strictly adheres to mountain speed limits.",
+          "Ample Luggage Capacity: Plenty of trunk room for oversized trekking backpacks, winter coats, and walking poles."
+        ]
+      },
+      {
+        "type": "inclusions",
+        "title": "What is Included in Your Transfer?",
+        "groups": [
+          {
+            "title": "Included in Quoted Price",
+            "items": [
+              "100% CT05 expressway tolls & Mong Sen viaduct fees",
+              "Private door-to-door vehicle with multi-zone air conditioning",
+              "Licensed mountain chauffeur with professional hospitality training",
+              "Chilled bottled drinking water & refreshing wet wipes",
+              "Fuel, vehicle maintenance, and driver meal allowances",
+              "24/7 bilingual dispatch assistance on WhatsApp"
+            ]
+          },
+          {
+            "title": "Not Included",
+            "items": [
+              "Fansipan cable car tickets and tourist attraction entry passes",
+              "Personal meals, drinks, and hotel accommodation in Sapa",
+              "Discretionary driver tip (optional based on satisfaction)"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "hanoi-to-halong-bay",
     "name": "Hanoi to Halong Bay Private Transfer",
-    "distance": "160 km",
-    "duration": "2.5 Hours",
-    "highway": "Hanoi - Hai Phong - Halong Expressway (5B)",
-    "description": "Express highway transfer connecting Hanoi Old Quarter directly to Tuan Chau Port or Halong International Cruise Port in time for noon cruise boarding.",
+    "distance": "155 km (96 miles)",
+    "duration": "2.0 to 2.5 Hours",
+    "highway": "Hanoi – Hai Phong (CT04) & Hai Phong – Ha Long (CT06) Expressways",
+    "description": "Direct, modern expressway transfer connecting downtown Hanoi or Noi Bai International Airport (HAN) directly to Tuan Chau Marina, Ha Long International Cruise Port (Sun Port), or Hon Gai Port. Guaranteed on-time arrival before cruise embarkation with all expressway tolls and port parking fees fully included.",
     "pricing": [
       {
-        "vehicle": "7-Seater SUV",
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
         "oneWay": "$60 USD",
         "roundTrip": "$110 USD"
       },
       {
-        "vehicle": "16-Seater Van",
+        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
+        "oneWay": "$105 USD",
+        "roundTrip": "$195 USD"
+      },
+      {
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
         "oneWay": "$75 USD",
         "roundTrip": "$140 USD"
       },
       {
-        "vehicle": "29-Seater Bus",
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
         "oneWay": "$140 USD",
         "roundTrip": "$260 USD"
+      },
+      {
+        "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
+        "oneWay": "$220 USD",
+        "roundTrip": "$410 USD"
       }
     ],
     "highlights": [
-      "Direct 5B Expressway avoids old congested National Route 18",
-      "Punctual arrival guaranteed before 11:30 AM cruise boarding",
-      "Pickup from any Hanoi downtown hotel or Noi Bai Airport",
-      "Highway toll fees and port parking tickets fully covered"
+      "100% via CT04 & CT06 expressways via Bach Dang Bridge—half the time of old QL18",
+      "Punctual arrival guaranteed before 11:30 AM cruise boarding window",
+      "Pickup from any Hanoi downtown hotel or terminal arrival gate at Noi Bai Airport",
+      "Expressway tolls (~280,000 VND) and cruise port parking tickets fully covered",
+      "Return pickup directly at cruise port arrivals lounge with name placard"
     ],
-    "image": "",
-    "imageAlt": "Hanoi to Halong Bay Private Transfer"
+    "image": "/images/routes/hanoi-to-halong-bay-private-transfer-cruise-port-expressway.webp",
+    "imageAlt": "Hanoi to Halong Bay Private Car Transfer - Luxury Cruise Ships at Marina and Limestone Karsts",
+    "gallery": [
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",
+        "alt": "9-Seater DCar VIP Limousine for Executive Hanoi to Halong Bay Cruise Transfer",
+        "label": "9-Seater VIP Limousine"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-ford-transit-exterior-high-roof.webp",
+        "alt": "16-Seater Van Rental with Driver for Halong Bay Family Cruise Groups",
+        "label": "16-Seater Minivan"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
+        "alt": "29-Seater Tourist Midi Bus for Corporate Delegations to Ha Long Bay",
+        "label": "29-Seater Midi Bus"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Route Specifications & Cruise Schedule Guide",
+        "items": [
+          { "label": "Total Distance", "value": "155 km from Hanoi Center / 175 km from Noi Bai Airport (HAN)" },
+          { "label": "Expressway Routes Used", "value": "100% via CT04 (Hanoi – Hai Phong) & CT06 (Hai Phong – Ha Long) via Bach Dang Bridge" },
+          { "label": "Average Travel Time", "value": "2.0 to 2.5 hours door-to-door (avoids congested National Route 18)" },
+          { "label": "Recommended Departure Time", "value": "08:00 AM – 08:30 AM from Hanoi for standard 11:30 AM – 12:15 PM cruise embarkation" },
+          { "label": "Cruise Port Drop-off Coverage", "value": "Tuan Chau Marina, Ha Long Sun Port (Bai Chay), Hon Gai Vinashin Port, or Got/Dong Bai Wharf" },
+          { "label": "Return Pickup Coordination", "value": "11:30 AM – 12:00 PM at cruise terminal arrivals hall after luggage disembarkation", "full": true }
+        ]
+      },
+      {
+        "type": "journey",
+        "title": "Detailed Step-by-Step Cruise Transfer",
+        "steps": [
+          {
+            "label": "1. Morning Hotel Pickup",
+            "text": "Your chauffeur arrives at your Hanoi Old Quarter or West Lake hotel lobby at your scheduled time (typically 8:00 AM – 8:30 AM) with luggage loading assistance."
+          },
+          {
+            "label": "2. CT04 Expressway High-Speed Cruise",
+            "text": "Glide along the modern 6-lane CT04 expressway cruising smoothly at 100–120 km/h, bypassing regional freight traffic."
+          },
+          {
+            "label": "3. Optional Comfort Stop at V52",
+            "text": "Optional 15-minute break at the modern Hai Duong V52 rest stop featuring clean western restrooms, Highlands Coffee, ATMs, and local delicacies."
+          },
+          {
+            "label": "4. Bach Dang Cable-Stayed Bridge",
+            "text": "Cross the multi-span Bach Dang Bridge connecting Hai Phong and Quang Ninh over the Cam River estuary."
+          },
+          {
+            "label": "5. Port Terminal Arrival & Meet Chauffeur",
+            "text": "Direct curbside drop-off right at your designated cruise check-in lounge or marina ticket counter before 11:30 AM. For return trips, your driver awaits inside the port arrivals lounge with a personalized name placard as you disembark."
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Transparent Vehicle Rates for Hanoi to Halong Bay",
+        "note": "All rates include electronic expressway tolls, Bach Dang bridge fees, port parking tickets, fuel, driver wage, and passenger insurance.",
+        "rows": [
+          { "label": "7-Seater SUV (Toyota Fortuner / Innova / Xpander)", "values": [{ "label": "One-Way", "value": "$60 USD" }, { "label": "Round-Trip", "value": "$110 USD", "accent": true }] },
+          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "One-Way", "value": "$105 USD" }, { "label": "Round-Trip", "value": "$195 USD", "accent": true }] },
+          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "One-Way", "value": "$75 USD" }, { "label": "Round-Trip", "value": "$140 USD", "accent": true }] },
+          { "label": "29-Seater Midi Bus (Thaco Cruiser Air Suspension)", "values": [{ "label": "One-Way", "value": "$140 USD" }, { "label": "Round-Trip", "value": "$260 USD", "accent": true }] },
+          { "label": "45-Seater Coach (Hyundai Universe Luxury)", "values": [{ "label": "One-Way", "value": "$220 USD" }, { "label": "Round-Trip", "value": "$410 USD", "accent": true }] }
+        ]
+      },
+      {
+        "type": "features",
+        "title": "Ha Long Cruise Port Terminal Guide",
+        "items": [
+          "Tuan Chau International Marina: Hub for Paradise Vietnam, Bhaya Cruises, Ambassador Day Cruise, Pelican Cruises, and Genesis Day Tours.",
+          "Ha Long International Cruise Port (Sun Port, Bai Chay): Modern deep-water passenger terminal for premier overnight lines including Ambassador Overnight, Heritage Binh Chuan, Indochine, Grand Pioneers (Essence Grand), and Elite of the Seas.",
+          "Hon Gai / Vinashin Dock: Departure pier for boutique Bai Tu Long Bay itineraries (Swan Cruises, Dragon Legend).",
+          "Got Ferry / Dong Bai Ferry Wharf: Dedicated transfer link if you are taking the high-speed ferry across to Cat Ba Island.",
+          "Noi Bai Airport Flight Tracking: If landing at HAN, send us your flight number; dispatchers track incoming flights live and adjust pickup seamlessly in case of baggage or customs delays.",
+          "All Highway Tolls Included: All CT04 and CT06 ETC electronic toll charges (~280,000 VND) and port parking permits are 100% pre-paid."
+        ]
+      },
+      {
+        "type": "inclusions",
+        "title": "What is Included in Your Transfer?",
+        "groups": [
+          {
+            "title": "Included in Quoted Price",
+            "items": [
+              "100% electronic expressway tolls (CT04 & CT06) and bridge fees",
+              "Cruise port entry gate and parking permits",
+              "Private door-to-door vehicle with climate control",
+              "Professional licensed chauffeur with English communication",
+              "Complimentary chilled drinking water & cold towels",
+              "24/7 bilingual dispatch assistance on WhatsApp"
+            ]
+          },
+          {
+            "title": "Not Included",
+            "items": [
+              "Cruise boarding tickets & cabin bookings",
+              "Personal meals, drinks, and attraction tickets",
+              "Discretionary driver tip (optional based on satisfaction)"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "hanoi-to-ninh-binh",
