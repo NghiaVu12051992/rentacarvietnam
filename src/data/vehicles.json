@@ -71,9 +71,9 @@
     "models": "Ford Transit & Hyundai Solati DCar President",
     "capacity": "5 to 7 VIP Passengers",
     "luggage": "5 to 6 Medium Suitcases (24-inch) + Golf Bags",
-    "description": "Executive first-class transport featuring Maybach-style reclining massage leather captain seats, starlight ambient ceiling, high-speed Wi-Fi, and private bilingual chauffeur.",
+    "description": "Executive first-class transport featuring ergonomic reclining leather captain seats with massage function, starlight ambient ceiling, high-speed Wi-Fi, and private bilingual chauffeur.",
     "features": [
-      "First-class Maybach-style leather massage seats with electric footrests",
+      "First-class executive leather massage seats with electric footrests",
       "Starlight ambient fiber-optic ceiling illumination with mood lighting",
       "Individual USB fast charging ports and 220V power outlets at every seat",
       "Smart TV entertainment screen and high-fidelity surround sound system",
@@ -105,7 +105,7 @@
     "suitability": "Ideal for business executives, VIP delegations, golf enthusiasts, and luxury family getaways.",
     "image": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",
     "imageAlt": "9-Seater DCar VIP Limousine Rental with Driver in Hanoi - Executive Black Exterior Profile",
-    "interiorImage": "/images/vehicles/9-seater-dcar-limousine-maybach-seats-interior-01.webp",
+    "interiorImage": "/images/vehicles/9-seater-dcar-limousine-executive-seats-interior-01.webp",
     "luggageImage": "/images/vehicles/9-seater-dcar-limousine-vip-luggage-trunk-space-01.webp",
     "gallery": [
       {

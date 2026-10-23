@@ -46,6 +46,13 @@ const hasMultiple = allPhotos.length > 1;
           1 / {allPhotos.length} Photos
         </span>
       )}
+      <span
+        class="p-album-ai-tag"
+        id="album-ai-tag"
+        style={initialPhoto.isAi ? '' : 'display: none;'}
+      >
+        AI Illustration Concept
+      </span>
       <span class="p-album-open-hint">Click to enlarge</span>
     </div>
 
@@ -108,6 +115,13 @@ const hasMultiple = allPhotos.length > 1;
 
         <!-- Photo Info & Sidebar Thumbnails -->
         <aside class="p-photo-sidebar">
+          <span
+            class="p-badge p-badge-outline"
+            id="lightbox-ai-tag"
+            style={initialPhoto.isAi ? 'margin-bottom: var(--space-xs); display: inline-block;' : 'display: none;'}
+          >
+            AI Illustration Concept
+          </span>
           <h4 class="p-photo-sidebar-title" id="lightbox-title">{initialPhoto.label}</h4>
           <p class="p-photo-sidebar-desc" id="lightbox-desc">{initialPhoto.alt}</p>
 
@@ -173,6 +187,15 @@ const hasMultiple = allPhotos.length > 1;
       if (counterBadge) counterBadge.textContent = `${currentIndex + 1} / ${total} Photos`;
       if (captionTitle) captionTitle.textContent = photo.label || 'Vehicle Photo';
       if (captionDesc) captionDesc.textContent = photo.alt || '';
+
+      const aiTag = document.getElementById('album-ai-tag');
+      if (aiTag) {
+        aiTag.style.display = photo.isAi ? '' : 'none';
+      }
+      const lightboxAiTag = document.getElementById('lightbox-ai-tag');
+      if (lightboxAiTag) {
+        lightboxAiTag.style.display = photo.isAi ? 'inline-block' : 'none';
+      }
 
       pageThumbs.forEach((thumb, i) => {
         if (i === currentIndex) {

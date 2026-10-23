@@ -2,7 +2,7 @@ import vehicles from '../data/vehicles.json';
 import routes from '../data/routes.json';
 import services from '../data/services.json';
 
-export interface DetailImage { src: string; alt: string; label: string }
+export interface DetailImage { src: string; alt: string; label: string; isAi?: boolean; aspect?: 'photo' | 'portrait' | 'square' | 'video' }
 export interface PriceRow { label: string; values: { label?: string; value: string; accent?: boolean }[] }
 interface SectionBase { title: string; note?: string }
 export type DetailSection = SectionBase & (
@@ -62,7 +62,7 @@ export function routeDetail(route: (typeof routes)[number]): DetailPageData {
     description: route.description,
     breadcrumbs: [{ label: 'Routes', href: '/routes/' }, { label: route.name }],
     badges: [route.distance, route.duration, route.highway],
-    image: { src: route.image, alt: route.imageAlt, label: route.name },
+    image: { src: route.image, alt: route.imageAlt, label: route.name, isAi: Boolean((route as any).isAi) },
     gallery: (((route as any).gallery || []) as DetailImage[]),
     sections: customSections || [
       { type: 'journey', title: 'Journey Details & Key Highlights', steps: [

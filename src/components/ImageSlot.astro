@@ -3,6 +3,7 @@ interface Props {
   src?: string;
   alt: string;
   label: string;
+  isAi?: boolean;
   eager?: boolean;
   aspect?: 'photo' | 'portrait' | 'square' | 'video';
   fit?: 'cover' | 'contain';
@@ -13,6 +14,7 @@ const {
   src = '',
   alt,
   label,
+  isAi = false,
   eager = false,
   aspect = 'photo',
   fit = 'cover',
@@ -35,14 +37,17 @@ const dimensions = {
   { 'p-image-slot--empty': !src }
 ]}>
   {src ? (
-    <img
-      src={src}
-      alt={alt}
-      loading={eager ? 'eager' : 'lazy'}
-      decoding="async"
-      width={dimensions.width}
-      height={dimensions.height}
-    />
+    <>
+      <img
+        src={src}
+        alt={alt}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        width={dimensions.width}
+        height={dimensions.height}
+      />
+      {isAi && <span class="p-image-ai-tag">AI Illustration</span>}
+    </>
   ) : (
     <div class="p-image-slot-content" role="img" aria-label={`Image placeholder: ${label}`}>
       <span class="p-image-slot-label">{label}</span>

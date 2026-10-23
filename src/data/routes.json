@@ -40,11 +40,12 @@
       "Mountain-certified chauffeurs with 5+ years experience on high-altitude passes",
       "Flexible departure timing avoiding early train transfers or cramped sleeper buses"
     ],
+    "isAi": true,
     "image": "/images/routes/hanoi-to-sapa-private-transfer-expressway-mountain-pass.webp",
-    "imageAlt": "Hanoi to Sapa Private Transfer - Scenic Winding Mountain Highway through Muong Hoa Valley Terraced Fields",
+    "imageAlt": "Hanoi to Sapa Mountain Highway & Valley (AI Illustration Concept)",
     "gallery": [
       {
-        "src": "/images/vehicles/9-seater-dcar-limousine-maybach-seats-interior-01.webp",
+        "src": "/images/vehicles/9-seater-dcar-limousine-executive-seats-interior-01.webp",
         "alt": "9-Seater DCar VIP Limousine First-Class Leather Reclining Massage Seats for Sapa Highway",
         "label": "VIP Limousine Massage Seats"
       },
@@ -190,8 +191,9 @@
       "Expressway tolls (~280,000 VND) and cruise port parking tickets fully covered",
       "Return pickup directly at cruise port arrivals lounge with name placard"
     ],
+    "isAi": true,
     "image": "/images/routes/hanoi-to-halong-bay-private-transfer-cruise-port-expressway.webp",
-    "imageAlt": "Hanoi to Halong Bay Private Car Transfer - Luxury Cruise Ships at Marina and Limestone Karsts",
+    "imageAlt": "Hanoi to Halong Bay Cruise Marina & Karsts (AI Illustration Concept)",
     "gallery": [
       {
         "src": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",

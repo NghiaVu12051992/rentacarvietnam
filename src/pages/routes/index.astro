@@ -23,7 +23,7 @@ const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halon
       {routesData.map((r) => (
         <article class="p-card route-entry">
           <div class="entry-main">
-            <ImageSlot src={r.image} alt={r.imageAlt} label={r.name} />
+            <ImageSlot src={r.image} alt={r.imageAlt} label={r.name} isAi={r.isAi} />
             <h2 class="entry-title">{r.name}</h2>
             <div class="metric-tags">
               <span class="p-badge p-badge-primary">{r.distance}</span>
@@ -43,18 +43,23 @@ const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halon
           </div>
 
           <div class="entry-pricing">
-            <h3 class="pricing-title">Starting Rates</h3>
-            <div class="price-cards">
-              {r.pricing.map((p) => (
-                <div class="p-card price-mini-card">
-                  <span class="vehicle-type">{p.vehicle}</span>
-                  <span class="price-val">{p.oneWay}</span>
-                  {p.roundTrip !== "N/A" && (
-                    <span class="roundtrip-val">2-way: {p.roundTrip}</span>
-                  )}
-                </div>
-              ))}
+            <div class="pricing-header">
+              <h3 class="pricing-title">Starting Rates</h3>
+              <span class="pricing-badge">All-Inclusive</span>
             </div>
+            <ul class="rate-list">
+              {r.pricing.map((p) => (
+                <li class="rate-row">
+                  <span class="rate-vehicle">{p.vehicle}</span>
+                  <span class="rate-quote">
+                    <strong class="rate-price">{p.oneWay}</strong>
+                    {p.roundTrip !== "N/A" && (
+                      <span class="rate-roundtrip">/ {p.roundTrip}</span>
+                    )}
+                  </span>
+                </li>
+              ))}
+            </ul>
             <a href={`/routes/${r.slug}/`} class="p-btn p-btn-primary full-width-btn">
               View Itinerary & Book
             </a>
@@ -155,42 +160,84 @@ const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halon
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xs);
-    padding: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-xs);
+  }
+  @media (max-width: 900px) {
+    .entry-pricing {
+      background: transparent;
+      border: none;
+      border-top: 1px solid var(--color-border);
+      border-radius: 0;
+      padding: var(--space-sm) 0 0 0;
+      gap: var(--space-xs);
+    }
+  }
+  .pricing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xs);
+    padding-bottom: var(--space-3xs);
+    border-bottom: 1px solid var(--color-border);
   }
   .pricing-title {
     font-size: var(--font-size-sm);
     color: var(--color-navy);
     font-weight: var(--font-weight-bold);
+    margin: 0;
   }
-  .price-cards {
+  .pricing-badge {
+    font-size: var(--font-size-2xs);
+    color: var(--color-primary-dark);
+    font-weight: var(--font-weight-semibold);
+    background: var(--color-primary-light);
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+  }
+  .rate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xs);
   }
-  .price-mini-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-xs);
+  .rate-row {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .vehicle-type {
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-xs);
+    padding: var(--space-2xs) 0;
+    border-bottom: 1px solid var(--color-border);
     font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
   }
-  .price-val {
+  .rate-row:last-child {
+    border-bottom: none;
+  }
+  .rate-vehicle {
+    color: var(--color-navy);
+    font-weight: var(--font-weight-medium);
+    flex: 1;
+    min-width: 0;
+  }
+  .rate-quote {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3xs);
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .rate-price {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     color: var(--color-price);
   }
-  .roundtrip-val {
+  .rate-roundtrip {
     font-size: var(--font-size-2xs);
-    color: var(--color-price);
+    color: var(--color-text-muted);
   }
   .full-width-btn {
     width: 100%;

@@ -2833,6 +2833,22 @@
 .p-image-slot--pos-top img {
     object-position: center top;
 }
+.p-image-ai-tag {
+    position: absolute;
+    bottom: var(--space-xs);
+    left: var(--space-xs);
+    background: rgba(15, 23, 42, 0.78);
+    color: var(--color-white);
+    padding: 3px 8px;
+    border-radius: var(--radius-xs);
+    font-size: var(--font-size-2xs);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 .p-image-slot-content {
     position: absolute;
     inset: 0;
