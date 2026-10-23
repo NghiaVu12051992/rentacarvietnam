@@ -1,0 +1,2 @@
+# Thả các file ảnh gốc cần xử lý vào thư mục này
+# Sau đó nhấp đúp vào file XU-LY-ANH.bat ở ngoài để chạy!

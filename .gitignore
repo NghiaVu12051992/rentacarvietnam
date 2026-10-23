@@ -20,3 +20,8 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Raw photos (chi luu anh thanh pham toi uu trong public/images)
+photos-raw/*
+!photos-raw/HUONG-DAN.txt
+
