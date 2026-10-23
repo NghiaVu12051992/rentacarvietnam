@@ -1,9 +1,14 @@
-// Cloudflare Pages Function: Trả về bảng giá xe cập nhật theo thời gian thực
-export const onRequestGet: PagesFunction<{
+interface PricingEnv {
   CLOUDFLARE_ACCOUNT_ID?: string;
   CLOUDFLARE_DATABASE_ID?: string;
   CLOUDFLARE_API_TOKEN?: string;
-}> = async (context) => {
+  DB?: any;
+}
+
+export const onRequestGet = async (context: {
+  request?: Request;
+  env?: PricingEnv;
+}) => {
   const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, OPTIONS',
@@ -11,7 +16,7 @@ export const onRequestGet: PagesFunction<{
     'Cache-Control': 'public, max-age=1800, s-maxage=3600', // Cache 1 giờ trên Cloudflare Edge
   };
 
-  const { env } = context;
+  const env = context.env || {};
 
   // 1. Nếu có biến môi trường D1 token, gọi trực tiếp D1
   if (env.CLOUDFLARE_ACCOUNT_ID && env.CLOUDFLARE_DATABASE_ID && env.CLOUDFLARE_API_TOKEN) {

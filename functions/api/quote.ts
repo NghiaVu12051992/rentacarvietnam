@@ -12,7 +12,10 @@ interface QuoteRequestBody {
   note?: string;
 }
 
-export const onRequestPost: PagesFunction<Env> = async (context) => {
+export const onRequestPost = async (context: {
+  request: Request;
+  env: Env;
+}) => {
   try {
     const { request, env } = context;
     const body: QuoteRequestBody = await request.json();
