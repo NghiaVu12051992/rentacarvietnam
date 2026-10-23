@@ -314,67 +314,306 @@
   {
     "slug": "hanoi-to-ninh-binh",
     "name": "Hanoi to Ninh Binh Private Car Day Tour",
-    "distance": "95 km",
+    "distance": "95 km (59 miles)",
     "duration": "1.5 Hours",
-    "highway": "Phap Van - Cau Gie - Ninh Binh Expressway",
-    "description": "Full-day private car charter exploring Trang An, Tam Coc, Mua Cave (Dragon Mountain), and Bai Dinh Pagoda at your own relaxed pace.",
+    "highway": "Phap Van - Cau Gie - Cao Bo - Mai Son Expressway (CT01)",
+    "description": "Full-day private car charter and direct transfer from Hanoi Old Quarter or Noi Bai International Airport (HAN) to the ancient karst kingdom of Ninh Binh. Travel rapidly via the modern CT01 North-South Expressway, exploring UNESCO World Heritage Trang An, Tam Coc river sampans, Mua Cave dragon summit, and Bai Dinh Pagoda with a dedicated professional chauffeur waiting on standby throughout your visit.",
     "pricing": [
       {
-        "vehicle": "7-Seater SUV",
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
         "oneWay": "$48 USD",
-        "roundTrip": "$65 USD (Full Day)"
+        "roundTrip": "$65 USD (Full Day 10h)"
       },
       {
-        "vehicle": "16-Seater Van",
+        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
+        "oneWay": "$85 USD",
+        "roundTrip": "$120 USD (Full Day 10h)"
+      },
+      {
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
         "oneWay": "$65 USD",
-        "roundTrip": "$85 USD (Full Day)"
+        "roundTrip": "$85 USD (Full Day 10h)"
       },
       {
-        "vehicle": "29-Seater Bus",
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
         "oneWay": "$100 USD",
-        "roundTrip": "$135 USD (Full Day)"
+        "roundTrip": "$135 USD (Full Day 10h)"
+      },
+      {
+        "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
+        "oneWay": "$140 USD",
+        "roundTrip": "$170 USD (Full Day 10h)"
       }
     ],
     "highlights": [
-      "10 hours dedicated driver service in Ninh Binh",
-      "Complete freedom to choose your sightseeing spots",
-      "Driver waits patiently while you take the 2.5-hour boat excursion",
-      "Expressway tolls in both directions included"
+      "100% via CT01 Expressway with all electronic tolls included in both directions",
+      "Up to 10 hours dedicated chauffeur service waiting patiently at every sightseeing spot",
+      "Complete itinerary flexibility between Trang An, Tam Coc, Mua Cave, and Bai Dinh",
+      "Door-to-door hotel pickup & return drop-off anywhere in Hanoi Old Quarter or West Lake",
+      "Chilled drinking water, cold refreshing towels, and air-conditioned retreat between excursions"
     ],
-    "image": "",
-    "imageAlt": "Hanoi to Ninh Binh Private Car Day Tour"
+    "isAi": true,
+    "image": "/images/routes/hanoi-to-ninh-binh-private-car-trang-an-tam-coc.webp",
+    "imageAlt": "Trang An & Tam Coc Karst River Landscape in Ninh Binh (AI Illustration Concept)",
+    "gallery": [
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+        "alt": "9-Seater DCar VIP Limousine for Executive Hanoi to Ninh Binh Day Tour",
+        "label": "9-Seater VIP Limousine"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+        "alt": "16-Seater Van Rental for Family and Small Group Day Trip to Ninh Binh",
+        "label": "16-Seater Minivan"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-rental-hanoi-thaco-exterior.webp",
+        "alt": "29-Seater Tourist Midi Bus with Pneumatic Suspension for Group Tour to Trang An",
+        "label": "29-Seater Midi Bus"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-rental-hanoi-exterior.webp",
+        "alt": "45-Seater Hyundai Universe Coach for Large Tour Groups to Bai Dinh and Trang An",
+        "label": "45-Seater Tour Coach"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Route Specifications & Day Tour Parameters",
+        "items": [
+          { "label": "Total Distance", "value": "95 km from Hanoi Center / 120 km from Noi Bai Airport (HAN)" },
+          { "label": "Expressway Infrastructure", "value": "CT01 North-South Expressway (Phap Van – Cau Gie – Cao Bo – Mai Son)" },
+          { "label": "Average Driving Time", "value": "1.25 to 1.5 hours each way (avoids congested National Highway 1A)" },
+          { "label": "Service Duration", "value": "Standard 10-hour full-day tour (e.g. 07:30 AM – 17:30 PM) or one-way private transfer" },
+          { "label": "Sightseeing Standby Policy", "value": "Your driver waits on-site at attraction parking gates while you enjoy boat rides and dining" },
+          { "label": "Attraction Coverage Area", "value": "Trang An, Tam Coc, Mua Cave, Bai Dinh Pagoda, Hoa Lu Ancient Capital, or Van Long Reserve", "full": true }
+        ]
+      },
+      {
+        "type": "journey",
+        "title": "Customizable Step-by-Step Ninh Binh Itinerary",
+        "steps": [
+          {
+            "label": "1. Hotel Pickup in Hanoi (07:30 – 08:00 AM)",
+            "text": "Your chauffeur meets you at your Hanoi Old Quarter, Ba Dinh, or West Lake accommodation with a cool, climate-controlled vehicle."
+          },
+          {
+            "label": "2. High-Speed CT01 Expressway Cruise",
+            "text": "Travel swiftly south on the 6-lane CT01 expressway across Ha Nam province, reaching Ninh Binh province in under 90 minutes."
+          },
+          {
+            "label": "3. Morning Excursion: Trang An or Tam Coc Sampan",
+            "text": "Board a traditional bamboo sampan rowed by local boatmen through natural karst caves, submerged grottos, and ancient limestone temples."
+          },
+          {
+            "label": "4. Local Lunch Break & Countryside Rest",
+            "text": "Your driver takes you to a premier local restaurant to savor Ninh Binh specialities such as mountain goat meat (thit de) and crispy burned rice (com chay)."
+          },
+          {
+            "label": "5. Afternoon: Mua Cave Summit or Ancient Capital",
+            "text": "Hike the 500 stone steps of Mua Cave (Hang Mua) to reach the iconic dragon shrine with 360-degree panoramic views of Tam Coc valley, or explore the 10th-century Dinh and Le dynastic temples at Hoa Lu."
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Transparent Vehicle Rates for Hanoi to Ninh Binh",
+        "note": "All rates include electronic expressway tolls, fuel, vehicle parking fees, driver wage, and passenger insurance.",
+        "rows": [
+          { "label": "7-Seater SUV (Toyota Fortuner / Innova / Xpander)", "values": [{ "label": "One-Way", "value": "$48 USD" }, { "label": "Full Day (10h)", "value": "$65 USD", "accent": true }] },
+          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "One-Way", "value": "$85 USD" }, { "label": "Full Day (10h)", "value": "$120 USD", "accent": true }] },
+          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "One-Way", "value": "$65 USD" }, { "label": "Full Day (10h)", "value": "$85 USD", "accent": true }] },
+          { "label": "29-Seater Midi Bus (Thaco Cruiser Pneumatic Air Suspension)", "values": [{ "label": "One-Way", "value": "$100 USD" }, { "label": "Full Day (10h)", "value": "$135 USD", "accent": true }] },
+          { "label": "45-Seater Coach (Hyundai Universe Flagship Luxury)", "values": [{ "label": "One-Way", "value": "$140 USD" }, { "label": "Full Day (10h)", "value": "$170 USD", "accent": true }] }
+        ]
+      },
+      {
+        "type": "features",
+        "title": "Ninh Binh Sightseeing Advice & Itinerary Recommendations",
+        "items": [
+          "Trang An vs. Tam Coc: Trang An offers a longer 2.5-hour boat excursion traversing 4–6 karst caves and the historic King Kong film set. Tam Coc features a 1.5-hour journey along the scenic Ngo Dong River directly flanked by seasonal rice paddies.",
+          "Hang Mua (Mua Cave) Timing: We recommend climbing the 500 steps either in the early morning (before 9:30 AM) or late afternoon (around 15:30 PM) to avoid midday heat and witness golden-hour photography over the valley.",
+          "Bai Dinh Pagoda Transit: Bai Dinh is immense (over 500 hectares). Internal electric shuttle carts are available at the entrance gate to transport visitors between the main prayer halls and the 100-meter stupa.",
+          "Luggage Security: If transferring onwards to Cat Ba, Sapa, or back to Noi Bai Airport, all your suitcases and personal belongings remain securely locked inside the air-conditioned vehicle under the driver's care while you tour.",
+          "Overtime Flexibility: Need extra time for a sunset dinner? Overtime is simply calculated at a modest hourly rate ($5–$10/hr depending on vehicle type) without any booking penalties.",
+          "Noi Bai Airport Direct Links: If landing at HAN, our driver can meet you at the terminal and proceed directly to Ninh Binh, saving you from navigating Hanoi downtown city traffic."
+        ]
+      },
+      {
+        "type": "inclusions",
+        "title": "What is Included in Your Tour?",
+        "groups": [
+          {
+            "title": "Included in Quoted Price",
+            "items": [
+              "100% round-trip CT01 expressway electronic tolls",
+              "Private air-conditioned vehicle with dedicated professional driver",
+              "10 hours driver service including standby waiting time",
+              "Attraction parking fees at Trang An, Tam Coc, Mua Cave, and Bai Dinh",
+              "Fuel, vehicle maintenance, and driver meal allowances",
+              "Bottled mineral drinking water & cold refreshing towels",
+              "24/7 bilingual dispatch assistance via WhatsApp"
+            ]
+          },
+          {
+            "title": "Not Included",
+            "items": [
+              "Attraction entrance tickets (Trang An boat, Mua Cave, Bai Dinh electric car)",
+              "Personal meals, beverages, and local dining expenses",
+              "Discretionary driver tip (optional based on satisfaction)"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "hanoi-to-ha-giang",
     "name": "Hanoi to Ha Giang Private Car Charter",
-    "distance": "320 km",
-    "duration": "Multi-Day Tour (3D2N / 4D3N)",
-    "highway": "Tuyen Quang Expressway & Northern Mountain Passes",
-    "description": "Private car charter for the legendary Ha Giang Loop, Dong Van Karst Plateau, Lung Cu Flag Tower, and Ma Pi Leng Pass.",
+    "distance": "285 km to City / 450+ km Loop",
+    "duration": "3D2N / 4D3N Multi-Day Loop",
+    "highway": "CT05 & CT02 Expressway to Tuyen Quang + QL2 Mountain Corridors",
+    "description": "Private door-to-door multi-day vehicle charter navigating the legendary Ha Giang Loop and Dong Van Karst Plateau UNESCO Global Geopark. Ascend through dramatic alpine peaks, cruise the emerald waters of Nho Que River through Tu San Abyss, conquer the towering cliffs of Ma Pi Leng Pass, and stand at Lung Cu Northern Flag Tower with a licensed, mountain-certified private chauffeur.",
     "pricing": [
       {
-        "vehicle": "7-Seater 4WD SUV",
+        "vehicle": "7-Seater 4WD SUV (Toyota Fortuner / Everest / Xpander)",
         "oneWay": "N/A",
-        "roundTrip": "$90 USD / day"
+        "roundTrip": "$90 USD / day ($270 USD for 3D2N)"
       },
       {
-        "vehicle": "16-Seater Van",
+        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
         "oneWay": "N/A",
-        "roundTrip": "$105 USD / day"
+        "roundTrip": "$145 USD / day ($435 USD for 3D2N)"
       },
       {
-        "vehicle": "29-Seater Midi Bus",
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
         "oneWay": "N/A",
-        "roundTrip": "$150 USD / day"
+        "roundTrip": "$105 USD / day ($315 USD for 3D2N)"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus (Thaco Cruiser Air Suspension)",
+        "oneWay": "N/A",
+        "roundTrip": "$155 USD / day ($465 USD for 3D2N)"
       }
     ],
     "highlights": [
-      "Experienced local mountain driver handling steep mountain passes",
-      "Vehicle stays with your group throughout the entire loop",
-      "Fuel, road passes, and driver accommodation included in tour rates",
-      "Stops at scenic viewpoints (Heaven's Gate, Nho Que River boat wharf)"
+      "Licensed mountain-certified chauffeurs with 5+ years handling high-altitude alpine terrain",
+      "Vehicle and driver remain on 24/7 dedicated assignment with your group throughout the entire loop",
+      "Door-to-door pickup from Hanoi hotel or Noi Bai Airport directly onto the northern expressway network",
+      "Stops at iconic highlights: Quan Ba Heaven Gate, Tham Ma Pass, Ma Pi Leng Pass & Tu San Canyon boat wharf",
+      "All highway tolls, mountain permits, fuel, driver meals, and driver overnight lodging 100% included"
     ],
-    "image": "",
-    "imageAlt": "Hanoi to Ha Giang Private Car Charter"
+    "isAi": true,
+    "image": "/images/routes/hanoi-to-ha-giang-private-car-charter-ma-pi-leng-pass.webp",
+    "imageAlt": "Ma Pi Leng Pass & Tu San Canyon in Ha Giang (AI Illustration Concept)",
+    "gallery": [
+      {
+        "src": "/images/vehicles/7-seater-car-rental-hanoi-mitsubishi-xpander-exterior.webp",
+        "alt": "7-Seater SUV Rental for Ha Giang Alpine Mountain Loop",
+        "label": "7-Seater SUV"
+      },
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+        "alt": "9-Seater DCar VIP Limousine for Executive Ha Giang Mountain Expedition",
+        "label": "9-Seater VIP Limousine"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+        "alt": "16-Seater Van Rental with Mountain Driver for Ha Giang Loop Group Tours",
+        "label": "16-Seater Minivan"
+      },
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-rental-hanoi-thaco-exterior.webp",
+        "alt": "29-Seater Midi Bus for Corporate and Group Tours to Ha Giang City and Dong Van",
+        "label": "29-Seater Midi Bus"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Route Specifications & Alpine Mountain Parameters",
+        "items": [
+          { "label": "Total Distance", "value": "285 km from Hanoi to Ha Giang City / 450+ km complete loop to Dong Van & Meo Vac" },
+          { "label": "Expressway & Highway Routes", "value": "CT05 (Noi Bai - Lao Cai) + CT02 (Phu Tho - Tuyen Quang expressway) + QL2 and QL4C" },
+          { "label": "Driving Time to Ha Giang City", "value": "5.5 to 6.0 hours via high-speed expressway linkages (bypasses older QL2 congestion)" },
+          { "label": "Mountain Incline & Terrain", "value": "Challenging 12–18% slopes, tight hairpin switchbacks, sheer limestone canyon drops" },
+          { "label": "Driver Qualification", "value": "Mountain-certified chauffeurs with a minimum of 5 years driving alpine switchbacks in Vietnam" },
+          { "label": "Vehicle Suitability Guidance", "value": "Private 7-seat SUVs, 9-seat Limousines, and 16-seat Vans are strongly recommended for tight village switchbacks; large 45-seat coaches cannot enter the inner Ma Pi Leng canyon loop.", "full": true }
+        ]
+      },
+      {
+        "type": "journey",
+        "title": "Recommended 3-Day / 4-Day Ha Giang Loop Itinerary",
+        "steps": [
+          {
+            "label": "Day 1: Hanoi to Ha Giang City & Quan Ba Heaven Gate (285 km)",
+            "text": "Depart Hanoi Old Quarter early morning via CT05 and CT02 expressways through Tuyen Quang. Arrive in Ha Giang City for lunch, take photos at Km 0 marker, and ascend Bac Sum Pass to Quan Ba Heaven Gate and the Fairy Twin Mountains."
+          },
+          {
+            "label": "Day 2: Yen Minh Pine Forest, Tham Ma Switchbacks & Dong Van (135 km)",
+            "text": "Navigate the iconic 9-turn switchbacks of Tham Ma Pass, visit the Century-old Palace of the Hmong King (Dinh Vua Meo), journey to the northernmost point of Vietnam at Lung Cu Flag Tower, and overnight in historic Dong Van Ancient Town."
+          },
+          {
+            "label": "Day 3: Ma Pi Leng Pass, Tu San Canyon Boat Ride & Return (420 km)",
+            "text": "Traverse the legendary Ma Pi Leng Pass—the King of Vietnam's Mountain Passes. Descend to the Nho Que River wharf for an emerald-water boat ride beneath 800-meter vertical canyon cliffs before beginning your relaxed return journey to Hanoi."
+          },
+          {
+            "label": "Optional Day 4: Du Gia Waterfall & Ethnic Tay Homestay",
+            "text": "Extend your journey into the tranquil, emerald valley of Du Gia to swim in natural mountain waterfalls, enjoy ethnic Tay hospitality, and experience rural village life."
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Transparent Multi-Day Charter Rates for Ha Giang",
+        "note": "All rates are calculated per day and include vehicle, fuel, mountain road permits, driver salary, driver meals, and driver overnight lodging.",
+        "rows": [
+          { "label": "7-Seater 4WD SUV (Toyota Fortuner / Ford Everest / Xpander)", "values": [{ "label": "Per Day", "value": "$90 USD" }, { "label": "3D2N Package", "value": "$270 USD", "accent": true }, { "label": "4D3N Package", "value": "$360 USD" }] },
+          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "Per Day", "value": "$145 USD" }, { "label": "3D2N Package", "value": "$435 USD", "accent": true }, { "label": "4D3N Package", "value": "$580 USD" }] },
+          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "Per Day", "value": "$105 USD" }, { "label": "3D2N Package", "value": "$315 USD", "accent": true }, { "label": "4D3N Package", "value": "$420 USD" }] },
+          { "label": "29-Seater Midi Bus (Thaco Cruiser Pneumatic Air Suspension)", "values": [{ "label": "Per Day", "value": "$155 USD" }, { "label": "3D2N Package", "value": "$465 USD", "accent": true }, { "label": "4D3N Package", "value": "$620 USD" }] }
+        ]
+      },
+      {
+        "type": "features",
+        "title": "Ha Giang Alpine Travel Advice & Practical Information",
+        "items": [
+          "Best Travel Seasons: September to November offers golden terraced rice harvest in Hoang Su Phi followed by the famous Pink Buckwheat Flower Festival (Hoa Tam Giac Mach). March to April features blooming peach, plum, and pear blossoms across the karst cliffs.",
+          "Tu San Canyon Boat Ride: The boat wharf on Nho Que River is accessible via a steep paved access road followed by electric tram transfers. We coordinate timing to arrive before morning tour crowds for pristine emerald-water photography.",
+          "Luggage Advice: Bring a compact duffel bag or backpack for daily access, while heavy suitcases remain safely secured in the vehicle's luggage compartment.",
+          "Mountain Chauffeur Expertise: Driving on Ha Giang's steep 18% switchbacks requires defensive mountain skills. Our chauffeurs strictly follow mountain safety protocols, maintain vehicle cooling systems, and never rush on hairpin bends.",
+          "Foreign Travel Permits: Foreign tourists staying in border districts (Dong Van, Meo Vac) require a standard border entry permit (~$10 USD / 250,000 VND). Your chauffeur assists in purchasing this effortlessly at the local police station.",
+          "Custom Itinerary Flexibility: Whether you want to stop for roadside photography at misty cloud lookouts or pause in ethnic village markets, your private vehicle gives you 100% schedule autonomy."
+        ]
+      },
+      {
+        "type": "inclusions",
+        "title": "What is Included in Your Ha Giang Charter?",
+        "groups": [
+          {
+            "title": "Included in Quoted Price",
+            "items": [
+              "Dedicated vehicle, fuel, and all electronic expressway tolls (CT05 & CT02)",
+              "Licensed mountain chauffeur with professional high-altitude driving experience",
+              "Driver meals, accommodation, and overnight expenses throughout the entire trip",
+              "100% private door-to-door flexibility throughout Hanoi and Ha Giang",
+              "Bottled mineral drinking water & refreshing towels in vehicle",
+              "24/7 bilingual dispatch assistance via WhatsApp"
+            ]
+          },
+          {
+            "title": "Not Included",
+            "items": [
+              "Attraction entry tickets (Lung Cu Flag Tower, Hmong King Palace)",
+              "Nho Que River boat cruise tickets & electric shuttle cart fees",
+              "Border entry permit fees (~$10 USD per foreign passenger)",
+              "Passenger hotel accommodation and personal meals in Ha Giang",
+              "Discretionary driver tip (optional based on satisfaction)"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
