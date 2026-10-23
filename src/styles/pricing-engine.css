@@ -1,0 +1,850 @@
+/* ==========================================================================
+   VN TOYOU PRICING ENGINE — UNIFIED COMPACT DESIGN SYSTEM
+   Standardized Colors, 12px Typography, Excel-style 2px Borders
+   ========================================================================== */
+
+/* 1. THEME VARIABLES & CORE TYPOGRAPHY (Mapped to System Tokens) */
+:root {
+  --pricing-bg: var(--color-bg, #f8fafc);
+  --pricing-card-bg: var(--color-white, #ffffff);
+  --pricing-border: var(--color-border, #cbd5e1);
+  --pricing-text: var(--color-navy, #0f172a);
+  --pricing-text-muted: var(--color-text-muted, #475569);
+  --pricing-primary: var(--color-primary, #10b981);
+  --pricing-primary-light: var(--color-primary-light, #ecfdf5);
+  --pricing-accent: var(--color-accent, #2563eb);
+  --pricing-accent-light: var(--color-accent-light, #eff6ff);
+  --pricing-warning: var(--color-caution, #d97706);
+  --pricing-warning-light: var(--color-caution-light, #fffbeb);
+  --pricing-danger: var(--color-danger, #ef4444);
+  --pricing-danger-light: var(--color-danger-light, #fef2f2);
+  --radius-sm: var(--radius-sm, 2px);
+  --radius-md: var(--radius-md, 2px);
+}
+
+.pricing-engine-container {
+  font-size: 14px;
+}
+
+.pricing-engine-container h1,
+.pricing-engine-container h2,
+.pricing-engine-container h3,
+.pricing-engine-container h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 2. FORM CONTROLS, BUTTONS & BADGES */
+input, select, textarea {
+  background-color: #ffffff;
+  border: 1px solid var(--pricing-border);
+  border-radius: 2px;
+  color: var(--pricing-text);
+  padding: 0.15rem 0.35rem;
+  height: 26px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s ease;
+}
+
+textarea { height: auto; }
+input:focus, select:focus, textarea:focus {
+  border-color: var(--pricing-accent);
+  box-shadow: 0 0 0 1px var(--pricing-accent);
+}
+label { font-weight: 600; color: var(--pricing-text-muted); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.55rem;
+  height: 26px;
+  border-radius: 2px;
+  border: 1px solid var(--pricing-border);
+  background: #ffffff;
+  color: var(--pricing-text);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+  transition: all 0.15s ease;
+}
+.btn:hover { background-color: #f1f5f9; }
+.btn-sm { height: 22px; padding: 0.15rem 0.35rem; }
+.btn-primary { background: var(--pricing-accent); color: #ffffff; border-color: var(--pricing-accent); }
+.btn-primary:hover { background: #1d4ed8; border-color: #1d4ed8; }
+.btn-secondary { background: #ffffff; color: var(--pricing-text); border-color: var(--pricing-border); }
+.btn-secondary:hover { background: #f1f5f9; border-color: #94a3b8; }
+.btn-danger { background: var(--pricing-danger); color: #ffffff; border-color: var(--pricing-danger); }
+.btn-danger:hover { background: #dc2626; }
+.btn-amber { background: #f59e0b; color: #ffffff; border-color: #f59e0b; font-weight: 700; }
+.btn-amber:hover { background: #d97706; border-color: #d97706; }
+.btn-emerald { background: #10b981; color: #ffffff; border-color: #10b981; font-weight: 700; }
+.btn-emerald:hover { background: #059669; border-color: #059669; }
+.btn-sky { background: #0284c7; color: #ffffff; border-color: #0284c7; font-weight: 700; }
+.btn-sky:hover { background: #0369a1; border-color: #0369a1; }
+.btn-indigo { background: #4f46e5; color: #ffffff; border-color: #4f46e5; font-weight: 600; }
+.btn-indigo:hover { background: #4338ca; border-color: #4338ca; }
+.btn-cyan { background: #0891b2; color: #ffffff; border-color: #0891b2; font-weight: 600; }
+.btn-cyan:hover { background: #0e7490; border-color: #0e7490; }
+.btn-push-d1 { background: #3b82f6; color: #ffffff; border-color: #3b82f6; font-weight: 600; }
+.btn-push-d1:hover { background: #2563eb; border-color: #2563eb; }
+.btn-detect { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; border: none; font-weight: 700; }
+.btn-save-draft-action { background-color: #0e7490; border-color: #0e7490; color: #ffffff; flex: 1; font-weight: 700; }
+.btn-save-draft-action:hover { background-color: #0891b2; border-color: #0891b2; }
+.btn-push-d1-action { flex: 1.2; font-weight: 700; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #ffffff; border: none; }
+.btn-restore-draft {
+  font-size: 0.65rem; padding: 0.15rem 0.4rem; background: #fffbeb; color: #b45309; border: 1px solid #fde68a;
+  border-radius: 2px; font-weight: 700; cursor: pointer; margin-left: 0.5rem; transition: all 0.15s ease;
+}
+.btn-restore-draft:hover { background-color: #fef3c7; }
+.btn-cancel-modal { background: #f1f5f9 !important; border: 1px solid #cbd5e1 !important; color: #475569 !important; }
+.btn-micro-set {
+  font-size: 0.6rem; padding: 0.05rem 0.25rem; border: 1px solid var(--pricing-border); border-radius: 2px;
+  background-color: #f1f5f9; cursor: pointer; color: var(--pricing-text-muted); font-weight: 600; line-height: 1.2;
+}
+.btn-micro-set.profit-set, .btn-micro-set.b2b-set { border-color: var(--pricing-border); background-color: #f1f5f9; color: var(--pricing-text); }
+.btn-micro-set.profit-set:hover, .btn-micro-set.b2b-set:hover { background-color: #e2e8f0; }
+.btn-remove {
+  background: transparent;
+  border: none;
+  color: var(--pricing-text-muted);
+  font-size: 1.15rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-remove:hover {
+  background-color: var(--pricing-danger-light);
+  color: var(--pricing-danger);
+}
+
+/* Badges */
+.badge-contact-us, .tour-b2c-badge.is-contact-us {
+  font-weight: 700; color: #b45309; background-color: #fffbeb; border: 1px solid #fde68a; border-radius: 2px; padding: 0.05rem 0.3rem; white-space: nowrap;
+}
+.badge-b2c-price, .tour-b2c-badge.is-published {
+  font-weight: 700; color: #047857; background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 2px; padding: 0.05rem 0.3rem; white-space: nowrap;
+}
+.badge-count {
+  font-size: 0.75rem; background: #e0f2fe; color: #0284c7; padding: 0.15rem 0.5rem; border-radius: 9999px; font-weight: 700;
+}
+.tour-region-badge {
+  font-size: 0.65rem; padding: 0.1rem 0.35rem; background: #e0f2fe; color: #0369a1; border-radius: 2px; font-weight: 700; margin-left: 0.2rem;
+}
+.auto-detect-success-badge {
+  font-size: 0.725rem; font-weight: 700; color: #047857; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border: 1px solid #6ee7b7; padding: 0.3rem 0.65rem; border-radius: 2px; box-shadow: 0 2px 5px rgba(16, 185, 129, 0.2); transition: all 0.3s ease;
+}
+.section-total-badge { color: var(--pricing-danger); font-weight: 700; margin-left: 0.4rem; font-size: 0.775rem; }
+
+/* Range Slider */
+.slider-container { display: flex; flex-direction: column; gap: 0.25rem; }
+.slider-header { display: flex; justify-content: space-between; align-items: center; }
+#markup-val { font-weight: 700; color: var(--pricing-accent); }
+input[type="range"] {
+  appearance: none; background: var(--pricing-border); height: 4px; border-radius: 2px; padding: 0; outline: none; cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--pricing-accent); cursor: pointer;
+}
+
+/* 3. SIDEBAR & NAVIGATION */
+.pricing-sidebar {
+  width: 390px; min-width: 280px; max-width: 650px; position: relative; background-color: #ffffff; border-right: 1px solid var(--pricing-border); display: flex; flex-direction: column; flex-shrink: 0;
+}
+.sidebar-resizer {
+  position: absolute; top: 0; right: -4px; width: 8px; height: 100%; cursor: col-resize; user-select: none; z-index: 50; transition: background-color 0.15s ease;
+}
+.sidebar-resizer:hover, .sidebar-resizer.resizing {
+  background-color: var(--pricing-accent);
+}
+.sidebar-header, .sidebar-search, .sidebar-filters, .sidebar-footer { padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--pricing-border); }
+.sidebar-header-row { display: flex; justify-content: space-between; align-items: center; gap: 0.3rem; }
+.sidebar-header-row h2 { margin: 0; font-size: 0.95rem; white-space: nowrap; }
+.sidebar-header-actions { display: flex; gap: 0.25rem; }
+.sidebar-filter-row { display: flex; gap: 0.2rem; flex-wrap: wrap; margin-bottom: 0.2rem; }
+.sidebar-filter-btn {
+  padding: 0.15rem 0.4rem; border: 1px solid var(--pricing-border); border-radius: 2px; background: #ffffff;
+  color: var(--pricing-text-muted); cursor: pointer; font-weight: 600; transition: all 0.15s ease; white-space: nowrap;
+}
+.sidebar-filter-btn.active, .sidebar-filter-btn:hover:not(.active) {
+  background: var(--pricing-accent) !important; color: #ffffff !important; border-color: var(--pricing-accent) !important;
+}
+.tours-list { flex: 1; list-style: none; padding: 0; margin: 0; overflow-y: auto; }
+.tours-list li {
+  padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--pricing-border); cursor: pointer; transition: all 0.15s ease;
+  display: flex; justify-content: space-between; align-items: center; gap: 0.35rem; min-height: 32px;
+}
+.tours-list li:hover { background-color: #f8fafc; }
+.tours-list li.active { background-color: var(--pricing-accent-light); border-left: 3px solid var(--pricing-accent); }
+.tours-list li .tour-item-main { display: flex; align-items: center; gap: 0.35rem; min-width: 0; flex: 1; overflow: hidden; }
+.tours-list li .tour-code { font-weight: 700; color: var(--pricing-accent); flex-shrink: 0; white-space: nowrap; }
+.tours-list li .tour-name { color: var(--pricing-text); flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tours-list li .tour-meta { color: var(--pricing-text-muted); flex-shrink: 0; white-space: nowrap; }
+
+/* Trade Fair Venue Sidebar Items */
+.tours-list li.tradefair-venue-item {
+  padding: 0.45rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.25rem;
+}
+.tradefair-venue-item .venue-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.35rem;
+}
+.tradefair-venue-item .venue-row-bottom {
+  font-size: 0.7rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.1rem;
+}
+.tradefair-venue-item .venue-row-bottom strong {
+  color: #0284c7;
+}
+
+/* Venue Shared Fairs Notice */
+.venue-shared-notice {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--pricing-accent);
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+.venue-shared-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+.venue-shared-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+.venue-shared-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+.venue-fairs-pills {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+.venue-fair-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.725rem;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+.venue-fair-pill:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+.venue-shared-desc {
+  font-size: 0.725rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* 4. MAIN LAYOUT, HEADER & SECTIONS */
+.pricing-engine-container {
+  display: flex; flex-direction: column; min-height: 100vh; background-color: var(--pricing-bg); color: var(--pricing-text);
+}
+.pricing-engine-header {
+  position: sticky; top: 0; z-index: 1000; background: #ffffff; border-bottom: 2px solid var(--pricing-border);
+  padding: 0.35rem 1rem; display: flex; align-items: center; gap: 0.75rem; justify-content: space-between; flex-wrap: wrap;
+}
+.pricing-engine-header-left {
+  display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0; line-height: 1.15; cursor: pointer; user-select: none;
+}
+.pricing-engine-header-left h1 {
+  font-size: 1.05rem !important; font-weight: 800 !important; color: var(--pricing-accent); margin: 0; display: inline;
+}
+.pricing-engine-header-left .header-badge { font-size: 0.675rem; color: #64748b; font-weight: 700; margin-left: 0.2rem; }
+.floating-nav-buttons { display: flex; gap: 0.35rem; align-items: center; flex: 0 1 auto; justify-content: center; margin: 0 0.5rem; }
+.nav-anchor-btn {
+  font-size: 0.775rem; padding: 0.25rem 0.55rem; flex: none; background: #ffffff; border: 1px solid var(--pricing-border);
+  border-radius: 2px; color: var(--pricing-text); cursor: pointer; font-weight: 600; transition: all 0.15s ease;
+}
+.nav-anchor-btn:hover, .nav-anchor-btn.active {
+  background-color: var(--pricing-accent) !important; color: #ffffff !important; border-color: var(--pricing-accent) !important;
+}
+.nav-anchor-btn.nav-b2b-highlight { background-color: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+.nav-anchor-btn.nav-itinerary-btn { background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+.floating-nav-actions { display: flex; gap: 0.35rem; align-items: center; flex-shrink: 0; }
+.btn-header-action {
+  height: 28px; font-size: 0.725rem; padding: 0 0.6rem; font-weight: 700; border: none; border-radius: 2px;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; white-space: nowrap; color: #ffffff;
+}
+.btn-header-draft { background-color: #0e7490; }
+.btn-header-draft:hover { background-color: #0891b2; }
+.btn-header-push { background-color: #2563eb; }
+.btn-header-push:hover { background-color: #1d4ed8; }
+.btn-header-recalc { background-color: #0284c7; }
+.btn-header-recalc:hover { background-color: #0369a1; }
+.btn-header-reset { background-color: #64748b; }
+.btn-header-reset:hover { background-color: #475569; }
+.btn-header-detect { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.btn-header-detect:hover { opacity: 0.95; }
+.btn-home {
+  font-size: 0.75rem; padding: 0.25rem 0.55rem; height: 28px; display: inline-flex; align-items: center; background: #ffffff;
+  border: 1px solid var(--pricing-border); color: var(--pricing-text-muted); border-radius: 2px; text-decoration: none; font-weight: 600; transition: all 0.15s ease;
+}
+.btn-home:hover { color: #000000; border-color: #475569; background-color: #f8fafc; }
+
+.pricing-engine-body {
+  flex: 1; padding: 0.5rem 1rem; display: flex; gap: 0.75rem; max-width: 100%; margin: 0; width: 100%; box-sizing: border-box;
+}
+.pricing-content { flex: 1; display: flex; flex-direction: column; gap: 0.6rem; min-width: 0; }
+.pricing-card { background: #ffffff; border: 1px solid var(--pricing-border); border-radius: 2px; padding: 0.75rem; }
+.control-section { background: #ffffff; border: 1px solid var(--pricing-border); border-radius: 2px; padding: 0.6rem; }
+.form-row { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }
+.form-col { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+.form-col.col-2 { flex: 2; }
+.form-col.col-3 { flex: 3; }
+.form-col.col-4 { flex: 4; }
+.form-col.col-5 { flex: 5; }
+.form-col.col-6 { flex: 6; }
+.form-col.col-8 { flex: 8; }
+.form-col-actions { justify-content: flex-end; display: flex; flex-direction: row; gap: 0.4rem; align-items: flex-end; }
+.form-group-section { border-bottom: 1px solid var(--pricing-border); padding-bottom: 0.6rem; margin-bottom: 0.6rem; }
+.form-group-section:last-child { border-bottom: none; margin-bottom: 0; }
+.form-group-section h3 { margin-top: 0; margin-bottom: 0.35rem; color: var(--pricing-text); border-left: 3px solid var(--pricing-accent); padding-left: 0.4rem; }
+.section-title-action { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; }
+.form-actions { display: flex; gap: 0.4rem; justify-content: flex-end; margin-top: 0.5rem; }
+
+/* Sub-tabs Bar & Manager Filters */
+.subtabs-bar {
+  display: flex; gap: 0.35rem; margin-bottom: 0.6rem; border-bottom: 1px solid var(--pricing-border); padding-bottom: 0.4rem;
+}
+.subtab-btn {
+  padding: 0.25rem 0.65rem; font-weight: 600; font-size: 0.75rem; border: 1px solid var(--pricing-border);
+  background: #f1f5f9; border-radius: 2px; color: var(--pricing-text-muted); cursor: pointer; outline: none; transition: all 0.15s ease;
+}
+.subtab-btn.active, .subtab-btn:hover:not(.active) {
+  background: #cbd5e1; color: #1e293b; font-weight: 700; border-color: #94a3b8;
+}
+.manager-toolbar {
+  margin-bottom: 0.5rem; display: flex; gap: 0.5rem; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;
+}
+.manager-toolbar-search { flex: 1; min-width: 240px; }
+.manager-filter-bar { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.15rem; flex-wrap: wrap; }
+.filter-group { display: flex; gap: 0.25rem; align-items: center; flex-shrink: 0; }
+.filter-group-label { font-size: 0.725rem; font-weight: 700; color: #64748b; white-space: nowrap; }
+.filter-pill,
+.btn-vehicle-filter, .btn-vehicle-days-filter, .btn-public-vehicle-filter, .btn-public-vehicle-days-filter,
+.btn-hotel-filter, .btn-hotel-star-filter, .btn-ticket-filter, .btn-meal-filter,
+.btn-golf-region-filter, .btn-settings-filter, .btn-airport-filter {
+  font-size: 0.7rem; padding: 0.15rem 0.45rem; border: 1px solid var(--pricing-border); border-radius: 2px;
+  background-color: #ffffff; cursor: pointer; font-weight: 600; color: var(--pricing-text-muted); transition: all 0.15s ease; white-space: nowrap;
+}
+.filter-pill.active,
+.btn-vehicle-filter.active, .btn-vehicle-days-filter.active, .btn-public-vehicle-filter.active, .btn-public-vehicle-days-filter.active,
+.btn-hotel-filter.active, .btn-hotel-star-filter.active, .btn-ticket-filter.active, .btn-meal-filter.active,
+.btn-golf-region-filter.active, .btn-settings-filter.active, .btn-airport-filter.active {
+  background-color: var(--pricing-accent) !important; color: #ffffff !important; border-color: var(--pricing-accent) !important; font-weight: 700;
+}
+.manager-actions-bar {
+  display: flex; gap: 0.4rem; justify-content: flex-end; margin-top: 0.5rem; align-items: center; flex-wrap: wrap;
+}
+
+/* Section 1 Helpers */
+.tour-info-header {
+  margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 0.3rem;
+}
+.tour-info-label { font-weight: 700; color: #1e293b; }
+.display-active-tour { color: var(--pricing-accent); font-weight: 600; text-overflow: ellipsis; overflow: hidden; }
+.tour-action-bar { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
+
+/* Section 2: Vehicle Input Table */
+.vehicle-input-table { width: 100%; border-collapse: collapse; border: 1px solid var(--pricing-border); }
+.vehicle-input-table th, .vehicle-input-table td { padding: 0.2rem 0.3rem; border: 1px solid var(--pricing-border); }
+.vehicle-input-table thead th { font-weight: 600; color: #475569; background-color: #f8fafc; white-space: nowrap; }
+.vehicle-input-table tbody td input { width: 100%; border: none; outline: none; background: transparent; padding: 0.15rem 0.2rem; }
+.vehicle-input-table tbody td input.text-right { text-align: right; }
+.vehicle-total-row { background-color: #f1f5f9; font-weight: 700; }
+.vehicle-total-row .total-label { padding-left: 0.3rem; font-size: 0.75rem; text-transform: uppercase; }
+.vehicle-total-row td input[readonly] {
+  padding: 0.15rem 0.3rem; text-align: right; background-color: #e2e8f0; font-weight: 700; border: none; outline: none; width: 100%;
+}
+
+/* Section 3: Hotel Details */
+
+
+/* Dynamic Input Tables (Hotels, Tickets, Meals, Guide, Vehicles) */
+.dynamic-input-table { width: 100%; border-collapse: collapse; border: 1px solid var(--pricing-border); }
+.dynamic-input-table th, .dynamic-input-table td { padding: 0.2rem 0.3rem; border: 1px solid var(--pricing-border); vertical-align: middle; }
+.dynamic-input-table thead th { font-weight: 600; color: #475569; background-color: #f8fafc; white-space: nowrap; }
+.dynamic-input-table tbody td input,
+.dynamic-input-table tbody td select { width: 100%; min-width: 0; box-sizing: border-box; border: none; outline: none; background: transparent; padding: 0.15rem 0.25rem; }
+.dynamic-input-table tbody td input.text-right { text-align: right; }
+.dynamic-input-table tbody td input.text-center,
+.dynamic-input-table tbody td select.text-center { text-align: center; }
+.dynamic-input-table tbody td:focus-within {
+  background-color: #eff6ff !important;
+  box-shadow: inset 0 0 0 1.5px var(--pricing-accent);
+}
+.dynamic-input-table tbody tr:hover td { background-color: #f8fafc; }
+.hotel-night-label { font-weight: 700; color: var(--pricing-accent); white-space: nowrap; }
+.hotel-perpax-display { background-color: #f1f5f9 !important; font-weight: 700; color: #475569; }
+.guide-row-total { background-color: #f1f5f9 !important; font-weight: bold; color: #475569; }
+.meal-item.excluded td input { text-decoration: line-through; opacity: 0.55; background-color: #f1f5f9; }
+
+/* Vehicle Manager Cells & Badges */
+.tpl-route-name-wrapper { display: flex; align-items: center; gap: 0.35rem; width: 100%; }
+.tpl-route-name-wrapper input { flex: 1; min-width: 120px; font-weight: 600; }
+.tpl-public-name { flex: 1; min-width: 120px; font-weight: 600; color: var(--pricing-text); white-space: nowrap; }
+.tpl-public-meta { font-weight: 600; color: #475569; }
+.tpl-public-price { font-weight: 700; color: #047857; text-align: right; }
+.resolved-provinces-badges, .resolved-public-provinces-badges { display: flex; gap: 0.2rem; align-items: center; flex-wrap: wrap; flex-shrink: 0; }
+.province-badge { background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; padding: 0.05rem 0.25rem; border-radius: 2px; font-size: 0.65rem; white-space: nowrap; font-weight: 600; line-height: 1.2; }
+.tpl-public-checkbox { cursor: pointer; width: 15px; height: 15px; accent-color: var(--pricing-primary); margin: 0 auto; display: block; }
+.btn-delete-tpl { background: transparent; border: none; color: var(--pricing-text-muted); font-size: 1.15rem; cursor: pointer; line-height: 1; padding: 0.1rem 0.35rem; border-radius: 2px; transition: all 0.15s ease; }
+.btn-delete-tpl:hover { background-color: var(--pricing-danger-light); color: var(--pricing-danger); }
+
+/* Golf Manager Cells */
+.golf-manager-table .col-golf-name,
+.golf-manager-table .col-golf-other {
+  white-space: normal;
+  word-break: break-word;
+}
+.col-golf-price-mobile { display: none; }
+.btn-view-golf-detail {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.68rem;
+  background: #f8fafc;
+  border: 1px solid var(--pricing-border);
+  border-radius: 2px;
+  cursor: pointer;
+  color: var(--pricing-accent);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.btn-view-golf-detail:hover {
+  background: var(--pricing-accent);
+  border-color: var(--pricing-accent);
+  color: #ffffff;
+}
+
+/* Services Manager (Fast Track & Visa) */
+.fasttrack-manager-table td, .visa-manager-table td { vertical-align: middle; }
+.service-price-cell-wrap { display: flex; align-items: center; justify-content: flex-end; gap: 0.2rem; width: 100%; }
+.service-price-cell-wrap input { flex: 1; text-align: right; }
+.service-price-cell-wrap span { font-size: 0.725rem; font-weight: 700; color: #64748b; }
+.cell-ft-margin, .cell-visa-margin { font-weight: 700; color: #2563eb; }
+
+/* 5. EXCEL-STYLE RESULT TABLE & DATA MANAGERS */
+.form-group-section, #tradefair-manager-container {
+  width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box;
+}
+.data-manager-table-scroll {
+  width: 100%; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--pricing-border); border-radius: 2px;
+  background-color: #ffffff;
+}
+.pricing-result-table { width: 100%; border-collapse: collapse; table-layout: auto; border: 1px solid var(--pricing-border); }
+.tradefair-manager-table {
+  width: 100%; border-collapse: collapse; table-layout: auto;
+}
+.tradefair-manager-table th, .tradefair-manager-table td {
+  padding: 0.25rem 0.35rem; border: 1px solid var(--pricing-border); vertical-align: middle;
+}
+.tradefair-manager-table input,
+.tradefair-manager-table select {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  background-color: #ffffff;
+  border: 1px solid var(--pricing-border);
+  border-radius: 2px;
+  padding: 0.15rem 0.35rem;
+  height: 26px;
+  color: var(--pricing-text);
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.tradefair-manager-table input:hover,
+.tradefair-manager-table select:hover {
+  border-color: #94a3b8;
+}
+.tradefair-manager-table input:focus,
+.tradefair-manager-table select:focus {
+  border-color: var(--pricing-accent);
+  background-color: #f0f7ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+.tradefair-manager-table input[type="number"] {
+  text-align: right;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.vehicle-manager-table, .public-vehicle-manager-table,
+.vehicle-cost-table, .public-vehicle-cost-table, .hotel-manager-table,
+.ticket-manager-table, .meal-manager-table, .settings-manager-table,
+.fasttrack-manager-table, .visa-manager-table, .golf-manager-table {
+  width: 100%; border-collapse: collapse; white-space: nowrap;
+}
+.pricing-result-table th, .pricing-result-table td { padding: 0.25rem 0.35rem; border: 1px solid var(--pricing-border); vertical-align: middle; }
+.data-manager-table-scroll th, .data-manager-table-scroll td { padding: 0.3rem 0.45rem; border: 1px solid var(--pricing-border); vertical-align: middle; }
+.pricing-result-table th,
+.data-manager-table-scroll thead th {
+  background-color: #f1f5f9; color: var(--pricing-text); font-weight: 700; border-bottom: 1px solid var(--pricing-border);
+}
+
+/* Column Resizer (Google Sheets drag-to-resize) */
+th.resizable-th { position: relative; overflow: visible; }
+.col-resizer {
+  position: absolute; top: 0; right: -3px; width: 6px; height: 100%; cursor: col-resize; user-select: none; z-index: 20; transition: background-color 0.15s ease;
+}
+.col-resizer:hover, .col-resizer.resizing { background-color: var(--pricing-accent); }
+body.table-resizing, body.table-resizing * { cursor: col-resize !important; user-select: none !important; }
+th.resizable-th:last-child .col-resizer { display: none !important; }
+
+/* Sticky first column */
+.pricing-result-table th:first-child, .pricing-result-table td:first-child,
+.vehicle-manager-table th:first-child, .vehicle-manager-table td:first-child,
+.public-vehicle-manager-table th:first-child, .public-vehicle-manager-table td:first-child,
+.vehicle-cost-table th:first-child, .vehicle-cost-table td:first-child,
+.public-vehicle-cost-table th:first-child, .public-vehicle-cost-table td:first-child,
+.hotel-manager-table th:first-child, .hotel-manager-table td:first-child {
+  position: sticky; left: 0; background-color: #ffffff; z-index: 5; font-weight: 600; border-right: 1px solid var(--pricing-border);
+}
+.pricing-result-table thead th:first-child,
+.data-manager-table-scroll thead th:first-child,
+.vehicle-manager-table thead th:first-child,
+.public-vehicle-manager-table thead th:first-child {
+  background-color: #f1f5f9; z-index: 15;
+}
+.vehicle-manager-table tbody tr:hover td:first-child,
+.public-vehicle-manager-table tbody tr:hover td:first-child {
+  background-color: #f8fafc;
+}
+
+/* Result Actions Header & Divider Inputs */
+.result-actions { display: flex; gap: 0.35rem; align-items: center; flex-wrap: wrap; }
+.pax-divider-input {
+  width: 38px; font-size: 0.725rem; font-weight: 700; text-align: center; border: 1px solid var(--pricing-border);
+  border-radius: 2px; margin-top: 0.15rem; background-color: #ffffff; outline: none; padding: 0.05rem;
+}
+
+/* Result Table Row Classes */
+.pricing-result-table th { vertical-align: middle; }
+.pricing-result-table td { text-align: right; }
+.pricing-result-table td:first-child { text-align: left; padding-left: 0.5rem; }
+.pricing-result-table tr:hover td { background-color: #f8fafc; }
+.row-sub td { color: #334155; }
+.row-subtotal td { font-weight: 600; background-color: #f8fafc; }
+
+/* Surcharge & TL Share */
+#row-other-usd { background-color: #ffffff; }
+.surcharge-cell-content { display: flex; align-items: center; justify-content: space-between; gap: 0.35rem; width: 100%; }
+#row-tl-share { background-color: #ffffff; }
+#row-tl-share .cell-label { font-weight: 600; color: var(--pricing-text); }
+
+/* Profit & Margin Rows */
+.row-profit td { background-color: #ffffff; color: var(--pricing-text); font-weight: 600; }
+.row-b2b-profit td { background-color: #ffffff; color: var(--pricing-text); font-weight: 600; }
+.profit-cell-content { display: flex; align-items: center; justify-content: space-between; gap: 0.3rem; }
+.profit-cell-title { display: flex; align-items: center; gap: 0.25rem; }
+.profit-percent-wrap { display: flex; align-items: center; gap: 0.1rem; font-size: 0.725rem; }
+.inline-percent-input {
+  width: 38px; text-align: center; font-weight: 700; border-radius: 2px; padding: 0.05rem; background-color: #ffffff; outline: none; border: 1px solid var(--pricing-border); color: var(--pricing-text);
+}
+.profit-subtext-b2c { font-size: 10px; color: var(--pricing-text-muted); font-weight: 500; margin-top: 2px; text-align: left; }
+.profit-subtext-b2b { font-size: 10px; color: var(--pricing-text-muted); font-weight: 500; margin-top: 2px; text-align: left; }
+
+/* Hotel Result Option Rows */
+#row-hotel-4star { background-color: #ffffff; }
+#row-hotel-4star { border-top: 1px solid var(--pricing-border); }
+#row-b2c-4star { background-color: #ffffff; border-bottom: 1px solid var(--pricing-border); }
+#row-b2c-4star .cell-label { font-weight: 700; color: var(--pricing-text); }
+#row-final-4star { background-color: #ffffff; border-bottom: 1px solid var(--pricing-border); }
+#row-final-4star .cell-label { font-weight: 700; color: var(--pricing-text); }
+
+.row-markup td { font-style: italic; color: var(--pricing-text-muted); }
+.row-final-price td { font-weight: 700; border-top: 1px solid var(--pricing-border); border-bottom: 1px solid var(--pricing-border); color: var(--pricing-text); }
+.row-section-toggle {
+  background-color: #f8fafc; cursor: pointer; font-weight: 600; border-top: 1px solid var(--pricing-border); transition: background-color 0.2s;
+}
+.row-section-toggle:hover { background-color: #f1f5f9; }
+.row-section-toggle td { text-align: left; padding: 0.5rem 0.6rem; color: var(--pricing-text); font-size: 0.75rem; user-select: none; }
+
+/* Mobile Vertical Price Summary Card */
+.mobile-price-summary-card {
+  margin-top: 0.5rem; padding: 0.5rem; background-color: #f8fafc; border: 1px solid var(--pricing-border); border-radius: 2px;
+}
+.mobile-summary-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; }
+.mobile-summary-title { margin: 0; font-size: 0.775rem; font-weight: 700; color: #1e40af; }
+.btn-copy-mobile-summary { font-size: 0.65rem; height: 22px; padding: 0.15rem 0.4rem; background-color: #1e40af; border-color: #1e40af; }
+.mobile-summary-star-row { display: flex; gap: 0.3rem; align-items: center; margin-bottom: 0.4rem; }
+.mobile-summary-star-label { font-size: 0.675rem; font-weight: 700; color: #475569; }
+#select-mobile-summary-star { width: auto; height: 22px; padding: 0 0.2rem; font-size: 0.7rem; border-radius: 2px; }
+#mobile-summary-list {
+  font-family: monospace; font-size: 0.725rem; color: #0f172a; background-color: #ffffff;
+  border: 1px solid #e2e8f0; border-radius: 2px; padding: 0.35rem; line-height: 1.4; white-space: pre-wrap;
+}
+
+/* 6. GOOGLE SHEETS BOTTOM BAR */
+.sheets-bottom-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 32px; background-color: #f8f9fa;
+  border-top: 1px solid #dadce0; display: flex; align-items: center; padding: 0 8px; z-index: 9999; user-select: none;
+}
+.sheets-tabs-scroll { display: flex; align-items: flex-end; height: 100%; gap: 2px; overflow-x: auto; scrollbar-width: thin; }
+.sheet-tab-btn, .tab-btn {
+  height: 27px; padding: 0 10px; font-weight: 500; color: #5f6368; background-color: #f1f3f4; border: 1px solid #dadce0;
+  border-bottom: none; border-radius: 2px 2px 0 0; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; outline: none;
+}
+.sheet-tab-btn:hover, .tab-btn:hover { background-color: #e8eaed; color: #202124; }
+.sheet-tab-btn.active, .tab-btn.active {
+  background-color: #ffffff !important; color: var(--pricing-accent) !important; font-weight: 700 !important;
+  border-top: 2px solid var(--pricing-accent) !important; border-bottom: 2px solid #ffffff !important; margin-top: -2px; z-index: 2;
+}
+.pricing-content, .pricing-engine-body { padding-bottom: 48px !important; }
+.p-floating-actions { display: none !important; }
+
+/* 8. MODALS & ITINERARY DRAWER */
+.new-tour-modal-overlay {
+  position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px); z-index: 10000; display: flex; align-items: center; justify-content: center;
+}
+.new-tour-modal { background: #ffffff; width: 440px; max-width: 92%; border-radius: 2px; border: 1px solid var(--pricing-border); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+.new-tour-modal-header, .new-tour-modal-footer { padding: 0.6rem 1rem; background: #f8fafc; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--pricing-border); }
+.new-tour-modal-footer { border-top: 1px solid var(--pricing-border); border-bottom: none; justify-content: flex-end; gap: 0.4rem; }
+.new-tour-modal-footer .btn { font-size: 0.75rem; font-weight: 700; padding: 0.45rem 1rem; border-radius: 2px; cursor: pointer; }
+.new-tour-modal-body { padding: 0.85rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.modal-form-group { display: flex; flex-direction: column; gap: 0.2rem; }
+.modal-form-row { display: flex; gap: 0.5rem; }
+.modal-form-col { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+.btn-close-modal, .btn-close-drawer { background: none; border: none; font-size: 1.3rem; color: #94a3b8; cursor: pointer; line-height: 1; }
+.btn-close-modal:hover, .btn-close-drawer:hover { color: var(--pricing-danger); }
+.itinerary-drawer {
+  position: fixed; top: 55px; right: -1200px; width: clamp(450px, 55vw, 900px); height: calc(100vh - 55px);
+  background: #ffffff; border-left: 1px solid var(--pricing-border); box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+  z-index: 999; display: flex; flex-direction: column; transition: right 0.25s ease;
+}
+.itinerary-drawer.open { right: 0; }
+.itinerary-drawer-header { padding: 0.6rem 1rem; background: #f8fafc; border-bottom: 1px solid var(--pricing-border); display: flex; justify-content: space-between; align-items: center; }
+.itinerary-drawer-header h3 { flex: 1; }
+.itinerary-drawer-body { padding: 0.75rem; overflow-y: auto; flex: 1; }
+.itinerary-drawer-empty { color: #94a3b8; text-align: center; padding-top: 2rem; font-style: italic; }
+.drawer-day-card { border: 1px solid var(--pricing-border); border-radius: 2px; padding: 0.5rem; margin-bottom: 0.5rem; background: #ffffff; }
+.drawer-day-title { font-weight: 700; color: var(--pricing-accent); display: flex; justify-content: space-between; }
+.btn-toggle-drawer { position: fixed; bottom: 2rem; right: 2rem; z-index: 998; background: var(--pricing-accent); color: #ffffff; border: none; border-radius: 2px; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; }
+
+/* 9. COMMON UTILITIES */
+.flex { display: flex !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-left { text-align: left !important; }
+.space-between { justify-content: space-between !important; }
+.items-center { align-items: center !important; }
+.gap-05 { gap: 0.5rem !important; }
+.mb-2 { margin-bottom: 0.4rem !important; }
+.mb-3 { margin-bottom: 0.8rem !important; }
+.m-0 { margin: 0 !important; }
+.flex-grow { flex-grow: 1 !important; }
+.hint-text-muted { font-size: 0.725rem; color: #64748b; }
+.input-exchange-rate { font-weight: 700; color: #2563eb; }
+.settings-hint-col { font-size: 0.725rem; color: #64748b; padding-top: 1rem; }
+.table-empty-hint { text-align: center; color: #94a3b8; padding: 0.5rem; }
+.quickview-empty-hint { text-align: center; padding: 2rem; color: #64748b; }
+
+/* 10. RESPONSIVE COMPACT RULES */
+.mobile-only { display: none; }
+.desktop-only { display: inline; }
+
+@media (max-width: 1023px) {
+  .pricing-sidebar { display: none !important; }
+  .control-section { display: block !important; }
+}
+@media (min-width: 1024px) {
+  .control-section { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  .pricing-engine-body { padding: 0.25rem !important; gap: 0.35rem !important; }
+  .pricing-card { padding: 0.4rem !important; }
+  .form-row { flex-direction: column !important; gap: 0.25rem !important; }
+  .form-col { width: 100% !important; }
+  .pricing-result-table th:first-child, .pricing-result-table td:first-child {
+    max-width: 110px !important; white-space: normal !important;
+  }
+  .pax-divider-input { width: 28px !important; height: 18px !important; padding: 0 !important; }
+  .pax-lbl { display: block !important; font-size: 10px !important; color: #64748b !important; }
+  th.has-tl .pax-lbl { display: none !important; }
+  .tl-lbl { display: block !important; font-size: 10px !important; color: var(--pricing-text) !important; font-weight: bold !important; }
+  .tl-lbl-text { display: none !important; }
+  .mobile-only { display: inline !important; }
+  .desktop-only { display: none !important; }
+  .mobile-price-summary-card.mobile-only { display: block !important; }
+  .search-tours-mobile-col { display: block !important; }
+
+  /* Data manager tables mobile scroll & actions */
+  .vehicle-manager-table, .public-vehicle-manager-table,
+  .vehicle-cost-table, .public-vehicle-cost-table, .hotel-manager-table { min-width: 780px !important; width: max-content !important; }
+  .vehicle-filter-bar, .hotel-filter-bar {
+    width: 100% !important; overflow-x: auto !important; flex-wrap: nowrap !important; -webkit-overflow-scrolling: touch; padding-bottom: 4px !important;
+  }
+  .vehicle-bottom-actions, .hotel-bottom-actions {
+    justify-content: stretch !important; gap: 0.4rem !important; flex-wrap: wrap !important;
+  }
+  .vehicle-bottom-actions .btn, .hotel-bottom-actions .btn { flex: 1 1 calc(50% - 0.4rem) !important; }
+  .vehicle-bottom-actions #btn-save-tpl-pricing, .hotel-bottom-actions #btn-save-tpl-hotels { flex: 1 1 100% !important; font-weight: 700 !important; }
+
+  /* Golf mobile columns */
+  .col-golf-stt, .col-golf-region, .col-golf-action, .col-golf-desktop { display: none !important; }
+  .col-golf-price-mobile { display: table-cell !important; }
+}
+
+/* Public Vehicle Pricing Customization & Profit */
+.public-vehicle-manager-table th,
+.public-vehicle-manager-table td {
+  vertical-align: middle;
+}
+
+.tpl-margin-input {
+  width: 58px;
+  height: 28px;
+  padding: 2px 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+.tpl-margin-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.tpl-public-cell {
+  padding: 4px 6px !important;
+}
+
+.tpl-public-cell-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.tpl-usd-input-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tpl-usd-prefix {
+  position: absolute;
+  left: 5px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.tpl-public-usd-input {
+  width: 58px;
+  height: 25px;
+  padding: 2px 4px 2px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: right;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #047857;
+  transition: all 0.2s ease;
+}
+.tpl-public-usd-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+.tpl-public-usd-input.is-custom {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.tpl-public-divider {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 1px;
+  user-select: none;
+}
+
+.tpl-profit-container {
+  display: inline-flex;
+  align-items: center;
+  min-width: 34px;
+  justify-content: flex-start;
+}
+
+.tpl-public-profit {
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.tpl-public-profit.profit-pos {
+  color: #059669; /* Emerald */
+}
+
+.tpl-public-profit.profit-neg {
+  color: #dc2626; /* Red */
+}
+
+.tpl-public-profit.profit-zero,
+.tpl-public-profit.profit-muted {
+  color: #94a3b8; /* Slate */
+}
+
+#public-vehicle-quick-margin-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  border: 1px dashed #cbd5e1;
+}

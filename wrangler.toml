@@ -1,0 +1,19 @@
+name = "rentacarvietnam"
+compatibility_date = "2024-10-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+# ==============================================================================
+# Cloudflare D1 Database Binding (Dùng lưu trữ đơn đặt xe / báo giá)
+# ==============================================================================
+[[d1_databases]]
+binding = "DB"
+database_name = "rentacarvietnam-db"
+database_id = "dien_database_id_vao_day"
+
+# ==============================================================================
+# Cloudflare R2 Storage Binding (Dùng lưu trữ ảnh xe, tour và cẩm nang)
+# ==============================================================================
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "rentacarvietnam-media"

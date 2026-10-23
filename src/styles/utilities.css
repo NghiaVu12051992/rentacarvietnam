@@ -1,0 +1,342 @@
+/* ==========================================================================
+ * TẦNG 4: FUNCTIONAL UTILITIES & MODIFIERS (src/styles/utilities.css)
+ * Tiện ích bố cục một mục đích và modifier dùng chung:
+ * 1. Grid System (.p-grid-2, .p-grid-3, .p-grid-4)
+ * 2. Flexbox & Alignment (.p-flex, .p-flex-col, .p-items-*, .p-justify-*)
+ * 3. Spacing (Margin, Padding, Gap)
+ * 4. Typography (Alignment, Size, Weight, Color)
+ * 5. Visibility & Sizing (.p-hide-*, .p-w-full, .p-img-rounded)
+ * 6. Section Layout Containers (.p-section, .p-section-title, .p-block-inner)
+ * 7. Shared List (.p-icon-list)
+ * ========================================================================== */
+
+/* =====================================================
+ * 1. GRID SYSTEM (Lưới co giãn tự động responsive)
+ * ===================================================== */
+.p-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: var(--grid-v-gap-desktop, var(--space-lg));
+}
+
+.p-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: var(--grid-v-gap-desktop, var(--space-lg));
+}
+
+.p-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--grid-v-gap-desktop, var(--space-lg));
+}
+
+.p-grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--grid-v-gap-desktop, var(--space-lg));
+}
+
+.p-grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--grid-v-gap-desktop, var(--space-lg));
+}
+
+@media (max-width: 992px) {
+    .p-grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .p-grid-2,
+    .p-grid-3,
+    .p-grid-4,
+    .p-grid-cols-2,
+    .p-grid-cols-3 {
+        grid-template-columns: 1fr;
+        gap: var(--grid-v-gap-mobile, var(--space-md));
+    }
+}
+
+/* =====================================================
+ * 2. FLEXBOX & ALIGNMENT
+ * ===================================================== */
+.p-flex        { display: flex; }
+.p-flex-col    { display: flex; flex-direction: column; }
+.p-flex-wrap   { flex-wrap: wrap; }
+.p-flex-center { display: flex; justify-content: center; align-items: center; }
+.p-flex-between{ display: flex; justify-content: space-between; align-items: center; }
+
+.p-items-start  { align-items: flex-start; }
+.p-items-center { align-items: center; }
+.p-items-end    { align-items: flex-end; }
+
+.p-justify-center  { justify-content: center; }
+.p-justify-between { justify-content: space-between; }
+.p-justify-around  { justify-content: space-around; }
+
+.p-flex-1   { flex: 1; min-width: 0; }
+.p-shrink-0 { flex-shrink: 0; }
+
+/* =====================================================
+ * 3. SPACING UTILITIES (Gap, Margin, Padding)
+ * ===================================================== */
+/* Gaps */
+.p-gap-3xs { gap: var(--space-3xs); }
+.p-gap-2xs { gap: var(--space-2xs); }
+.p-gap-xs  { gap: var(--space-xs); }
+.p-gap-sm  { gap: var(--space-sm); }
+.p-gap-md  { gap: var(--space-md); }
+.p-gap-lg  { gap: var(--space-lg); }
+.p-gap-xl  { gap: var(--space-xl); }
+.p-gap-2xl { gap: var(--space-2xl); }
+
+/* Margin Bottom */
+.p-mb-0   { margin-bottom: 0 !important; }
+.p-mb-3xs { margin-bottom: var(--space-3xs); }
+.p-mb-2xs { margin-bottom: var(--space-2xs); }
+.p-mb-xs  { margin-bottom: var(--space-xs); }
+.p-mb-sm  { margin-bottom: var(--space-sm); }
+.p-mb-md  { margin-bottom: var(--space-md); }
+.p-mb-lg  { margin-bottom: var(--space-lg); }
+.p-mb-xl  { margin-bottom: var(--space-xl); }
+.p-mb-2xl { margin-bottom: var(--space-2xl); }
+
+/* Margin Top */
+.p-mt-0   { margin-top: 0 !important; }
+.p-mt-3xs { margin-top: var(--space-3xs); }
+.p-mt-2xs { margin-top: var(--space-2xs); }
+.p-mt-xs  { margin-top: var(--space-xs); }
+.p-mt-sm  { margin-top: var(--space-sm); }
+.p-mt-md  { margin-top: var(--space-md); }
+.p-mt-lg  { margin-top: var(--space-lg); }
+.p-mt-xl  { margin-top: var(--space-xl); }
+.p-mt-2xl { margin-top: var(--space-2xl); }
+.p-mt-3xl { margin-top: var(--space-3xl); }
+.p-mt-auto{ margin-top: auto; }
+
+/* Margin Inline & Reset */
+.p-mr-xs  { margin-inline-end: var(--space-xs); }
+.p-ml-xs  { margin-inline-start: var(--space-xs); }
+.p-m-0    { margin: 0 !important; }
+
+/* Margin Block (Vertical) */
+.p-my-xs  { margin-block: var(--space-xs); }
+.p-my-sm  { margin-block: var(--space-sm); }
+.p-my-md  { margin-block: var(--space-md); }
+.p-my-lg  { margin-block: var(--space-lg); }
+.p-my-xl  { margin-block: var(--space-xl); }
+.p-my-2xl { margin-block: var(--space-2xl); }
+
+/* Padding All */
+.p-p-0    { padding: 0 !important; }
+.p-p-2xs  { padding: var(--space-2xs); }
+.p-p-xs   { padding: var(--space-xs); }
+.p-p-sm   { padding: var(--space-sm); }
+.p-p-md   { padding: var(--space-md); }
+.p-p-lg   { padding: var(--space-lg); }
+.p-p-xl   { padding: var(--space-xl); }
+.p-p-2xl  { padding: var(--space-2xl); }
+
+/* Padding Top */
+.p-pt-0   { padding-top: 0 !important; }
+.p-pt-xs  { padding-top: var(--space-xs); }
+.p-pt-sm  { padding-top: var(--space-sm); }
+.p-pt-md  { padding-top: var(--space-md); }
+.p-pt-lg  { padding-top: var(--space-lg); }
+.p-pt-xl  { padding-top: var(--space-xl); }
+.p-pt-2xl { padding-top: var(--space-2xl); }
+.p-pt-3xl { padding-top: var(--space-3xl); }
+
+/* Padding Bottom */
+.p-pb-0   { padding-bottom: 0 !important; }
+.p-pb-xs  { padding-bottom: var(--space-xs); }
+.p-pb-sm  { padding-bottom: var(--space-sm); }
+.p-pb-md  { padding-bottom: var(--space-md); }
+.p-pb-lg  { padding-bottom: var(--space-lg); }
+.p-pb-xl  { padding-bottom: var(--space-xl); }
+.p-pb-2xl { padding-bottom: var(--space-2xl); }
+.p-pb-3xl { padding-bottom: var(--space-3xl); }
+
+/* Padding Block (Vertical) */
+.p-py-xs  { padding-block: var(--space-xs); }
+.p-py-sm  { padding-block: var(--space-sm); }
+.p-py-md  { padding-block: var(--space-md); }
+.p-py-lg  { padding-block: var(--space-lg); }
+.p-py-xl  { padding-block: var(--space-xl); }
+.p-py-2xl { padding-block: var(--space-2xl); }
+
+/* =====================================================
+ * 4. TYPOGRAPHY UTILITIES
+ * ===================================================== */
+/* Alignment */
+.p-text-center { text-align: center; }
+.p-text-left   { text-align: left; }
+
+/* Font Sizes */
+.p-text-3xs { font-size: var(--font-size-3xs); }
+.p-text-2xs { font-size: var(--font-size-2xs); }
+.p-text-xs  { font-size: var(--font-size-xs); }
+.p-text-sm  { font-size: var(--font-size-sm); }
+.p-text-base{ font-size: var(--font-size-base); }
+.p-text-md  { font-size: var(--font-size-md); }
+.p-text-lg  { font-size: var(--font-size-lg); }
+.p-text-xl  { font-size: var(--font-size-xl); }
+.p-text-2xl { font-size: var(--font-size-2xl); }
+.p-text-3xl { font-size: var(--font-size-3xl); }
+.p-text-4xl { font-size: var(--font-size-4xl); }
+
+/* Font Weights */
+.p-font-normal   { font-weight: var(--font-weight-normal); }
+.p-font-medium   { font-weight: var(--font-weight-medium); }
+.p-font-semibold { font-weight: var(--font-weight-semibold); }
+.p-font-bold     { font-weight: var(--font-weight-bold); }
+.p-font-black    { font-weight: var(--font-weight-black); }
+
+/* Text Colors */
+.p-text-muted       { color: var(--color-text-muted); }
+.p-text-primary     { color: var(--color-primary); }
+.p-text-navy        { color: var(--color-navy); }
+.p-text-white       { color: var(--color-white); }
+.p-text-white-muted { color: var(--color-white-muted); }
+.p-text-success     { color: var(--color-success); }
+.p-text-danger      { color: var(--color-danger); }
+.p-text-accent      { color: var(--color-accent-dark); }
+.p-text-caution     { color: var(--color-caution); }
+.p-urgent-price     { color: var(--color-danger); font-weight: var(--font-weight-bold); }
+
+/* =====================================================
+ * 5. VISIBILITY & SIZING
+ * ===================================================== */
+@media (max-width: 768px) {
+    .p-hide-mobile { display: none !important; }
+}
+@media (min-width: 769px) {
+    .p-hide-desktop { display: none !important; }
+}
+
+.p-hidden     { display: none !important; }
+.p-w-full     { width: 100% !important; }
+.p-h-100      { height: 100% !important; }
+.p-img-rounded{ border-radius: var(--radius-lg); width: 100%; height: auto; object-fit: cover; }
+.p-list-none  { list-style: none; }
+
+/* =====================================================
+ * 6. LAYOUT & STRUCTURAL CONTAINERS
+ * ===================================================== */
+
+
+/* --- Layout Main & Sidebar Grid Standards --- */
+.p-layout-main {
+    padding-block: var(--space-xl);
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .p-layout-main {
+        padding-bottom: 10rem;
+    }
+}
+
+.p-layout-overlap {
+    margin-top: calc(var(--space-3xl) * -1);
+    z-index: 10;
+    padding-top: 0 !important;
+}
+
+.p-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+    --toc-w: var(--toc-width, 16.25rem);
+    --sidebar-w: var(--sidebar-width, 21.25rem);
+}
+
+.p-sticky-wrapper {
+    position: sticky;
+    top: calc(var(--header-height, 7rem) + var(--space-sm));
+    transition: top 0.3s ease-in-out;
+}
+
+body.hide-header-scrolled .p-sticky-wrapper {
+    top: 1.25rem;
+}
+
+.p-layout-grid.has-sidebar {
+    grid-template-columns: 1fr var(--sidebar-w);
+}
+
+.p-layout-grid.has-sidebar-left {
+    grid-template-columns: var(--sidebar-w) 1fr;
+}
+
+.p-layout-grid.has-toc {
+    grid-template-columns: var(--toc-w) 1fr;
+}
+
+.p-layout-grid.has-sidebar.has-toc {
+    grid-template-columns: var(--toc-w) 1fr var(--sidebar-w);
+    gap: var(--gap-xl);
+}
+
+@media (max-width: 1200px) {
+    .p-layout-grid {
+        --toc-w: 220px;
+        --sidebar-w: 300px;
+        gap: var(--gap-lg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .p-layout-grid,
+    .p-layout-grid.has-sidebar,
+    .p-layout-grid.has-sidebar-left,
+    .p-layout-grid.has-toc,
+    .p-layout-grid.has-sidebar.has-toc {
+        grid-template-columns: 1fr;
+        gap: var(--gap-xl);
+    }
+    
+    .p-layout-toc {
+        display: none; 
+    }
+
+    .p-layout-sidebar {
+        padding-inline: var(--block-padding-mobile);
+    }
+}
+
+.p-layout-content {
+    min-width: 0;
+}
+
+
+
+/* Page frames: one owner for page columns; content fills its assigned track. */
+.p-page-columns {
+    --page-side-width: var(--page-help-width);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--page-column-gap);
+    align-items: start;
+    width: 100%;
+}
+.p-page-columns--booking { --page-side-width: var(--page-booking-width); }
+.p-page-columns > *, .p-page-columns-main > *, .p-page-columns-side > * {
+    min-width: 0;
+}
+.p-page-columns-main, .p-page-columns-side, .p-page-columns-nav { width: 100%; min-width: 0; }
+@media (min-width: 1025px) {
+    .p-page-columns--2,
+    .p-page-columns--3 { grid-template-columns: minmax(0, 1fr) var(--page-side-width); }
+    .p-page-columns--3 > .p-page-columns-nav { grid-column: 1 / -1; }
+}
+@media (min-width: 1280px) {
+    .p-page-columns--3 { grid-template-columns: var(--page-navigation-width) minmax(0, 1fr) var(--page-side-width); }
+    .p-page-columns--3 > .p-page-columns-nav { grid-column: auto; }
+}
+@media (max-width: 640px) {
+    .p-page-columns { gap: var(--space-lg); }
+}

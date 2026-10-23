@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PageFrame from './PageFrame.astro';
+import ImageSlot from '../components/ImageSlot.astro';
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  imageAlt?: string;
+  policy?: boolean;
+  draft?: boolean;
+  columns?: 1 | 2 | 3;
+  headings?: { depth: number; slug: string; text: string }[];
+}
+const { title, description, category, image = '', imageAlt = '', policy = false, draft = false, columns, headings = [] } = Astro.props;
+const frameColumns = columns ?? (policy ? 1 : 2);
+---
+
+<BaseLayout title={`${title} | Hanoi Car & Bus Rental`} description={description} noindex={draft}>
+  <div class="p-container p-resource-page">
+    <nav class="p-resource-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="/resources/">Guide & Help</a>
+      {policy && <><span>/</span><a href="/resources/policies/">Policies</a></>}
+    </nav>
+    <PageFrame columns={frameColumns}>
+      {frameColumns === 3 && <nav slot="navigation" class="p-resource-sidebar" aria-label="On this page">
+        <h2>On this page</h2>
+        {headings.filter(heading => heading.depth === 2).map(heading => <a href={`#${heading.slug}`}>{heading.text}</a>)}
+      </nav>}
+      <article class="p-resource-article">
+        <header class="p-resource-header">
+          <span class="p-badge p-badge-primary">{category}</span>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </header>
+        {!policy && <ImageSlot src={image} alt={imageAlt || title} label={title} eager />}
+        {draft && <p class="p-resource-notice">Full policy details are being finalized. Please request the current terms from our team before confirming your booking.</p>}
+        <div class="p-resource-prose"><slot /></div>
+        <a href={policy ? '/resources/policies/' : '/resources/'} class="p-resource-link">{policy ? 'Back to all policies' : 'Back to Guide & Help'}</a>
+      </article>
+      {frameColumns > 1 && <aside slot="sidebar" class="p-resource-sidebar" aria-label="Related help">
+        <h2>More information</h2>
+        <a href="/resources/">Travel articles</a>
+        <a href="/resources/faq/">Frequently asked questions</a>
+        <a href="/resources/policies/">Policies & booking information</a>
+        <div class="p-resource-sidebar-contact">
+          <h2>Have a specific question?</h2>
+          <p>Tell our team about your trip and the details you need to confirm.</p>
+          <a href="/contact/" class="p-btn p-btn-primary">Contact our team</a>
+        </div>
+      </aside>}
+    </PageFrame>
+  </div>
+</BaseLayout>

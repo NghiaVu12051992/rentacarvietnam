@@ -1,0 +1,19 @@
+---
+import ImageSlot from './ImageSlot.astro';
+import type { ExploreCardData } from '../lib/homepage';
+interface Props { item: ExploreCardData }
+const { item } = Astro.props;
+---
+<a class:list={['p-explore-card', { 'p-explore-card--text': !item.image }]} href={item.href}>
+  {item.image && <div class="p-explore-card-media"><ImageSlot {...item.image} /></div>}
+  <div class="p-explore-card-body">
+    <span class="p-explore-eyebrow">{item.eyebrow}</span>
+    <h3>{item.title}</h3>
+    <p>{item.description}</p>
+  </div>
+  <div class="p-explore-card-footer">
+    {item.meta && <ul class="p-explore-meta">{item.meta.map(text => <li>{text}</li>)}</ul>}
+    {item.price && <div class="p-explore-price"><strong>{item.price.value}</strong><span>{item.price.context}</span></div>}
+    <span class="p-explore-card-link">View details</span>
+  </div>
+</a>

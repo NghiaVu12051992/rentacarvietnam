@@ -1,0 +1,62 @@
+---
+import BookingWizard from './BookingWizard.astro';
+interface Props { hasInlineWizard?: boolean }
+const { hasInlineWizard = false } = Astro.props;
+---
+
+<aside class="mobile-sticky-bar" aria-label="Quick Actions">
+  <div class="sticky-bar-inner">
+    <a href="https://wa.me/84900000000" class="p-btn p-btn-ghost sticky-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <button type="button" class="p-btn p-btn-primary sticky-btn" data-open-quote aria-haspopup="dialog" aria-controls="mobile-quote-dialog">Get a Quote</button>
+    <button type="button" class="p-btn p-btn-ghost sticky-btn" data-back-to-top>Back to top</button>
+  </div>
+</aside>
+
+{!hasInlineWizard && <div hidden data-quote-fallback><BookingWizard /></div>}
+
+<dialog class="p-quote-dialog" id="mobile-quote-dialog" aria-labelledby="mobile-quote-title">
+  <div class="p-quote-dialog-toolbar">
+    <h2 id="mobile-quote-title">Get a Quote</h2>
+    <button type="button" class="p-btn p-btn-outline" data-close-quote>Close</button>
+  </div>
+  <div class="p-quote-dialog-body" data-quote-dialog-body></div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#mobile-quote-dialog');
+  const dialogBody = dialog?.querySelector<HTMLElement>('[data-quote-dialog-body]');
+  const openButton = document.querySelector<HTMLButtonElement>('[data-open-quote]');
+  const closeButton = dialog?.querySelector<HTMLButtonElement>('[data-close-quote]');
+  const wizard = document.querySelector<HTMLElement>('[data-booking-wizard]');
+  let placeholder: Comment | null = null;
+  let savedScroll = 0;
+
+  openButton?.addEventListener('click', () => {
+    if (!dialog || !dialogBody || !wizard || dialog.open) return;
+    savedScroll = window.scrollY;
+    placeholder = document.createComment('Booking form original position');
+    wizard.before(placeholder);
+    document.documentElement.classList.add('p-quote-open');
+    // Move the existing form, preserving its values, step and listeners.
+    dialogBody.append(wizard);
+    dialog.showModal();
+    dialogBody.scrollTop = 0;
+    closeButton?.focus({ preventScroll: true });
+  });
+  closeButton?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
+  // Native dialog also handles Escape and keeps keyboard focus inside.
+  dialog?.addEventListener('close', () => {
+    if (placeholder && wizard) placeholder.replaceWith(wizard);
+    placeholder = null;
+    document.documentElement.classList.remove('p-quote-open');
+    window.scrollTo({ top: savedScroll, behavior: 'instant' });
+    openButton?.focus({ preventScroll: true });
+  });
+  document.querySelector<HTMLButtonElement>('[data-back-to-top]')?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  });
+</script>

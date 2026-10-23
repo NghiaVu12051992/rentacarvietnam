@@ -1,0 +1,317 @@
+/* ==========================================================================
+ * TẦNG 1: DESIGN TOKENS (src/styles/tokens.css)
+ * Single Source of Truth cho toàn bộ biến CSS của website.
+ * QUY TẮC BẤT BIẾN:
+ * - Chỉ chứa định nghĩa biến CSS trong :root và override ngôn ngữ (:lang(th)).
+ * - TUYỆT ĐỐI KHÔNG chứa selector UI trực tiếp.
+ * - TUYỆT ĐỐI KHÔNG dùng !important.
+ * - Không hardcode mã màu hex/px ở các tầng sau; tất cả phải gọi qua var(--...).
+ * ========================================================================== */
+:root {
+    /* =====================================================
+     * 1. BRAND & PRIMARY (Xanh biển chủ đạo từ Logo)
+     * ===================================================== */
+    --color-primary:       #0098da;
+    --color-primary-dark:  #007bb0;
+    --color-primary-light: #f0f9ff;
+    --color-price:         var(--color-primary-dark);
+    --color-booking-bg:    var(--color-primary-light);
+    --color-booking-header: var(--color-navy);
+    --color-booking-border: var(--color-primary);
+
+    /* =====================================================
+     * 2. NAVY & DARK (Tiêu đề Heading, Nền tối, Header)
+     * ===================================================== */
+    --color-navy:          #0f172a;
+    --color-navy-dark:     #020617;
+    --color-navy-light:    #1e293b;
+
+    /* =====================================================
+     * 3. ACCENT / GOLD (Giá tiền, Rating & Badge điểm nhấn)
+     * ===================================================== */
+    --color-accent:        #eab308;
+    --color-accent-dark:   #ca8a04;
+    --color-accent-light:  #fef9c3;
+
+    /* =====================================================
+     * 4. SEMANTIC STATUS (Pillar 7 - Alert & Trạng thái UI)
+     * ===================================================== */
+    /* Success — Xanh lá (Bao gồm, xác nhận, thành công) */
+    --color-success:       #10b981;
+    --color-success-light: #d1fae5;
+    --color-success-text:  #065f46;
+
+    /* Danger / Warning — Đỏ (Không bao gồm, cảnh báo, lỗi) */
+    --color-danger:        #ef4444;
+    --color-danger-light:  #fef2f2;
+    --color-danger-border: #fee2e2;
+    --color-danger-text:   #991b1b;
+
+    /* Caution — Vàng cam hổ phách (Lưu ý quan trọng, ghi chú) */
+    --color-caution:       #d97706;
+    --color-caution-light: #fffbeb;
+    --color-caution-border:#fef3c7;
+    --color-caution-text:  #92400e;
+    --color-warning:       var(--color-caution);
+    --color-warning-light: var(--color-caution-light);
+
+    /* Third-party Hotline */
+    --color-whatsapp:      #25d366;
+    --color-whatsapp-dark: #128c7e;
+    --shadow-whatsapp:     0 4px 12px rgba(37, 211, 102, 0.3);
+
+    /* Gradients tối giản thực tế */
+    --gradient-hero:       linear-gradient(135deg, rgba(2, 6, 23, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+    --gradient-primary:    linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+
+    /* Scrim Overlay dùng chung cho hero & modal backdrop */
+    --overlay-mid:         rgba(0, 0, 0, 0.5);
+
+    /* =====================================================
+     * 5. NEUTRALS & SURFACES (Nền phẳng và Chữ đọc)
+     * ===================================================== */
+    --color-white:         #ffffff;
+    --color-white-muted:   rgba(255, 255, 255, 0.8);
+    --color-white-dim:     rgba(255, 255, 255, 0.6);
+    --color-bg:            #f8fafc;
+    --color-bg-alt:        #f4f7fb;
+    --color-bg-light:      var(--color-bg-alt);
+    --color-text:          #0f172a;
+    --color-text-muted:    #64748b;
+    --color-border:        #f1f5f9;
+    --color-border-strong: #e2e8f0;
+    --color-border-subtle: var(--color-border);
+
+    /* =====================================================
+     * TYPOGRAPHY
+     * ===================================================== */
+    --font-main:           'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading:        'Outfit', var(--font-main);
+
+    /* Font Sizes — GetYourGuide Harmonious Scale */
+    --font-size-3xs:       0.6875rem; /* 11px micro badge */
+    --font-size-2xs:       0.75rem;   /* 12px micro tag/badge */
+    --font-size-xs:        0.8125rem; /* 13px supporting text */
+    --font-size-sm:        0.875rem;  /* 14px secondary text, metadata, form labels */
+    --font-size-base:      1rem;      /* 16px body text chuẩn vàng */
+    --font-size-md:        1.125rem;  /* 18px card titles, lead text */
+    --font-size-lg:        1.25rem;   /* 20px subheadings */
+    --font-size-xl:        1.625rem;  /* 26px section titles H2/H3 */
+    --font-size-2xl:       2.125rem;  /* 34px page titles H1 */
+    --font-size-3xl:       2.5rem;    /* 40px hero banners */
+    --font-size-4xl:       3.25rem;   /* 52px big display */
+
+    /* Font Weights */
+    --font-weight-normal:   400;
+    --font-weight-medium:   500;
+    --font-weight-semibold: 600;
+    --font-weight-bold:     700;
+    --font-weight-black:    800;
+
+    /* Line Heights */
+    --line-height-none:        1;
+    --line-height-tight:       1.2;
+    --line-height-snug-alt:    1.3;
+    --line-height-snug:        1.4;
+    --line-height-base:        1.5;
+    --line-height-comfortable: 1.6;
+    --line-height-relaxed:     1.8;
+    --leading-relaxed:         var(--line-height-relaxed);
+
+    /* Letter Spacing */
+    --tracking-tight:          -0.02em;
+    --tracking-normal:         0;
+    --tracking-wide:           0.05em;
+    --tracking-wider:          0.075em;
+    --tracking-widest:         0.1em;
+
+    /* =====================================================
+     * SPACING & RADIUS (International 4px/8px Design System)
+     * ===================================================== */
+    --space-3xs:           0.125rem; /* 2px - Micro borders/badges */
+    --space-2xs:           0.25rem;  /* 4px - Tight inline items, pills */
+    --space-xs:            0.5rem;   /* 8px - Icon-to-text, list gaps */
+    --space-sm:            0.75rem;  /* 12px - Sub-items, compact padding */
+    --space-md:            1rem;     /* 16px - Base standard component padding */
+    --space-lg:            1.5rem;   /* 24px - Card inner padding, column gaps */
+    --space-xl:            2rem;     /* 32px - Card headers, sub-block margins */
+    --space-2xl:           3rem;     /* 48px - Standard Section vertical spacing */
+    --space-3xl:           4rem;     /* 64px - Maximum page section separator */
+
+    /* Border Radius */
+    --radius-2xs:          0.25rem;  /* 4px */
+    --radius-xs:           0.5rem;   /* 8px */
+    --radius-sm:           0.75rem;  /* 12px */
+    --radius-md:           1.25rem;  /* 20px */
+    --radius-lg:           2rem;     /* 32px */
+    --radius-full:         9999px;
+
+    /* Aspect Ratios */
+    --aspect-video:        16 / 9;
+    --aspect-photo:        3 / 2;
+    --aspect-portrait:     2 / 3;
+    --aspect-square:       1 / 1;
+
+    /* Content Widths */
+    --content-width-sm:    50rem;    /* 800px */
+    --content-width-lg:    75rem;    /* 1200px */
+
+    /* =====================================================
+     * BORDER, ELEVATION & TRANSITIONS
+     * ===================================================== */
+    --border-width:        1px;
+    --border-width-lg:     2px;
+    --border-width-xl:     4px;
+
+    --border-subtle:       1px solid var(--color-border);
+    --border-default:      1px solid var(--color-border-strong);
+
+    --opacity-subtle:      0.9;
+    --opacity-muted:       0.6;
+    --opacity-dim:         0.4;
+
+    /* Shadows phẳng nhẹ hiện đại */
+    --shadow-sm:           0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -2px rgba(15, 23, 42, 0.02);
+    --shadow-md:           0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+    --shadow-lg:           0 20px 50px -12px rgba(15, 23, 42, 0.08), 0 10px 20px -10px rgba(15, 23, 42, 0.04);
+    --shadow-glow:         0 0 25px rgba(0, 152, 218, 0.25);
+
+    --shadow-card:         var(--shadow-sm);
+    --shadow-popover:      var(--shadow-lg);
+
+    /* Text Shadows */
+    --shadow-text:         0 2px 12px rgba(2, 6, 23, 0.5);
+
+    /* Transitions */
+    --duration-fast:       200ms;
+    --transition-fast:     200ms cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-base:     400ms cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-slow:     600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* Focus Ring (WCAG) */
+    --focus-ring-width:    2px;
+    --focus-ring-offset:   2px;
+    --focus-ring-outline:  2px solid var(--color-primary);
+
+    /* =====================================================
+     * LAYOUT & SPACING STANDARDS
+     * ===================================================== */
+    --z-base:              1;
+    --z-sticky:            200;
+    --z-overlay:           300;
+    --z-modal:             400;
+    --z-toast:             500;
+
+    --header-height:       7rem;
+    --sidebar-width:       21.25rem;
+    --toc-width:           16.25rem;
+    --container-max-width: 77.5rem;
+    --container-page-max:  87.5rem;
+    --container-text-max:  42.5rem;
+
+    --page-padding:              clamp(1rem, 2.5vw, 1.75rem);
+    --container-padding:         var(--page-padding);
+    --container-padding-desktop: 1.5rem;
+    --container-padding-mobile:  0.875rem;
+    --block-padding-mobile:      0.875rem;
+
+    --section-padding:           clamp(2.5rem, 4vw, 3.5rem);
+    --section-gap:               var(--space-xl);
+    --header-v-margin-desktop:   var(--space-xl);
+    --header-v-margin-mobile:    var(--space-lg);
+    --grid-v-gap-desktop:        var(--space-lg);
+    --grid-v-gap-mobile:         1rem;
+
+    /* Semantic sizing keeps hierarchy independent of the spacing scale. */
+    --type-page-title:           clamp(2rem, 1.5rem + 2vw, 2.75rem);
+    --type-section-title:        clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    --type-form-title:           clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem);
+    --card-padding:              clamp(1rem, 0.75rem + 1vw, 1.5rem);
+    --measure-heading:           24ch;
+    --measure-description:       65ch;
+    --control-height:            2.75rem;
+    --control-height-lg:         3rem;
+    --type-mobile-page:          1.875rem;
+    --mobile-action-space:       5rem;
+    --mobile-header-height:      4.5rem;
+    --quote-dialog-width:        32rem;
+    --media-reading-max:         36rem;
+    --media-list-max:            25rem;
+    --page-column-gap:           var(--space-xl);
+    --page-help-width:           18rem;
+    --page-booking-width:        24rem;
+    --page-navigation-width:     12rem;
+    --carousel-gap:              var(--space-lg);
+    --carousel-mobile-card:      88%;
+    --home-card-media-share:     40%;
+
+    /* Components & Micro-interactions */
+    --icon-box-sm:         2rem;
+    --icon-box-md:         2.5rem;
+    --icon-box-lg:         3.5rem;
+    --hover-offset:        -0.2rem;
+    --hover-scale:         1.05;
+
+    --gap-sm:              var(--space-xs);
+    --gap-md:              var(--space-sm);
+    --gap-lg:              var(--space-md);
+    --gap-xl:              var(--space-lg);
+}
+
+/* =====================================================
+ * THAI LANGUAGE TYPOGRAPHY OVERRIDES
+ * Thai characters are vertically complex (diacritics/tone marks)
+ * and appear much smaller than Latin at the same font-size.
+ * We load 'Sarabun' (highly legible Thai font) and scale up
+ * typography sizes/line-heights specifically for ':lang(th)'.
+ * ===================================================== */
+html:lang(th), :root:lang(th) {
+    --font-main: 'Sarabun', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Sarabun', var(--font-main);
+
+    /* Scale up all typography levels (+2px to +4px) for elderly readability */
+    --font-size-2xs: 0.75rem;     /* 10px -> 12px */
+    --font-size-xs: 0.875rem;     /* 12px -> 14px */
+    --font-size-sm: 1rem;         /* 14px -> 16px */
+    --font-size-base: 1.125rem;   /* 16px -> 18px */
+    --font-size-md: 1.25rem;      /* 18px -> 20px */
+    --font-size-lg: 1.375rem;     /* 20px -> 22px */
+    --font-size-xl: 1.625rem;     /* 24px -> 26px */
+    --font-size-2xl: 2.25rem;     /* 36px */
+    --font-size-3xl: 3rem;        /* 48px */
+    --font-size-4xl: 3.75rem;     /* 60px */
+
+    /* Increase line heights to prevent overlapping diacritics */
+    --line-height-tight: 1.35;
+    --line-height-snug-alt: 1.45;
+    --line-height-snug: 1.55;
+    --line-height-base: 1.65;
+    --line-height-comfortable: 1.75;
+    --line-height-relaxed: 2.0;
+
+    /* Slightly adjust tracking (Thai text is easier to read with a tiny bit of spacing) */
+    --tracking-tight: 0;
+    --tracking-normal: 0.01em;
+}
+
+/* =====================================================
+ * THAI MOBILE OVERRIDE — Scale back on small screens
+ * On ≤480px (phone portrait), the +2-4px font scale-up
+ * causes horizontal overflow. Reduce to near-default
+ * while keeping slightly larger sizes for Thai legibility.
+ * ===================================================== */
+@media (max-width: 480px) {
+    html:lang(th), :root:lang(th) {
+        /* Reduce scale-up to +1px instead of +2-4px */
+        --font-size-2xs: 0.6875rem;   /* 11px (was 12px) */
+        --font-size-xs: 0.8125rem;    /* 13px (was 14px) */
+        --font-size-sm: 0.9375rem;    /* 15px (was 16px) */
+        --font-size-base: 1rem;       /* 16px (was 18px) — back to default */
+        --font-size-md: 1.125rem;     /* 18px (was 20px) */
+        --font-size-lg: 1.25rem;      /* 20px (was 22px) */
+        --font-size-xl: 1.5rem;       /* 24px (was 26px) — back to default */
+        --font-size-2xl: 2rem;        /* 32px (was 40px) — significantly reduced */
+        --font-size-3xl: 2.75rem;     /* 44px (was 60px) — prevent overflow */
+        --font-size-4xl: 3.5rem;      /* 56px (was 76px) — prevent overflow */
+    }
+}

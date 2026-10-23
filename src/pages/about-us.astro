@@ -1,0 +1,197 @@
+---
+// src/pages/about-us.astro
+import siteImages from '../data/site-images.json';
+import ImageSlot from '../components/ImageSlot.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWizard from '../components/BookingWizard.astro';
+
+const pageTitle = "About Us | Hanoi Car & Bus Rental";
+const pageDesc = "Licensed private passenger transport operator based in Hanoi, Vietnam. Over 10 years of experience serving international tourists, expat families, and corporate MICE groups.";
+---
+
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+  <div class="p-container">
+    <header class="page-header">
+      <span class="p-badge p-badge-primary">COMPANY PROFILE</span>
+      <h1 class="page-title">About Hanoi Car & Bus Rental</h1>
+      <p class="page-subtitle">
+        Direct local fleet operator in Hanoi with over a decade of dedication to passenger safety, punctuality, and transparent pricing.
+      </p>
+    </header>
+
+    <div class="p-about-overview">
+    <ImageSlot src={siteImages.aboutTeam} alt="Our Hanoi drivers and dispatch team" label="Drivers & dispatch team" eager />
+
+    <!-- Key Statistics Grid -->
+    <div class="stats-grid">
+      <div class="p-card stat-card">
+        <span class="stat-number">35+</span>
+        <span class="stat-label">Modern Owned Vehicles</span>
+      </div>
+      <div class="p-card stat-card">
+        <span class="stat-number">12,000+</span>
+        <span class="stat-label">Safe Trips Completed</span>
+      </div>
+      <div class="p-card stat-card">
+        <span class="stat-number">4.9 / 5</span>
+        <span class="stat-label">Customer Satisfaction Rating</span>
+      </div>
+      <div class="p-card stat-card">
+        <span class="stat-number">10+ Years</span>
+        <span class="stat-label">Northern Vietnam Experience</span>
+      </div>
+    </div>
+
+    </div>
+
+    <!-- Company Standards & Legal Trust -->
+    <div class="about-content-grid">
+      <div class="p-card info-section-card">
+        <h2 class="section-heading">Our Chauffeur Standards</h2>
+        <ul class="standards-list">
+          <li><strong>Punctuality Guarantee:</strong> Drivers arrive at your pickup location 15 minutes before scheduled departure.</li>
+          <li><strong>Mountain Road Certified:</strong> All chauffeurs driving mountain routes (Sapa, Ha Giang, Cao Bang) have over 5 years of certified mountain highway experience.</li>
+          <li><strong>Strict Non-Smoking Policy:</strong> All vehicles are thoroughly sanitized, smoke-free, and air-conditioned.</li>
+          <li><strong>Transparent Hospitality:</strong> No forced shopping stops, no hidden fees, and zero vòi vĩnh / aggressive tipping requests.</li>
+        </ul>
+      </div>
+
+      <div class="p-card info-section-card">
+        <h2 class="section-heading">Official Business Verification</h2>
+        <p class="corp-text">
+          Hanoi Car & Bus Rental operates under full legal licensing by the Hanoi Department of Transport:
+        </p>
+        <ul class="legal-list">
+          <li><strong>Registered Name:</strong> Hanoi Car & Bus Rental Passenger Transport Co., Ltd</li>
+          <li><strong>Transport License:</strong> No. 0109988224/GP-SGTVT</li>
+          <li><strong>Dispatch Hub:</strong> Hoan Kiem District, Hanoi, Vietnam</li>
+          <li><strong>Emergency Support:</strong> 24/7 dedicated dispatch manager on call</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Inquiry Section -->
+    <section class="inquiry-section">
+      <div class="inquiry-header">
+        <span class="p-badge p-badge-primary">DISPATCH INQUIRY</span>
+        <h2 class="inquiry-title">Plan Your Trip with Our Dispatchers</h2>
+        <p class="inquiry-subtitle">Receive customized route advice and all-inclusive pricing.</p>
+      </div>
+      <BookingWizard />
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 760px;
+    margin: var(--space-xl) auto var(--space-xl) auto;
+  }
+  .page-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-navy);
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .page-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+  .stat-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    text-align: center;
+  }
+  .stat-number {
+    display: block;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-3xs);
+  }
+  .stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  .info-section-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-lg);
+  }
+  .section-heading {
+    font-size: var(--font-size-lg);
+    color: var(--color-navy);
+    margin-bottom: var(--space-sm);
+    font-weight: var(--font-weight-bold);
+  }
+  .corp-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+    margin-bottom: var(--space-xs);
+  }
+  .standards-list,
+  .legal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .standards-list li,
+  .legal-list li {
+    font-size: var(--font-size-xs);
+    color: var(--color-navy);
+    line-height: var(--line-height-comfortable);
+  }
+
+  .inquiry-section {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+  }
+  .inquiry-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--space-lg) auto;
+  }
+  .inquiry-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    margin-bottom: var(--space-xs);
+  }
+  .inquiry-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 860px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .about-content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

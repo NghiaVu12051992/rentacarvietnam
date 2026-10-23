@@ -1,0 +1,172 @@
+---
+// src/pages/services/index.astro
+import ImageSlot from '../../components/ImageSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BookingWizard from '../../components/BookingWizard.astro';
+import servicesData from '../../data/services.json';
+
+const pageTitle = "Transport Services | Hanoi Car & Bus Rental";
+const pageDesc = "Professional passenger transportation in Hanoi and Northern Vietnam: Noi Bai Airport transfers, car rental with driver, and private bus charter.";
+---
+
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+  <div class="p-container">
+    <header class="page-header">
+      <span class="p-badge p-badge-primary">TRANSPORT SERVICES</span>
+      <h1 class="page-title">Dedicated Chauffeur & Transfer Services</h1>
+      <p class="page-subtitle">
+        Custom private transportation solutions for international vacationers, business delegations, and travel operators.
+      </p>
+    </header>
+
+    <div class="services-list">
+      {servicesData.map((s) => (
+        <article class="p-card service-entry p-media-entry">
+          <ImageSlot src={s.image} alt={s.imageAlt} label={s.title} />
+          <div class="p-media-entry-content">
+          <span class="p-badge p-badge-primary">CHAUFFEUR SERVICE</span>
+          <h2 class="entry-title">{s.title}</h2>
+          <p class="entry-sub">{s.subtitle}</p>
+          <p class="entry-desc">{s.description}</p>
+
+          <ul class="clean-features">
+            {s.features.map((f) => (
+              <li><span class="tick">✓</span> {f}</li>
+            ))}
+          </ul>
+
+          <div class="entry-actions">
+            <a href={`/services/${s.slug}/`} class="p-btn p-btn-primary">
+              View Service & Pricing
+            </a>
+            <a href="#quick-booking-wizard" class="p-btn p-btn-outline">
+              Request Quote
+            </a>
+          </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Booking Form Section -->
+    <section class="inquiry-section">
+      <div class="inquiry-header">
+        <span class="p-badge p-badge-primary">INSTANT DISPATCH</span>
+        <h2 class="inquiry-title">Book Your Service in 15 Seconds</h2>
+        <p class="inquiry-subtitle">Choose your group size and receive our confirmed all-inclusive rate.</p>
+      </div>
+      <BookingWizard />
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 760px;
+    margin: var(--space-xl) auto var(--space-xl) auto;
+  }
+  .page-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-navy);
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .page-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  .service-entry {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .entry-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .entry-sub {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+  }
+  .entry-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+    line-height: var(--line-height-comfortable);
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-xs);
+  }
+  .clean-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    background: var(--color-bg);
+    padding: var(--space-md);
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--color-border);
+  }
+  .clean-features li {
+    font-size: var(--font-size-xs);
+    color: var(--color-navy);
+    display: flex;
+    gap: var(--space-xs);
+  }
+  .tick {
+    color: var(--color-success);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .entry-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+
+  .inquiry-section {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+  .inquiry-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--space-lg) auto;
+  }
+  .inquiry-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    margin-bottom: var(--space-xs);
+  }
+  .inquiry-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .entry-actions {
+      flex-direction: column;
+    }
+    .entry-actions .p-btn {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  columns?: 1 | 2 | 3;
+  sidebar?: 'help' | 'booking';
+}
+const { columns = 1, sidebar = 'help' } = Astro.props;
+---
+
+<div class:list={['p-page-columns', `p-page-columns--${columns}`, { 'p-page-columns--booking': sidebar === 'booking' }]}>
+  {columns === 3 && <div class="p-page-columns-nav"><slot name="navigation" /></div>}
+  <div class="p-page-columns-main"><slot /></div>
+  {columns > 1 && <div class="p-page-columns-side"><slot name="sidebar" /></div>}
+</div>

@@ -1,0 +1,214 @@
+[
+  {
+    "slug": "16-seater-van",
+    "title": "16-Seater Van Rental with Driver",
+    "shortTitle": "16-Seater Minivan",
+    "badge": "Most Popular for Groups",
+    "models": "Ford Transit & Hyundai Solati",
+    "capacity": "8 to 12 Passengers",
+    "luggage": "8 to 10 Large Suitcases (24-inch)",
+    "description": "The quintessential choice for private small group tours and family vacations in Northern Vietnam. High ceiling with independent multi-zone air conditioning.",
+    "features": [
+      "Individual dual-zone air conditioning vents",
+      "Reclining ergonomic passenger seats",
+      "Spacious luggage storage bay behind rear seats",
+      "High ceiling allows comfortable boarding (Solati: 1.9m)",
+      "Smooth mountain pass handling on Sapa and Ha Giang routes"
+    ],
+    "sampleRates": [
+      {
+        "route": "Noi Bai Airport Transfer",
+        "price": "$28 USD"
+      },
+      {
+        "route": "Hanoi to Halong Bay (One-way)",
+        "price": "$65 USD"
+      },
+      {
+        "route": "Hanoi to Sapa (One-way)",
+        "price": "$85 USD"
+      },
+      {
+        "route": "Hanoi to Ninh Binh Day Tour",
+        "price": "$80 USD"
+      },
+      {
+        "route": "Ha Giang Loop (Per day)",
+        "price": "$95 USD"
+      }
+    ],
+    "suitability": "Ideal for groups of 6 to 12 travelers with luggage touring Northwest Vietnam.",
+    "image": "",
+    "imageAlt": "16-Seater Van Rental with Driver",
+    "interiorImage": "",
+    "luggageImage": ""
+  },
+  {
+    "slug": "7-seater-car",
+    "title": "7-Seater SUV & Car Rental with Driver",
+    "shortTitle": "7-Seater SUV & MPV",
+    "badge": "Family & Business",
+    "models": "Toyota Fortuner, Innova & Kia Carnival",
+    "capacity": "1 to 4 Passengers",
+    "luggage": "3 to 4 Standard Suitcases",
+    "description": "Premium comfortable SUV and MPV service for couples, small families, and business travelers requiring punctuality and discretion.",
+    "features": [
+      "High ground clearance for comfortable city and highway travel",
+      "Leather seating with USB charging ports",
+      "Complimentary child safety seat upon request",
+      "Cool climate control with clean cabin filter",
+      "Experienced bilingual driver"
+    ],
+    "sampleRates": [
+      {
+        "route": "Noi Bai Airport to Hanoi Center",
+        "price": "$18 USD"
+      },
+      {
+        "route": "Hanoi to Halong Bay (One-way)",
+        "price": "$60 USD"
+      },
+      {
+        "route": "Hanoi to Ninh Binh (Full Day)",
+        "price": "$65 USD"
+      },
+      {
+        "route": "Hanoi to Sapa (One-way)",
+        "price": "$80 USD"
+      },
+      {
+        "route": "Hanoi City Tour (8 Hours)",
+        "price": "$55 USD"
+      }
+    ],
+    "suitability": "Recommended for up to 4 adults with medium check-in luggage.",
+    "image": "",
+    "imageAlt": "7-Seater SUV & Car Rental with Driver",
+    "interiorImage": "",
+    "luggageImage": ""
+  },
+  {
+    "slug": "29-seater-bus",
+    "title": "29-Seater Midi Bus Rental with Driver",
+    "shortTitle": "29-Seater Midi Bus",
+    "badge": "Tour Groups & Events",
+    "models": "Thaco Town & Hyundai County",
+    "capacity": "15 to 20 Passengers",
+    "luggage": "18 to 22 Large Suitcases",
+    "description": "Spacious tourist coach equipped with smooth pneumatic air suspension, specifically engineered for winding mountain highways without motion sickness.",
+    "features": [
+      "Pneumatic air suspension system for smooth riding",
+      "Tour guide PA microphone and multi-speaker audio system",
+      "Large dedicated underfloor and rear luggage compartments",
+      "Panoramic view windows for sightseeing",
+      "High-output roof-mounted cooling unit"
+    ],
+    "sampleRates": [
+      {
+        "route": "Noi Bai Airport Transfer (Group)",
+        "price": "$55 USD"
+      },
+      {
+        "route": "Hanoi City Tour (8 Hours)",
+        "price": "$90 USD"
+      },
+      {
+        "route": "Hanoi to Halong Bay (2 Days 1 Night)",
+        "price": "$180 USD"
+      },
+      {
+        "route": "Hanoi to Sapa (Round-trip 3D2N)",
+        "price": "$280 USD"
+      },
+      {
+        "route": "Hanoi to Ninh Binh Day Trip",
+        "price": "$125 USD"
+      }
+    ],
+    "suitability": "Perfect for organized tour groups, foreign school trips, and corporate outings.",
+    "image": "",
+    "imageAlt": "29-Seater Midi Bus Rental with Driver",
+    "interiorImage": "",
+    "luggageImage": ""
+  },
+  {
+    "slug": "35-seater-bus",
+    "title": "35-Seater Tourist Bus Rental with Driver",
+    "shortTitle": "35-Seater Bus",
+    "badge": "Corporate & Associations",
+    "models": "Thaco Kinglong & Isuzu Samco",
+    "capacity": "21 to 28 Passengers",
+    "luggage": "25 to 30 Large Suitcases",
+    "description": "Medium-to-large charter coach bridging the gap between midi bus and full-size coach, saving up to 30% in transport logistics.",
+    "features": [
+      "Generous aisle space with overhead luggage racks",
+      "Deep reclining plush seats with footrests",
+      "Huge undercarriage luggage holds",
+      "Built-in video entertainment screen and wireless mic",
+      "Strict regular maintenance and certified D/E drivers"
+    ],
+    "sampleRates": [
+      {
+        "route": "Noi Bai Airport Transfer (Large Group)",
+        "price": "$70 USD"
+      },
+      {
+        "route": "Hanoi to Halong Bay Cruise Transfer",
+        "price": "$220 USD"
+      },
+      {
+        "route": "Hanoi to Ninh Binh (Full Day)",
+        "price": "$140 USD"
+      },
+      {
+        "route": "Hanoi to Sapa Tour (3D2N)",
+        "price": "$340 USD"
+      }
+    ],
+    "suitability": "Optimal balance for corporate delegations, golf teams, and tour operators.",
+    "image": "",
+    "imageAlt": "35-Seater Tourist Bus Rental with Driver",
+    "interiorImage": "",
+    "luggageImage": ""
+  },
+  {
+    "slug": "45-seater-coach",
+    "title": "45-Seater Universe Coach Rental with Driver",
+    "shortTitle": "45-Seater Universe Coach",
+    "badge": "Large Delegations & MICE",
+    "models": "Hyundai Universe Prime / Luxury",
+    "capacity": "30 to 42 Passengers",
+    "luggage": "Unlimited underfloor pass-through luggage bays",
+    "description": "The flagship passenger coach in Vietnam. Renowned for supreme air suspension, silent cabin, and unmatched luggage capacity for international events.",
+    "features": [
+      "Full 6-bellow air suspension system eliminating road vibration",
+      "High-power roof air conditioning with ion filtration",
+      "Massive pass-through cargo holds accommodating 45+ suitcases or golf bags",
+      "Dual wireless microphones with digital audio processing",
+      "Senior Class E licensed chauffeurs with VIP protocol training"
+    ],
+    "sampleRates": [
+      {
+        "route": "Noi Bai Airport VIP Transfer",
+        "price": "$90 USD"
+      },
+      {
+        "route": "Hanoi to Halong Bay (Round-trip)",
+        "price": "$260 USD"
+      },
+      {
+        "route": "Hanoi City Convention Shuttle (Full Day)",
+        "price": "$140 USD"
+      },
+      {
+        "route": "Hanoi to Ninh Binh Tour",
+        "price": "$170 USD"
+      }
+    ],
+    "suitability": "Large international congresses, incoming MICE tour groups, and university groups.",
+    "image": "",
+    "imageAlt": "45-Seater Universe Coach Rental with Driver",
+    "interiorImage": "",
+    "luggageImage": ""
+  }
+]

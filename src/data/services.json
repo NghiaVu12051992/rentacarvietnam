@@ -1,0 +1,103 @@
+[
+  {
+    "slug": "hanoi-airport-transfer",
+    "title": "Hanoi Noi Bai Airport Transfer (HAN)",
+    "subtitle": "Punctual airport pickup with nameboard & flight tracking",
+    "description": "Stress-free private airport transfer between Noi Bai International Airport (HAN) and Hanoi Old Quarter, West Lake, or onward to Halong and Ninh Binh.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV (1-4 Pax)",
+        "airportToCity": "$18 USD",
+        "cityToAirport": "$15 USD"
+      },
+      {
+        "vehicle": "16-Seater Van (5-10 Pax)",
+        "airportToCity": "$28 USD",
+        "cityToAirport": "$25 USD"
+      },
+      {
+        "vehicle": "29-Seater Bus (15-20 Pax)",
+        "airportToCity": "$55 USD",
+        "cityToAirport": "$50 USD"
+      },
+      {
+        "vehicle": "45-Seater Coach (30-40 Pax)",
+        "airportToCity": "$90 USD",
+        "cityToAirport": "$85 USD"
+      }
+    ],
+    "features": [
+      "Real-time flight radar tracking — zero extra fee if your flight is delayed",
+      "Driver meets you at Column 9 or 10 holding a personalized signboard",
+      "Free 60 minutes waiting time after flight touchdown",
+      "Airport toll fee, parking tickets, and baggage assistance fully included"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi Noi Bai Airport Transfer (HAN)"
+  },
+  {
+    "slug": "car-rental-with-driver",
+    "title": "Hanoi Private Car Rental with Driver",
+    "subtitle": "Flexible hourly, full-day, and multi-day private chauffeur service",
+    "description": "Rent a clean private vehicle with an English-speaking driver for custom Hanoi city tours, business meetings, factory inspections, or inter-provincial trips.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV",
+        "cityTour8h": "$55 USD",
+        "suburb200km": "$75 USD",
+        "multiDay": "From $80 / day"
+      },
+      {
+        "vehicle": "16-Seater Van",
+        "cityTour8h": "$75 USD",
+        "suburb200km": "$95 USD",
+        "multiDay": "From $100 / day"
+      },
+      {
+        "vehicle": "29-Seater Bus",
+        "cityTour8h": "$100 USD",
+        "suburb200km": "$135 USD",
+        "multiDay": "From $140 / day"
+      }
+    ],
+    "features": [
+      "Standard 8-hour or 10-hour working day with 100km or 200km allowance",
+      "Transparent overtime rate ($5 USD / hour) and excess km rate ($0.4 / km)",
+      "Courteous non-smoking chauffeurs with local dining and route knowledge",
+      "Flexible itinerary — modify your schedule on the fly"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi Private Car Rental with Driver"
+  },
+  {
+    "slug": "private-bus-charter",
+    "title": "Private Bus Charter & Group Transportation",
+    "subtitle": "Contract coaches from 29 to 45 seats for tour operators, MICE & corporate",
+    "description": "High-capacity charter buses for inbound travel agencies, international delegations, school field trips, and golf retreats across Northern Vietnam.",
+    "pricing": [
+      {
+        "vehicle": "29-Seater Midi Bus (Thaco Town)",
+        "dailyRate": "From $110 USD / day",
+        "capacity": "15-20 Pax"
+      },
+      {
+        "vehicle": "35-Seater Bus (Samco / Kinglong)",
+        "dailyRate": "From $130 USD / day",
+        "capacity": "21-28 Pax"
+      },
+      {
+        "vehicle": "45-Seater Coach (Hyundai Universe)",
+        "dailyRate": "From $150 USD / day",
+        "capacity": "30-42 Pax"
+      }
+    ],
+    "features": [
+      "Modern fleet with air suspension (bầu hơi) ensuring smooth ride",
+      "Professional B2B contracts, e-invoices (VAT), and dedicated dispatch coordinator",
+      "Backup bus replacement guarantee within 45 minutes in Hanoi area",
+      "Class D and E drivers with pristine safety records on northern expressways"
+    ],
+    "image": "",
+    "imageAlt": "Private Bus Charter & Group Transportation"
+  }
+]

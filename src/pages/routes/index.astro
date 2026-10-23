@@ -1,0 +1,227 @@
+---
+// src/pages/routes/index.astro
+import ImageSlot from '../../components/ImageSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BookingWizard from '../../components/BookingWizard.astro';
+import routesData from '../../data/routes.json';
+
+const pageTitle = "Popular Intercity Transfer Routes | Hanoi Car & Bus Rental";
+const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halong Bay, Ninh Binh, Ha Giang, and Noi Bai Airport. Tolls, fuel, and driver included.";
+---
+
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+  <div class="p-container">
+    <header class="page-header">
+      <span class="p-badge p-badge-primary">POPULAR ROUTES</span>
+      <h1 class="page-title">Northern Vietnam Private Transfers</h1>
+      <p class="page-subtitle">
+        Fast, direct expressway travel with door-to-door hotel pickup and professional drivers. No crowded buses, no train transfers.
+      </p>
+    </header>
+
+    <div class="routes-list">
+      {routesData.map((r) => (
+        <article class="p-card route-entry">
+          <div class="entry-main">
+            <ImageSlot src={r.image} alt={r.imageAlt} label={r.name} />
+            <h2 class="entry-title">{r.name}</h2>
+            <div class="metric-tags">
+              <span class="p-badge p-badge-primary">{r.distance}</span>
+              <span class="p-badge p-badge-outline">{r.duration}</span>
+              <span class="highway-tag">{r.highway}</span>
+            </div>
+            <p class="entry-desc">{r.description}</p>
+
+            <ul class="highlights-list">
+              {r.highlights.map((h) => (
+                <li>
+                  <span class="bullet">✓</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="entry-pricing">
+            <h3 class="pricing-title">Starting Rates</h3>
+            <div class="price-cards">
+              {r.pricing.map((p) => (
+                <div class="p-card price-mini-card">
+                  <span class="vehicle-type">{p.vehicle}</span>
+                  <span class="price-val">{p.oneWay}</span>
+                  {p.roundTrip !== "N/A" && (
+                    <span class="roundtrip-val">2-way: {p.roundTrip}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+            <a href={`/routes/${r.slug}/`} class="p-btn p-btn-primary full-width-btn">
+              View Itinerary & Book
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Booking Form Section -->
+    <section class="inquiry-section">
+      <div class="inquiry-header">
+        <span class="p-badge p-badge-primary">CUSTOM ROUTES</span>
+        <h2 class="inquiry-title">Need a Custom Route or Multi-City Tour?</h2>
+        <p class="inquiry-subtitle">Tell us your schedule and our dispatch team will tailor an exact itinerary for your group.</p>
+      </div>
+      <BookingWizard />
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 760px;
+    margin: var(--space-xl) auto var(--space-xl) auto;
+  }
+  .page-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-navy);
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .page-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+  .routes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  .route-entry {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-lg);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+  .entry-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .metric-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    align-items: center;
+    margin-bottom: var(--space-sm);
+  }
+  .highway-tag {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+  .entry-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+    line-height: var(--line-height-comfortable);
+    margin-bottom: var(--space-sm);
+  }
+  .highlights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+  .highlights-list li {
+    display: flex;
+    gap: var(--space-xs);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+  .bullet {
+    color: var(--color-success);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .entry-pricing {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xs);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .pricing-title {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+    font-weight: var(--font-weight-bold);
+  }
+  .price-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+  .price-mini-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .vehicle-type {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+  .price-val {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-price);
+  }
+  .roundtrip-val {
+    font-size: var(--font-size-2xs);
+    color: var(--color-price);
+  }
+  .full-width-btn {
+    width: 100%;
+    margin-top: var(--space-2xs);
+  }
+
+  .inquiry-section {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+  .inquiry-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--space-lg) auto;
+  }
+  .inquiry-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    margin-bottom: var(--space-xs);
+  }
+  .inquiry-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 860px) {
+    .route-entry {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+  }
+</style>

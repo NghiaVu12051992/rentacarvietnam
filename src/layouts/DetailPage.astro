@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PageFrame from './PageFrame.astro';
+import BookingWizard from '../components/BookingWizard.astro';
+import DetailGallery from '../components/DetailGallery.astro';
+import DetailSections from '../components/DetailSections.astro';
+import type { DetailPageData } from '../lib/detail-pages';
+interface Props { page: DetailPageData }
+const { page } = Astro.props;
+---
+<BaseLayout hasBookingWizard title={`${page.title} | Hanoi Car & Bus Rental`} description={page.metaDescription}>
+  <div class="p-container p-detail-page">
+    <nav class="p-detail-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      {page.breadcrumbs.map(item => <><span aria-hidden="true">/</span>{item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}</>)}
+    </nav>
+    <header class="p-detail-header">
+      <div class="p-detail-badges">{page.badges.map((badge, index) => <span class:list={['p-badge', { 'p-badge-primary': index === 0 }]}>{badge}</span>)}</div>
+      <h1>{page.title}</h1>
+      {page.models && <p class="p-detail-models">Available Models: <strong>{page.models}</strong></p>}
+      {page.subtitle && <p class="p-detail-subtitle">{page.subtitle}</p>}
+      <p class="p-detail-lead">{page.description}</p>
+    </header>
+    <PageFrame columns={2} sidebar="booking">
+      <div class="p-detail-stack">
+        <DetailGallery image={page.image} gallery={page.gallery} />
+        <DetailSections sections={page.sections} />
+      </div>
+      <BookingWizard slot="sidebar" {...page.booking} />
+    </PageFrame>
+  </div>
+</BaseLayout>

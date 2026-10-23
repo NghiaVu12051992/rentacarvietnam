@@ -1,0 +1,24 @@
+---
+import ContentSection from './ContentSection.astro';
+import PriceList from './PriceList.astro';
+import type { DetailSection } from '../lib/detail-pages';
+interface Props { sections: DetailSection[] }
+const { sections } = Astro.props;
+---
+{sections.map(section => (
+  <ContentSection title={section.title} note={section.note}>
+    {section.type === 'specs' && <dl class="p-detail-specs">
+      {section.items.map(item => <div class:list={['p-detail-spec', { 'p-detail-spec--full': item.full }]}>
+        <dt>{item.label}</dt><dd>{item.value}</dd>
+      </div>)}
+    </dl>}
+    {section.type === 'features' && <ul class="p-detail-list">{section.items.map(item => <li>{item}</li>)}</ul>}
+    {section.type === 'prices' && <PriceList rows={section.rows} />}
+    {section.type === 'journey' && <ol class="p-detail-timeline">
+      {section.steps.map(step => <li><span class="p-badge">{step.label}</span><p>{step.text}</p></li>)}
+    </ol>}
+    {section.type === 'inclusions' && <div class="p-detail-inclusions">
+      {section.groups.map(group => <div><h3>{group.title}</h3><ul class="p-detail-list">{group.items.map(item => <li>{item}</li>)}</ul></div>)}
+    </div>}
+  </ContentSection>
+))}

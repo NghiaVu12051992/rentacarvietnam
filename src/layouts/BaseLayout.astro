@@ -1,0 +1,224 @@
+---
+// src/layouts/BaseLayout.astro
+import MobileActions from '../components/MobileActions.astro';
+import '../styles/tokens.css';
+import '../styles/global.css';
+import '../styles/components.css';
+import '../styles/utilities.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+  hasBookingWizard?: boolean;
+}
+
+const {
+  title = "Hanoi Car & Bus Rental | Private Car, Van & Bus with Driver in Vietnam",
+  description = "Reliable private car, minivan, and bus rental with professional English-speaking drivers in Hanoi and Northern Vietnam. Transparent rates, zero hidden fees.",
+  canonical,
+  noindex = false,
+  hasBookingWizard = false,
+} = Astro.props;
+
+const currentUrl = canonical || Astro.url.href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+      <div class="p-container header-inner">
+        <a href="/" class="brand-logo">
+          <span class="brand-main">HANOI CAR & BUS</span>
+          <span class="brand-sub">Private Rental with Driver</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="/vehicles/" class="nav-item">Our Vehicles</a>
+          <a href="/routes/" class="nav-item">Routes</a>
+          <a href="/services/" class="nav-item">Services</a>
+          <a href="/resources/" class="nav-item">Guide & Help</a>
+          <a href="/about-us/" class="nav-item">About Us</a>
+          <a href="/contact/" class="nav-item">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <span class="lang-badge">EN</span>
+          <a href="https://wa.me/84900000000" target="_blank" rel="noopener noreferrer" class="p-btn p-btn-primary p-btn-sm header-cta">
+            WhatsApp Hotline
+          </a>
+          <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span>Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="site-main">
+      <slot />
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="p-container footer-inner">
+        <div class="footer-col">
+          <h3 class="footer-title">HANOI CAR & BUS RENTAL</h3>
+          <p class="footer-desc">
+            Professional private passenger transport with driver across Hanoi, Sapa, Halong Bay, Ninh Binh, and Ha Giang.
+          </p>
+          <p class="footer-meta">Transport Business License No. 0109988224/GP-SGTVT</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Vehicles</h4>
+          <ul class="footer-list">
+            <li><a href="/vehicles/7-seater-car/">7-Seater SUV & MPV</a></li>
+            <li><a href="/vehicles/16-seater-van/">16-Seater Minivan</a></li>
+            <li><a href="/vehicles/29-seater-bus/">29-Seater Midi Bus</a></li>
+            <li><a href="/vehicles/35-seater-bus/">35-Seater Bus</a></li>
+            <li><a href="/vehicles/45-seater-coach/">45-Seater Coach</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Key Routes</h4>
+          <ul class="footer-list">
+            <li><a href="/routes/hanoi-to-sapa/">Hanoi to Sapa</a></li>
+            <li><a href="/routes/hanoi-to-halong-bay/">Hanoi to Halong Bay</a></li>
+            <li><a href="/routes/hanoi-to-ninh-binh/">Hanoi to Ninh Binh</a></li>
+            <li><a href="/routes/hanoi-to-ha-giang/">Hanoi to Ha Giang</a></li>
+            <li><a href="/services/hanoi-airport-transfer/">Noi Bai Airport Transfer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Support & Booking</h4>
+          <p class="footer-text">24/7 Dispatch Hotline / WhatsApp:</p>
+          <p class="footer-highlight">+84 9xx xxx xxx</p>
+          <p class="footer-text">Email: booking@hanoicarbusrental.com</p>
+          <p class="footer-text">Old Quarter Dispatch Hub, Hoan Kiem, Hanoi</p>
+          <ul class="footer-list p-mt-md">
+            <li><a href="/resources/">Travel articles & help</a></li>
+            <li><a href="/resources/faq/">Frequently asked questions</a></li>
+            <li><a href="/resources/policies/">Policies & booking information</a></li>
+            <li><a href="/resources/policies/privacy/">Privacy information</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-container footer-bottom">
+        <p>© {new Date().getFullYear()} Hanoi Car & Bus Rental. All rights reserved. Strictly no hidden fees.</p>
+      </div>
+    </footer>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="drawer-overlay" id="drawer-overlay"></div>
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <div class="drawer-brand">
+            <span class="brand-main">HANOI CAR & BUS</span>
+            <span class="brand-sub">Navigation Menu</span>
+          </div>
+          <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">
+            Close [X]
+          </button>
+        </div>
+
+        <nav class="drawer-nav">
+          <div class="drawer-section">
+            <span class="drawer-section-title">Vehicles with Driver</span>
+            <a href="/vehicles/" class="drawer-link drawer-link--all">Browse Full Fleet</a>
+            <a href="/vehicles/7-seater-car/" class="drawer-link">7-Seater SUV & MPV</a>
+            <a href="/vehicles/16-seater-van/" class="drawer-link">16-Seater Minivan</a>
+            <a href="/vehicles/29-seater-bus/" class="drawer-link">29-Seater Midi Bus</a>
+            <a href="/vehicles/35-seater-bus/" class="drawer-link">35-Seater Bus</a>
+            <a href="/vehicles/45-seater-coach/" class="drawer-link">45-Seater Coach</a>
+          </div>
+
+          <div class="drawer-section">
+            <span class="drawer-section-title">Popular Routes</span>
+            <a href="/routes/" class="drawer-link drawer-link--all">All Intercity Transfers</a>
+            <a href="/routes/hanoi-to-sapa/" class="drawer-link">Hanoi to Sapa (315 km)</a>
+            <a href="/routes/hanoi-to-halong-bay/" class="drawer-link">Hanoi to Halong Bay (160 km)</a>
+            <a href="/routes/hanoi-to-ninh-binh/" class="drawer-link">Hanoi to Ninh Binh (95 km)</a>
+            <a href="/routes/hanoi-to-ha-giang/" class="drawer-link">Hanoi to Ha Giang (320 km)</a>
+          </div>
+
+          <div class="drawer-section">
+            <span class="drawer-section-title">Company & Inquiries</span>
+            <a href="/services/" class="drawer-link">Services Hub</a>
+            <a href="/about-us/" class="drawer-link">About Us & Transport License</a>
+            <a href="/contact/" class="drawer-link">Contact & Dispatch Support</a>
+          </div>
+          <div class="drawer-section">
+            <span class="drawer-section-title">Guide & Help</span>
+            <a href="/resources/" class="drawer-link">Travel Articles</a>
+            <a href="/resources/faq/" class="drawer-link">Frequently Asked Questions</a>
+            <a href="/resources/policies/" class="drawer-link">Policies & Booking Information</a>
+          </div>
+        </nav>
+
+        <div class="drawer-footer">
+          <a href="https://wa.me/84900000000" target="_blank" rel="noopener noreferrer" class="p-btn p-btn-primary p-btn-full">
+            WhatsApp Hotline (+84)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <MobileActions hasInlineWizard={hasBookingWizard} />
+
+    <script>
+      (function() {
+        const toggleBtn = document.getElementById('mobile-nav-toggle');
+        const closeBtn = document.getElementById('drawer-close-btn');
+        const overlay = document.getElementById('drawer-overlay');
+        const drawer = document.getElementById('mobile-drawer');
+
+        function openMenu() {
+          if (!drawer) return;
+          drawer.classList.add('is-open');
+          drawer.setAttribute('aria-hidden', 'false');
+          toggleBtn?.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+          if (!drawer) return;
+          drawer.classList.remove('is-open');
+          drawer.setAttribute('aria-hidden', 'true');
+          toggleBtn?.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+
+        toggleBtn?.addEventListener('click', openMenu);
+        closeBtn?.addEventListener('click', closeMenu);
+        overlay?.addEventListener('click', closeMenu);
+        drawer?.querySelectorAll('.drawer-link').forEach(link => {
+          link.addEventListener('click', closeMenu);
+        });
+      })();
+    </script>
+  </body>
+</html>

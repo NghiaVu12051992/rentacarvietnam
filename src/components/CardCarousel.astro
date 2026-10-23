@@ -1,0 +1,66 @@
+---
+import ExploreCard from './ExploreCard.astro';
+import type { HomeSection } from '../lib/homepage';
+interface Props { section: HomeSection }
+const { section } = Astro.props;
+---
+<section class="p-discovery-section" id={section.id} aria-labelledby={`${section.id}-title`} data-carousel>
+  <div class="p-discovery-heading">
+    <div><h2 id={`${section.id}-title`}>{section.title}</h2><p>{section.description}</p></div>
+    <a href={section.href} class="p-discovery-all">{section.linkLabel}</a>
+  </div>
+  <ul class="p-carousel-track" id={`${section.id}-track`} tabindex="0" aria-label={`${section.title}. Scroll for more choices.`} data-carousel-track>
+    {section.items.map(item => <li class="p-carousel-slide"><ExploreCard item={item} /></li>)}
+  </ul>
+  <div class="p-carousel-controls" data-carousel-controls hidden>
+    <span class="p-carousel-status" aria-live="polite" aria-atomic="true" data-carousel-status></span>
+    <button type="button" class="p-carousel-button" aria-label={`Previous cards: ${section.title}`} aria-controls={`${section.id}-track`} data-carousel-prev>Previous</button>
+    <button type="button" class="p-carousel-button" aria-label={`Next cards: ${section.title}`} aria-controls={`${section.id}-track`} data-carousel-next>Next</button>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(section => {
+    const track = section.querySelector<HTMLElement>('[data-carousel-track]');
+    const controls = section.querySelector<HTMLElement>('[data-carousel-controls]');
+    const previous = section.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+    const next = section.querySelector<HTMLButtonElement>('[data-carousel-next]');
+    const status = section.querySelector<HTMLElement>('[data-carousel-status]');
+    if (!track || !controls || !previous || !next || !status) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      controls.hidden = maxScroll < 2;
+      previous.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= maxScroll - 2;
+      const bounds = track.getBoundingClientRect();
+      const slides = Array.from(track.children);
+      const visible = slides.flatMap((slide, index) => {
+        const rect = slide.getBoundingClientRect();
+        return rect.left < bounds.right - rect.width / 2 && rect.right > bounds.left + rect.width / 2 ? [index + 1] : [];
+      });
+      if (visible.length) status.textContent = `${visible[0]}${visible.length > 1 ? `–${visible[visible.length - 1]}` : ''} / ${slides.length}`;
+    };
+    const move = (direction: number) => {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      track.scrollBy({ left: direction * (track.clientWidth + gap), behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+    };
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
+    track.addEventListener('keydown', event => {
+      if (event.target !== track) return;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        move(event.key === 'ArrowRight' ? 1 : -1);
+      }
+    });
+    let scheduled = false;
+    track.addEventListener('scroll', () => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(() => { update(); scheduled = false; });
+    }, { passive: true });
+    new ResizeObserver(update).observe(track);
+    update();
+  });
+</script>

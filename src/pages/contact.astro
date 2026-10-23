@@ -1,0 +1,123 @@
+---
+// src/pages/contact.astro
+import siteImages from '../data/site-images.json';
+import ImageSlot from '../components/ImageSlot.astro';
+import PageFrame from '../layouts/PageFrame.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWizard from '../components/BookingWizard.astro';
+
+const pageTitle = "Contact & Get a Quote | Hanoi Car & Bus Rental";
+const pageDesc = "Contact our 24/7 Hanoi dispatch office for private car, van, and bus rental inquiries. Direct WhatsApp, phone, and fast email quotes.";
+---
+
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+  <div class="p-container">
+    <header class="page-header">
+      <span class="p-badge p-badge-primary">DIRECT CONTACT</span>
+      <h1 class="page-title">Contact & Request a Quote</h1>
+      <p class="page-subtitle">
+        Our bilingual dispatch team is standing by 24/7 to assist with quotes, flight adjustments, and group itinerary planning.
+      </p>
+    </header>
+
+    <PageFrame columns={2} sidebar="booking">
+      <!-- Contact Info Cards -->
+      <div class="contact-info-col">
+        <div class="p-card contact-card">
+          <span class="p-badge p-badge-primary">INSTANT CHAT</span>
+          <h2 class="card-title">WhatsApp Hotline 24/7</h2>
+          <p class="card-desc">For urgent pickups, airport delays, and instant quotes:</p>
+          <a href="https://wa.me/84900000000" target="_blank" rel="noopener noreferrer" class="contact-link highlight">
+            +84 900 000 000 (WhatsApp)
+          </a>
+        </div>
+
+        <div class="p-card contact-card">
+          <span class="p-badge p-badge-outline">EMAIL DISPATCH</span>
+          <h2 class="card-title">Corporate & Group RFP</h2>
+          <p class="card-desc">Send your formal itineraries and corporate requirements:</p>
+          <a href="mailto:booking@hanoicarbusrental.com" class="contact-link">
+            booking@hanoicarbusrental.com
+          </a>
+        </div>
+
+        <div class="p-card contact-card">
+          <span class="p-badge p-badge-outline">DISPATCH OFFICE</span>
+          <h2 class="card-title">Hanoi Operations Hub</h2>
+          <p class="card-desc">Old Quarter Operations Office, Hoan Kiem District, Hanoi, Vietnam.</p>
+          <ImageSlot src={siteImages.contactOffice} alt="Our Hanoi dispatch office" label="Dispatch office" />
+          <p class="office-hours">Office Hours: 06:00 - 23:00 (Daily) • Vehicles dispatched 24/7</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Booking Wizard -->
+      <div slot="sidebar" class="contact-wizard-col">
+        <BookingWizard />
+      </div>
+    </PageFrame>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 760px;
+    margin: var(--space-xl) auto var(--space-xl) auto;
+  }
+  .page-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-navy);
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .page-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .contact-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+  .card-title {
+    font-size: var(--font-size-lg);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .card-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .contact-link {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-top: var(--space-2xs);
+  }
+  .contact-link.highlight {
+    font-size: var(--font-size-lg);
+    color: var(--color-whatsapp-dark);
+  }
+  .office-hours {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-3xs);
+  }
+
+  @media (max-width: 860px) {
+}
+</style>

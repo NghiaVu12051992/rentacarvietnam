@@ -1,0 +1,369 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "route": "/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 10
+    },
+    {
+      "width": 320,
+      "route": "/vehicles/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 5
+    },
+    {
+      "width": 320,
+      "route": "/vehicles/16-seater-van/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 3
+    },
+    {
+      "width": 320,
+      "route": "/routes/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 4
+    },
+    {
+      "width": 320,
+      "route": "/routes/hanoi-to-sapa/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 320,
+      "route": "/services/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 3
+    },
+    {
+      "width": 320,
+      "route": "/services/hanoi-airport-transfer/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 320,
+      "route": "/about-us/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 320,
+      "route": "/contact/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 375,
+      "route": "/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 10
+    },
+    {
+      "width": 375,
+      "route": "/vehicles/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 5
+    },
+    {
+      "width": 375,
+      "route": "/vehicles/16-seater-van/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 3
+    },
+    {
+      "width": 375,
+      "route": "/routes/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 4
+    },
+    {
+      "width": 375,
+      "route": "/routes/hanoi-to-sapa/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 375,
+      "route": "/services/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 3
+    },
+    {
+      "width": 375,
+      "route": "/services/hanoi-airport-transfer/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 375,
+      "route": "/about-us/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 375,
+      "route": "/contact/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 10
+    },
+    {
+      "width": 390,
+      "route": "/vehicles/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 5
+    },
+    {
+      "width": 390,
+      "route": "/vehicles/16-seater-van/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 3
+    },
+    {
+      "width": 390,
+      "route": "/routes/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 4
+    },
+    {
+      "width": 390,
+      "route": "/routes/hanoi-to-sapa/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 390,
+      "route": "/services/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 3
+    },
+    {
+      "width": 390,
+      "route": "/services/hanoi-airport-transfer/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 390,
+      "route": "/about-us/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 390,
+      "route": "/contact/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "30px",
+      "imageSlots": 1
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 10
+    },
+    {
+      "width": 768,
+      "route": "/vehicles/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 5
+    },
+    {
+      "width": 768,
+      "route": "/vehicles/16-seater-van/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 3
+    },
+    {
+      "width": 768,
+      "route": "/routes/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 4
+    },
+    {
+      "width": 768,
+      "route": "/routes/hanoi-to-sapa/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 1
+    },
+    {
+      "width": 768,
+      "route": "/services/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 3
+    },
+    {
+      "width": 768,
+      "route": "/services/hanoi-airport-transfer/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 1
+    },
+    {
+      "width": 768,
+      "route": "/about-us/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 1
+    },
+    {
+      "width": 768,
+      "route": "/contact/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "39.36px",
+      "imageSlots": 1
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 10
+    },
+    {
+      "width": 1440,
+      "route": "/vehicles/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 5
+    },
+    {
+      "width": 1440,
+      "route": "/vehicles/16-seater-van/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 3
+    },
+    {
+      "width": 1440,
+      "route": "/routes/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 4
+    },
+    {
+      "width": 1440,
+      "route": "/routes/hanoi-to-sapa/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 1
+    },
+    {
+      "width": 1440,
+      "route": "/services/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 3
+    },
+    {
+      "width": 1440,
+      "route": "/services/hanoi-airport-transfer/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 1
+    },
+    {
+      "width": 1440,
+      "route": "/about-us/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 1
+    },
+    {
+      "width": 1440,
+      "route": "/contact/",
+      "overflow": [],
+      "headerOverlap": false,
+      "h1Size": "44px",
+      "imageSlots": 1
+    }
+  ],
+  "drawer": {
+    "open": "false",
+    "menuLabel": "Menu",
+    "closed": "true"
+  }
+}

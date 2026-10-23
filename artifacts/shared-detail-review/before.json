@@ -1,0 +1,131 @@
+[
+  {
+    "route": "/vehicles/16-seater-van/",
+    "title": "16-Seater Van Rental with Driver",
+    "sections": [
+      "Vehicle Capacity & Specifications",
+      "Key Features & Amenities",
+      "Popular Routes & Fixed Rates"
+    ],
+    "imageCount": 3,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/vehicles/7-seater-car/",
+    "title": "7-Seater SUV & Car Rental with Driver",
+    "sections": [
+      "Vehicle Capacity & Specifications",
+      "Key Features & Amenities",
+      "Popular Routes & Fixed Rates"
+    ],
+    "imageCount": 3,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/vehicles/29-seater-bus/",
+    "title": "29-Seater Midi Bus Rental with Driver",
+    "sections": [
+      "Vehicle Capacity & Specifications",
+      "Key Features & Amenities",
+      "Popular Routes & Fixed Rates"
+    ],
+    "imageCount": 3,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/vehicles/35-seater-bus/",
+    "title": "35-Seater Tourist Bus Rental with Driver",
+    "sections": [
+      "Vehicle Capacity & Specifications",
+      "Key Features & Amenities",
+      "Popular Routes & Fixed Rates"
+    ],
+    "imageCount": 3,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/vehicles/45-seater-coach/",
+    "title": "45-Seater Universe Coach Rental with Driver",
+    "sections": [
+      "Vehicle Capacity & Specifications",
+      "Key Features & Amenities",
+      "Popular Routes & Fixed Rates"
+    ],
+    "imageCount": 3,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/routes/hanoi-to-sapa/",
+    "title": "Hanoi to Sapa Private Transfer",
+    "sections": [
+      "Journey Details & Key Highlights",
+      "Transparent Vehicle Rates for this Route",
+      "What is Included?"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/routes/hanoi-to-halong-bay/",
+    "title": "Hanoi to Halong Bay Private Transfer",
+    "sections": [
+      "Journey Details & Key Highlights",
+      "Transparent Vehicle Rates for this Route",
+      "What is Included?"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/routes/hanoi-to-ninh-binh/",
+    "title": "Hanoi to Ninh Binh Private Car Day Tour",
+    "sections": [
+      "Journey Details & Key Highlights",
+      "Transparent Vehicle Rates for this Route",
+      "What is Included?"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/routes/hanoi-to-ha-giang/",
+    "title": "Hanoi to Ha Giang Private Car Charter",
+    "sections": [
+      "Journey Details & Key Highlights",
+      "Transparent Vehicle Rates for this Route",
+      "What is Included?"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/services/hanoi-airport-transfer/",
+    "title": "Hanoi Noi Bai Airport Transfer (HAN)",
+    "sections": [
+      "Service Commitments & Standards",
+      "Transparent Pricing Table (No Hidden Surcharges)"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/services/car-rental-with-driver/",
+    "title": "Hanoi Private Car Rental with Driver",
+    "sections": [
+      "Service Commitments & Standards",
+      "Transparent Pricing Table (No Hidden Surcharges)"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  },
+  {
+    "route": "/services/private-bus-charter/",
+    "title": "Private Bus Charter & Group Transportation",
+    "sections": [
+      "Service Commitments & Standards",
+      "Transparent Pricing Table (No Hidden Surcharges)"
+    ],
+    "imageCount": 1,
+    "columns": "776px 384px"
+  }
+]

@@ -1,0 +1,10 @@
+---
+import ImageSlot from './ImageSlot.astro';
+import type { DetailImage } from '../lib/detail-pages';
+interface Props { image: DetailImage; gallery?: DetailImage[] }
+const { image, gallery = [] } = Astro.props;
+---
+<div class="p-detail-gallery">
+  <ImageSlot {...image} eager />
+  {gallery.length > 0 && <div class="p-photo-pair">{gallery.map(photo => <ImageSlot {...photo} />)}</div>}
+</div>

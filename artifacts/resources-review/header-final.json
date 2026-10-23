@@ -1,0 +1,38 @@
+[
+  {
+    "width": 320,
+    "menuVisible": true,
+    "headerLinksWrap": false,
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "menuVisible": true,
+    "headerLinksWrap": false,
+    "overflow": false
+  },
+  {
+    "width": 901,
+    "menuVisible": true,
+    "headerLinksWrap": false,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "menuVisible": true,
+    "headerLinksWrap": false,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "menuVisible": false,
+    "headerLinksWrap": false,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "menuVisible": false,
+    "headerLinksWrap": false,
+    "overflow": false
+  }
+]

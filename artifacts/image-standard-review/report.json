@@ -1,0 +1,227 @@
+{
+  "pageChecks": 44,
+  "imageChecks": 140,
+  "issues": [],
+  "results": [
+    {
+      "width": 375,
+      "route": "/",
+      "images": 12
+    },
+    {
+      "width": 375,
+      "route": "/vehicles/",
+      "images": 5
+    },
+    {
+      "width": 375,
+      "route": "/vehicles/16-seater-van/",
+      "images": 3
+    },
+    {
+      "width": 375,
+      "route": "/routes/",
+      "images": 4
+    },
+    {
+      "width": 375,
+      "route": "/routes/hanoi-to-sapa/",
+      "images": 1
+    },
+    {
+      "width": 375,
+      "route": "/services/",
+      "images": 3
+    },
+    {
+      "width": 375,
+      "route": "/services/hanoi-airport-transfer/",
+      "images": 1
+    },
+    {
+      "width": 375,
+      "route": "/about-us/",
+      "images": 1
+    },
+    {
+      "width": 375,
+      "route": "/contact/",
+      "images": 1
+    },
+    {
+      "width": 375,
+      "route": "/resources/",
+      "images": 3
+    },
+    {
+      "width": 375,
+      "route": "/resources/choosing-your-vehicle/",
+      "images": 1
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "images": 12
+    },
+    {
+      "width": 768,
+      "route": "/vehicles/",
+      "images": 5
+    },
+    {
+      "width": 768,
+      "route": "/vehicles/16-seater-van/",
+      "images": 3
+    },
+    {
+      "width": 768,
+      "route": "/routes/",
+      "images": 4
+    },
+    {
+      "width": 768,
+      "route": "/routes/hanoi-to-sapa/",
+      "images": 1
+    },
+    {
+      "width": 768,
+      "route": "/services/",
+      "images": 3
+    },
+    {
+      "width": 768,
+      "route": "/services/hanoi-airport-transfer/",
+      "images": 1
+    },
+    {
+      "width": 768,
+      "route": "/about-us/",
+      "images": 1
+    },
+    {
+      "width": 768,
+      "route": "/contact/",
+      "images": 1
+    },
+    {
+      "width": 768,
+      "route": "/resources/",
+      "images": 3
+    },
+    {
+      "width": 768,
+      "route": "/resources/choosing-your-vehicle/",
+      "images": 1
+    },
+    {
+      "width": 1025,
+      "route": "/",
+      "images": 12
+    },
+    {
+      "width": 1025,
+      "route": "/vehicles/",
+      "images": 5
+    },
+    {
+      "width": 1025,
+      "route": "/vehicles/16-seater-van/",
+      "images": 3
+    },
+    {
+      "width": 1025,
+      "route": "/routes/",
+      "images": 4
+    },
+    {
+      "width": 1025,
+      "route": "/routes/hanoi-to-sapa/",
+      "images": 1
+    },
+    {
+      "width": 1025,
+      "route": "/services/",
+      "images": 3
+    },
+    {
+      "width": 1025,
+      "route": "/services/hanoi-airport-transfer/",
+      "images": 1
+    },
+    {
+      "width": 1025,
+      "route": "/about-us/",
+      "images": 1
+    },
+    {
+      "width": 1025,
+      "route": "/contact/",
+      "images": 1
+    },
+    {
+      "width": 1025,
+      "route": "/resources/",
+      "images": 3
+    },
+    {
+      "width": 1025,
+      "route": "/resources/choosing-your-vehicle/",
+      "images": 1
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "images": 12
+    },
+    {
+      "width": 1440,
+      "route": "/vehicles/",
+      "images": 5
+    },
+    {
+      "width": 1440,
+      "route": "/vehicles/16-seater-van/",
+      "images": 3
+    },
+    {
+      "width": 1440,
+      "route": "/routes/",
+      "images": 4
+    },
+    {
+      "width": 1440,
+      "route": "/routes/hanoi-to-sapa/",
+      "images": 1
+    },
+    {
+      "width": 1440,
+      "route": "/services/",
+      "images": 3
+    },
+    {
+      "width": 1440,
+      "route": "/services/hanoi-airport-transfer/",
+      "images": 1
+    },
+    {
+      "width": 1440,
+      "route": "/about-us/",
+      "images": 1
+    },
+    {
+      "width": 1440,
+      "route": "/contact/",
+      "images": 1
+    },
+    {
+      "width": 1440,
+      "route": "/resources/",
+      "images": 3
+    },
+    {
+      "width": 1440,
+      "route": "/resources/choosing-your-vehicle/",
+      "images": 1
+    }
+  ]
+}

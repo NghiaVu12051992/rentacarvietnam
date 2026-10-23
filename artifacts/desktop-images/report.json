@@ -1,0 +1,212 @@
+[
+  {
+    "width": 375,
+    "route": "/vehicles/",
+    "imageWidth": 294,
+    "imageHeight": 196,
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "route": "/services/",
+    "imageWidth": 294,
+    "imageHeight": 196,
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "route": "/about-us/",
+    "imageWidth": 328,
+    "imageHeight": 219,
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "route": "/",
+    "imageWidth": 328,
+    "imageHeight": 219,
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "route": "/routes/",
+    "imageWidth": 294,
+    "imageHeight": 196,
+    "overflow": false
+  },
+  {
+    "width": 375,
+    "route": "/resources/choosing-your-vehicle/",
+    "imageWidth": 328,
+    "imageHeight": 219,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/vehicles/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/services/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/about-us/",
+    "imageWidth": 576,
+    "imageHeight": 384,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "imageWidth": 705,
+    "imageHeight": 470,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/routes/",
+    "imageWidth": 655,
+    "imageHeight": 437,
+    "overflow": false
+  },
+  {
+    "width": 768,
+    "route": "/resources/choosing-your-vehicle/",
+    "imageWidth": 705,
+    "imageHeight": 470,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "/vehicles/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "/services/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "/about-us/",
+    "imageWidth": 576,
+    "imageHeight": 384,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "/",
+    "imageWidth": 457,
+    "imageHeight": 304,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "/routes/",
+    "imageWidth": 527,
+    "imageHeight": 352,
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "/resources/choosing-your-vehicle/",
+    "imageWidth": 961,
+    "imageHeight": 641,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "route": "/vehicles/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "route": "/services/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "route": "/about-us/",
+    "imageWidth": 469,
+    "imageHeight": 313,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "route": "/",
+    "imageWidth": 457,
+    "imageHeight": 305,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "route": "/routes/",
+    "imageWidth": 528,
+    "imageHeight": 352,
+    "overflow": false
+  },
+  {
+    "width": 1025,
+    "route": "/resources/choosing-your-vehicle/",
+    "imageWidth": 574,
+    "imageHeight": 383,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/vehicles/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/services/",
+    "imageWidth": 400,
+    "imageHeight": 267,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/about-us/",
+    "imageWidth": 576,
+    "imageHeight": 384,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "imageWidth": 572,
+    "imageHeight": 381,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/routes/",
+    "imageWidth": 576,
+    "imageHeight": 384,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "route": "/resources/choosing-your-vehicle/",
+    "imageWidth": 576,
+    "imageHeight": 384,
+    "overflow": false
+  }
+]

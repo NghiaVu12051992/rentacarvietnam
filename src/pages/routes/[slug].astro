@@ -1,0 +1,14 @@
+---
+import DetailPage from '../../layouts/DetailPage.astro';
+import { routeDetail } from '../../lib/detail-pages';
+import routesData from '../../data/routes.json';
+
+export async function getStaticPaths() {
+  return routesData.map((route) => ({
+    params: { slug: route.slug },
+    props: { page: routeDetail(route) },
+  }));
+}
+const { page } = Astro.props;
+---
+<DetailPage page={page} />

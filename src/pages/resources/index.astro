@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import PageFrame from '../../layouts/PageFrame.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageSlot from '../../components/ImageSlot.astro';
+const articles = (await getCollection('articles')).sort((a, b) => a.data.order - b.data.order);
+const policies = (await getCollection('policies')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Travel Guide & Help | Hanoi Car & Bus Rental" description="Practical travel articles, answers to booking questions and information about our policies.">
+  <div class="p-container p-resource-page">
+    <PageFrame columns={1}>
+    <header class="p-resource-header">
+      <span class="p-badge p-badge-primary">Travel guide & help</span>
+      <h1>Plan your trip with confidence</h1>
+      <p>Practical reading, clear answers and booking information, all in one place.</p>
+    </header>
+
+    <nav class="p-resource-tabs" aria-label="Content categories">
+      <a href="#articles">Travel articles</a>
+      <a href="/resources/faq/">Frequently asked questions</a>
+      <a href="#policies">Policies</a>
+    </nav>
+
+    <section class="p-resource-section" id="articles" aria-labelledby="articles-title">
+      <div class="p-resource-section-heading">
+        <h2 id="articles-title">Before you travel</h2>
+        <p>Choose your vehicle, understand your options and prepare your booking details.</p>
+      </div>
+      <div class="p-grid-cols-3">
+        {articles.map(({ id, data }) => (
+          <article class="p-resource-card">
+            <a href={`/resources/${id}/`} tabindex="-1" aria-hidden="true"><ImageSlot src={data.image} alt={data.imageAlt} label={data.title} /></a>
+            <span class="p-resource-meta">{data.category}</span>
+            <h3><a href={`/resources/${id}/`}>{data.title}</a></h3>
+            <p>{data.description}</p>
+            <a class="p-resource-link" href={`/resources/${id}/`}>Read article<span class="p-resource-sr">: {data.title}</span></a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="p-resource-help" aria-labelledby="faq-title">
+      <div>
+        <span class="p-badge p-badge-primary">Quick answers</span>
+        <h2 id="faq-title">Questions before you book?</h2>
+        <p>Find answers about quotes, vehicles, luggage, pickup arrangements and changes.</p>
+      </div>
+      <a href="/resources/faq/" class="p-btn p-btn-primary">Browse all FAQs</a>
+    </section>
+
+    <section class="p-resource-section" id="policies" aria-labelledby="policies-title">
+      <div class="p-resource-section-heading">
+        <h2 id="policies-title">Policies & booking information</h2>
+        <p>Find the information to check before confirming your journey.</p>
+      </div>
+      <div class="p-resource-policy-list">
+        {policies.map(({ id, data }) => (
+          <a class="p-resource-policy-row" href={`/resources/policies/${id}/`}>
+            <h3>{data.title}</h3>
+            <p>{data.description}</p>
+            <span class="p-resource-link">View details</span>
+          </a>
+        ))}
+      </div>
+    </section>
+    </PageFrame>
+  </div>
+</BaseLayout>

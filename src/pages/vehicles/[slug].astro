@@ -1,0 +1,14 @@
+---
+import DetailPage from '../../layouts/DetailPage.astro';
+import { vehicleDetail } from '../../lib/detail-pages';
+import vehiclesData from '../../data/vehicles.json';
+
+export async function getStaticPaths() {
+  return vehiclesData.map((vehicle) => ({
+    params: { slug: vehicle.slug },
+    props: { page: vehicleDetail(vehicle) },
+  }));
+}
+const { page } = Astro.props;
+---
+<DetailPage page={page} />

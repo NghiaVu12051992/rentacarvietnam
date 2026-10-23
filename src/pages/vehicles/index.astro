@@ -1,0 +1,236 @@
+---
+// src/pages/vehicles/index.astro
+import ImageSlot from '../../components/ImageSlot.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BookingWizard from '../../components/BookingWizard.astro';
+import vehiclesData from '../../data/vehicles.json';
+
+const pageTitle = "Our Fleet & Vehicles | Hanoi Car & Bus Rental";
+const pageDesc = "Explore our modern passenger fleet in Hanoi: 7-seater SUV, 16-seater minivan, 29-seater, 35-seater, and 45-seater tour coaches with professional drivers.";
+---
+
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+  <div class="p-container">
+    <!-- Header -->
+    <header class="page-header">
+      <span class="p-badge p-badge-primary">HANOI FLEET</span>
+      <h1 class="page-title">Our Passenger Fleet & Vehicles</h1>
+      <p class="page-subtitle">
+        Every vehicle is 2021–2025 model, meticulously serviced, and operated by professional bilingual chauffeurs.
+      </p>
+    </header>
+
+    <!-- Vehicle Cards Grid (NO TABLES) -->
+    <div class="vehicle-list">
+      {vehiclesData.map((v) => (
+        <article class="p-card vehicle-entry p-media-entry">
+          <ImageSlot src={v.image} alt={v.imageAlt} label={v.title} />
+          <div class="p-media-entry-content">
+          <div class="entry-header">
+            <span class="p-badge p-badge-primary">{v.badge}</span>
+            <span class="entry-models">{v.models}</span>
+            <h2 class="entry-title">{v.title}</h2>
+            <p class="entry-desc">{v.description}</p>
+          </div>
+
+          <div class="entry-specs">
+            <div class="spec-block">
+              <span class="spec-label">Group Capacity</span>
+              <span class="spec-val">{v.capacity}</span>
+            </div>
+            <div class="spec-block">
+              <span class="spec-label">Luggage Space</span>
+              <span class="spec-val">{v.luggage}</span>
+            </div>
+            <div class="spec-block spec-block-full">
+              <span class="spec-label">Best For</span>
+              <span class="spec-val">{v.suitability}</span>
+            </div>
+          </div>
+
+          <div class="entry-rates">
+            <h3 class="rates-heading">Sample Route Rates (All-Inclusive)</h3>
+            <div class="rates-chips">
+              {v.sampleRates.map((r) => (
+                <div class="rate-chip">
+                  <span class="chip-route">{r.route}</span>
+                  <span class="chip-price">{r.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="entry-footer">
+            <a href={`/vehicles/${v.slug}/`} class="p-btn p-btn-primary">
+              View Detailed Specs & Book
+            </a>
+            <a href="#booking-inquiry" class="p-btn p-btn-outline">
+              Quick Quote
+            </a>
+          </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Booking Form Section -->
+    <section class="inquiry-section" id="booking-inquiry">
+      <div class="inquiry-header">
+        <span class="p-badge p-badge-primary">INSTANT DISPATCH</span>
+        <h2 class="inquiry-title">Ready to Reserve Your Vehicle?</h2>
+        <p class="inquiry-subtitle">Select your group size below and our dispatch team will confirm availability.</p>
+      </div>
+      <BookingWizard />
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 760px;
+    margin: var(--space-xl) auto var(--space-xl) auto;
+  }
+  .page-title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-navy);
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .page-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+  .vehicle-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  .vehicle-entry {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .entry-models {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-left: var(--space-xs);
+  }
+  .entry-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    margin-bottom: var(--space-3xs);
+    font-weight: var(--font-weight-bold);
+  }
+  .entry-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+  .entry-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    background: var(--color-bg);
+    padding: var(--space-md);
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--color-border);
+  }
+  .spec-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .spec-block-full {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-xs);
+  }
+  .spec-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+  .spec-val {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .rates-heading {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-xs);
+  }
+  .rates-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+  .rate-chip {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: var(--radius-xs);
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+    font-size: var(--font-size-xs);
+  }
+  .chip-route {
+    color: var(--color-navy);
+  }
+  .chip-price {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-price);
+  }
+
+  .entry-footer {
+    display: flex;
+    gap: var(--space-sm);
+    padding-top: var(--space-xs);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .inquiry-section {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+  .inquiry-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--space-lg) auto;
+  }
+  .inquiry-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    margin-bottom: var(--space-xs);
+  }
+  .inquiry-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .entry-specs {
+      grid-template-columns: 1fr;
+    }
+    .entry-footer {
+      flex-direction: column;
+    }
+    .entry-footer .p-btn {
+      width: 100%;
+    }
+  }
+</style>

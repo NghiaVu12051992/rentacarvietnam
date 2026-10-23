@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "hanoi-to-sapa",
+    "name": "Hanoi to Sapa Private Transfer",
+    "distance": "315 km",
+    "duration": "3.5 to 4.0 Hours",
+    "highway": "Noi Bai - Lao Cai Expressway (CT05)",
+    "description": "Direct expressway private transfer from Hanoi Old Quarter or Noi Bai Airport to Sapa town. Smooth, comfortable, avoiding cramped buses or slow trains.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV",
+        "oneWay": "$80 USD",
+        "roundTrip": "$150 USD"
+      },
+      {
+        "vehicle": "16-Seater Van",
+        "oneWay": "$95 USD",
+        "roundTrip": "$180 USD"
+      },
+      {
+        "vehicle": "29-Seater Bus",
+        "oneWay": "$170 USD",
+        "roundTrip": "$320 USD"
+      }
+    ],
+    "highlights": [
+      "100% via CT05 Expressway with all tolls included",
+      "Rest stop at Km117 for clean restrooms, coffee, and local snacks",
+      "Door-to-door drop-off right at your hotel lobby in Sapa",
+      "Mountain-certified driver skilled on the 30 km Lao Cai - Sapa pass"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi to Sapa Private Transfer"
+  },
+  {
+    "slug": "hanoi-to-halong-bay",
+    "name": "Hanoi to Halong Bay Private Transfer",
+    "distance": "160 km",
+    "duration": "2.5 Hours",
+    "highway": "Hanoi - Hai Phong - Halong Expressway (5B)",
+    "description": "Express highway transfer connecting Hanoi Old Quarter directly to Tuan Chau Port or Halong International Cruise Port in time for noon cruise boarding.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV",
+        "oneWay": "$60 USD",
+        "roundTrip": "$110 USD"
+      },
+      {
+        "vehicle": "16-Seater Van",
+        "oneWay": "$75 USD",
+        "roundTrip": "$140 USD"
+      },
+      {
+        "vehicle": "29-Seater Bus",
+        "oneWay": "$140 USD",
+        "roundTrip": "$260 USD"
+      }
+    ],
+    "highlights": [
+      "Direct 5B Expressway avoids old congested National Route 18",
+      "Punctual arrival guaranteed before 11:30 AM cruise boarding",
+      "Pickup from any Hanoi downtown hotel or Noi Bai Airport",
+      "Highway toll fees and port parking tickets fully covered"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi to Halong Bay Private Transfer"
+  },
+  {
+    "slug": "hanoi-to-ninh-binh",
+    "name": "Hanoi to Ninh Binh Private Car Day Tour",
+    "distance": "95 km",
+    "duration": "1.5 Hours",
+    "highway": "Phap Van - Cau Gie - Ninh Binh Expressway",
+    "description": "Full-day private car charter exploring Trang An, Tam Coc, Mua Cave (Dragon Mountain), and Bai Dinh Pagoda at your own relaxed pace.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV",
+        "oneWay": "$48 USD",
+        "roundTrip": "$65 USD (Full Day)"
+      },
+      {
+        "vehicle": "16-Seater Van",
+        "oneWay": "$65 USD",
+        "roundTrip": "$85 USD (Full Day)"
+      },
+      {
+        "vehicle": "29-Seater Bus",
+        "oneWay": "$100 USD",
+        "roundTrip": "$135 USD (Full Day)"
+      }
+    ],
+    "highlights": [
+      "10 hours dedicated driver service in Ninh Binh",
+      "Complete freedom to choose your sightseeing spots",
+      "Driver waits patiently while you take the 2.5-hour boat excursion",
+      "Expressway tolls in both directions included"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi to Ninh Binh Private Car Day Tour"
+  },
+  {
+    "slug": "hanoi-to-ha-giang",
+    "name": "Hanoi to Ha Giang Private Car Charter",
+    "distance": "320 km",
+    "duration": "Multi-Day Tour (3D2N / 4D3N)",
+    "highway": "Tuyen Quang Expressway & Northern Mountain Passes",
+    "description": "Private car charter for the legendary Ha Giang Loop, Dong Van Karst Plateau, Lung Cu Flag Tower, and Ma Pi Leng Pass.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater 4WD SUV",
+        "oneWay": "N/A",
+        "roundTrip": "$90 USD / day"
+      },
+      {
+        "vehicle": "16-Seater Van",
+        "oneWay": "N/A",
+        "roundTrip": "$105 USD / day"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus",
+        "oneWay": "N/A",
+        "roundTrip": "$150 USD / day"
+      }
+    ],
+    "highlights": [
+      "Experienced local mountain driver handling steep mountain passes",
+      "Vehicle stays with your group throughout the entire loop",
+      "Fuel, road passes, and driver accommodation included in tour rates",
+      "Stops at scenic viewpoints (Heaven's Gate, Nho Que River boat wharf)"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi to Ha Giang Private Car Charter"
+  }
+]

@@ -1,0 +1,344 @@
+{
+  "summary": {
+    "checks": 30,
+    "errors": [],
+    "badLinks": [],
+    "failedMoves": [],
+    "counts": [
+      {
+        "width": 375,
+        "id": "vehicles",
+        "visible": 1,
+        "controls": true
+      },
+      {
+        "width": 375,
+        "id": "destinations",
+        "visible": 1,
+        "controls": true
+      },
+      {
+        "width": 375,
+        "id": "services",
+        "visible": 1,
+        "controls": true
+      },
+      {
+        "width": 375,
+        "id": "travel-guide",
+        "visible": 1,
+        "controls": true
+      },
+      {
+        "width": 375,
+        "id": "help",
+        "visible": 1,
+        "controls": true
+      },
+      {
+        "width": 1440,
+        "id": "vehicles",
+        "visible": 2,
+        "controls": true
+      },
+      {
+        "width": 1440,
+        "id": "destinations",
+        "visible": 2,
+        "controls": true
+      },
+      {
+        "width": 1440,
+        "id": "services",
+        "visible": 2,
+        "controls": true
+      },
+      {
+        "width": 1440,
+        "id": "travel-guide",
+        "visible": 2,
+        "controls": false
+      },
+      {
+        "width": 1440,
+        "id": "help",
+        "visible": 2,
+        "controls": true
+      }
+    ],
+    "keyboardScroll": 604,
+    "wizardStep": "Step 2 of 5"
+  },
+  "results": [
+    {
+      "width": 320,
+      "id": "vehicles",
+      "scroll": 0,
+      "max": 467,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 320,
+      "id": "destinations",
+      "scroll": 0,
+      "max": 467,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 320,
+      "id": "services",
+      "scroll": 0,
+      "max": 467,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 320,
+      "id": "travel-guide",
+      "scroll": 0,
+      "max": 217,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 320,
+      "id": "help",
+      "scroll": 0,
+      "max": 716,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 375,
+      "id": "vehicles",
+      "scroll": 0,
+      "max": 557,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 375,
+      "id": "destinations",
+      "scroll": 0,
+      "max": 557,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 375,
+      "id": "services",
+      "scroll": 0,
+      "max": 557,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 375,
+      "id": "travel-guide",
+      "scroll": 0,
+      "max": 259,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 375,
+      "id": "help",
+      "scroll": 0,
+      "max": 854,
+      "visible": 1,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 768,
+      "id": "vehicles",
+      "scroll": 0,
+      "max": 361,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 768,
+      "id": "destinations",
+      "scroll": 0,
+      "max": 361,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 768,
+      "id": "services",
+      "scroll": 0,
+      "max": 361,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 768,
+      "id": "travel-guide",
+      "scroll": 0,
+      "max": 0,
+      "visible": 2,
+      "controls": false,
+      "moved": true
+    },
+    {
+      "width": 768,
+      "id": "help",
+      "scroll": 0,
+      "max": 721,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1024,
+      "id": "vehicles",
+      "scroll": 0,
+      "max": 489,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1024,
+      "id": "destinations",
+      "scroll": 0,
+      "max": 489,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1024,
+      "id": "services",
+      "scroll": 0,
+      "max": 489,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1024,
+      "id": "travel-guide",
+      "scroll": 0,
+      "max": 0,
+      "visible": 2,
+      "controls": false,
+      "moved": true
+    },
+    {
+      "width": 1024,
+      "id": "help",
+      "scroll": 0,
+      "max": 977,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1025,
+      "id": "vehicles",
+      "scroll": 0,
+      "max": 489,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1025,
+      "id": "destinations",
+      "scroll": 0,
+      "max": 489,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1025,
+      "id": "services",
+      "scroll": 0,
+      "max": 489,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1025,
+      "id": "travel-guide",
+      "scroll": 0,
+      "max": 0,
+      "visible": 2,
+      "controls": false,
+      "moved": true
+    },
+    {
+      "width": 1025,
+      "id": "help",
+      "scroll": 0,
+      "max": 978,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1440,
+      "id": "vehicles",
+      "scroll": 0,
+      "max": 604,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1440,
+      "id": "destinations",
+      "scroll": 0,
+      "max": 604,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1440,
+      "id": "services",
+      "scroll": 0,
+      "max": 604,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    },
+    {
+      "width": 1440,
+      "id": "travel-guide",
+      "scroll": 0,
+      "max": 0,
+      "visible": 2,
+      "controls": false,
+      "moved": true
+    },
+    {
+      "width": 1440,
+      "id": "help",
+      "scroll": 0,
+      "max": 1208,
+      "visible": 2,
+      "controls": true,
+      "moved": true
+    }
+  ]
+}

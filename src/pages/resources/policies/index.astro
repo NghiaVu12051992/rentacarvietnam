@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import PageFrame from '../../../layouts/PageFrame.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const policies = (await getCollection('policies')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Policies & Booking Information | Hanoi Car & Bus Rental" description="Information about booking, payments, cancellations, changes and privacy.">
+  <div class="p-container p-resource-page">
+    <PageFrame columns={1}>
+    <nav class="p-resource-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/resources/">Guide & Help</a><span>/</span><span aria-current="page">Policies</span></nav>
+    <header class="p-resource-header"><span class="p-badge p-badge-primary">Booking information</span><h1>Policies & booking information</h1><p>Review the information for your journey and ask our team to confirm the terms that apply to your booking.</p></header>
+    <div class="p-resource-policy-list">
+      {policies.map(({ id, data }) => <a class="p-resource-policy-row" href={`/resources/policies/${id}/`}><h2>{data.title}</h2><p>{data.description}</p><span class="p-resource-link">View details</span></a>)}
+    </div>
+    </PageFrame>
+  </div>
+</BaseLayout>

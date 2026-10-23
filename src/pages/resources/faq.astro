@@ -1,0 +1,37 @@
+---
+import PageFrame from '../../layouts/PageFrame.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { faqGroups } from '../../data/faqs';
+---
+<BaseLayout title="Frequently Asked Questions | Hanoi Car & Bus Rental" description="Answers to common questions about private transport, booking, luggage, airport pickups and changes.">
+  <div class="p-container p-resource-page">
+    <PageFrame columns={1}>
+    <nav class="p-resource-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/resources/">Guide & Help</a><span>/</span><span aria-current="page">FAQ</span></nav>
+    <header class="p-resource-header">
+      <span class="p-badge p-badge-primary">Frequently asked questions</span>
+      <h1>A little clarity before your trip</h1>
+      <p>Find answers by topic, or contact our team for help with your own itinerary.</p>
+    </header>
+    <nav class="p-resource-tabs" aria-label="FAQ topics">
+      {faqGroups.map(group => <a href={`#${group.id}`}>{group.title}</a>)}
+    </nav>
+    <div class="p-resource-faq-list">
+      {faqGroups.map(group => (
+        <section class="p-resource-section" id={group.id} aria-labelledby={`${group.id}-title`}>
+          <h2 id={`${group.id}-title`}>{group.title}</h2>
+          {group.items.map(item => (
+            <details class="p-faq-accordion">
+              <summary class="p-faq-summary">{item.question}<span class="p-resource-faq-indicator" aria-hidden="true"></span></summary>
+              <div class="p-faq-body">{item.answer}</div>
+            </details>
+          ))}
+        </section>
+      ))}
+    </div>
+    <section class="p-resource-help">
+      <div><h2>Still have a question?</h2><p>Send your itinerary or booking details and tell us what you need to know.</p></div>
+      <a href="/contact/" class="p-btn p-btn-primary">Contact our team</a>
+    </section>
+    </PageFrame>
+  </div>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageFrame from '../layouts/PageFrame.astro';
+import BookingWizard from '../components/BookingWizard.astro';
+import CardCarousel from '../components/CardCarousel.astro';
+import { homepageSections } from '../lib/homepage';
+
+const sections = homepageSections(await getCollection('articles', ({ data }) => !data.draft));
+const pageTitle = 'Hanoi Car & Bus Rental | Private Car, Van & Bus with Driver';
+const pageDesc = 'Explore private vehicles, transfers from Hanoi, chauffeur services and practical travel guides. Find your next journey and request a quote.';
+---
+
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+  <section class="p-home-hero">
+    <div class="p-container">
+      <PageFrame columns={2} sidebar="booking">
+        <div class="p-home-intro">
+          <span class="p-badge p-badge-primary">Your journey starts in Hanoi</span>
+          <h1>Private rides.<br />More ways to explore.</h1>
+          <p>Find the right car, van or coach, explore your destination and plan a journey that fits your group.</p>
+          <div class="p-home-intro-actions">
+            <a href="#vehicles" class="p-btn p-btn-primary">Explore your options</a>
+            <a href="/contact/" class="p-btn p-btn-outline">Plan a custom trip</a>
+          </div>
+          <ul class="p-home-benefits">
+            <li>Private vehicles with driver</li>
+            <li>Airport, city & intercity journeys</li>
+            <li>Advice from our Hanoi team</li>
+          </ul>
+        </div>
+        <BookingWizard slot="sidebar" />
+      </PageFrame>
+    </div>
+  </section>
+
+  <div class="p-container p-home-discovery">
+    <nav class="p-home-shortcuts" aria-label="Explore our categories">
+      {sections.map(section => <a href={`#${section.id}`}>{section.navLabel}</a>)}
+    </nav>
+    {sections.map(section => <CardCarousel section={section} />)}
+    <section class="p-home-contact" aria-labelledby="home-contact-title">
+      <div><h2 id="home-contact-title">Something a little different?</h2><p>Share your itinerary. Our team can help you choose a vehicle and plan the details.</p></div>
+      <a href="/contact/" class="p-btn p-btn-primary">Tell us about your trip</a>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+interface Props {
+  src?: string;
+  alt: string;
+  label: string;
+  eager?: boolean;
+  aspect?: 'photo' | 'portrait' | 'square' | 'video';
+  fit?: 'cover' | 'contain';
+  position?: 'center' | 'top';
+}
+
+const {
+  src = '',
+  alt,
+  label,
+  eager = false,
+  aspect = 'photo',
+  fit = 'cover',
+  position = 'center',
+} = Astro.props;
+
+const dimensions = {
+  photo: { width: '1200', height: '800', ratio: '3:2' },
+  portrait: { width: '800', height: '1200', ratio: '2:3' },
+  square: { width: '1000', height: '1000', ratio: '1:1' },
+  video: { width: '1920', height: '1080', ratio: '16:9' },
+}[aspect] || { width: '1200', height: '800', ratio: '3:2' };
+---
+
+<figure class:list={[
+  'p-image-slot',
+  `p-image-slot--${aspect}`,
+  `p-image-slot--fit-${fit}`,
+  `p-image-slot--pos-${position}`,
+  { 'p-image-slot--empty': !src }
+]}>
+  {src ? (
+    <img
+      src={src}
+      alt={alt}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      width={dimensions.width}
+      height={dimensions.height}
+    />
+  ) : (
+    <div class="p-image-slot-content" role="img" aria-label={`Image placeholder: ${label}`}>
+      <span class="p-image-slot-label">{label}</span>
+      <span class="p-image-slot-hint">Image placeholder · {dimensions.ratio}</span>
+    </div>
+  )}
+</figure>
+

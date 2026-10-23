@@ -1,0 +1,434 @@
+[
+  {
+    "width": 375,
+    "route": "/resources/choosing-your-vehicle/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": 328,
+    "sidebarContent": 202,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/resources/policies/privacy/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": 328,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/resources/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/resources/faq/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/vehicles/16-seater-van/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/routes/hanoi-to-sapa/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/services/hanoi-airport-transfer/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 375,
+    "route": "/contact/",
+    "columns": "328px",
+    "mainWidth": 328,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/resources/choosing-your-vehicle/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": 705,
+    "sidebarContent": 202,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/resources/policies/privacy/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": 705,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/resources/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/resources/faq/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/vehicles/16-seater-van/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/routes/hanoi-to-sapa/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/services/hanoi-airport-transfer/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 768,
+    "route": "/contact/",
+    "columns": "705px",
+    "mainWidth": 705,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/resources/choosing-your-vehicle/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": 961,
+    "sidebarContent": 202,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/resources/policies/privacy/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": 961,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/resources/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/resources/faq/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/vehicles/16-seater-van/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/routes/hanoi-to-sapa/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/services/hanoi-airport-transfer/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1024,
+    "route": "/contact/",
+    "columns": "961px",
+    "mainWidth": 961,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/resources/choosing-your-vehicle/",
+    "columns": "642px 288px",
+    "mainWidth": 642,
+    "articleWidth": 642,
+    "sidebarContent": 202,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/resources/policies/privacy/",
+    "columns": "962px",
+    "mainWidth": 962,
+    "articleWidth": 962,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/resources/",
+    "columns": "962px",
+    "mainWidth": 962,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/resources/faq/",
+    "columns": "962px",
+    "mainWidth": 962,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/vehicles/16-seater-van/",
+    "columns": "546px 384px",
+    "mainWidth": 546,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/routes/hanoi-to-sapa/",
+    "columns": "546px 384px",
+    "mainWidth": 546,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/services/hanoi-airport-transfer/",
+    "columns": "546px 384px",
+    "mainWidth": 546,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1025,
+    "route": "/contact/",
+    "columns": "546px 384px",
+    "mainWidth": 546,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/resources/choosing-your-vehicle/",
+    "columns": "872px 288px",
+    "mainWidth": 872,
+    "articleWidth": 872,
+    "sidebarContent": 202,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/resources/policies/privacy/",
+    "columns": "1192px",
+    "mainWidth": 1192,
+    "articleWidth": 1192,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/resources/",
+    "columns": "1192px",
+    "mainWidth": 1192,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/resources/faq/",
+    "columns": "1192px",
+    "mainWidth": 1192,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/vehicles/16-seater-van/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/routes/hanoi-to-sapa/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/services/hanoi-airport-transfer/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1280,
+    "route": "/contact/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/resources/choosing-your-vehicle/",
+    "columns": "872px 288px",
+    "mainWidth": 872,
+    "articleWidth": 872,
+    "sidebarContent": 202,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/resources/policies/privacy/",
+    "columns": "1192px",
+    "mainWidth": 1192,
+    "articleWidth": 1192,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/resources/",
+    "columns": "1192px",
+    "mainWidth": 1192,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/resources/faq/",
+    "columns": "1192px",
+    "mainWidth": 1192,
+    "articleWidth": null,
+    "sidebarContent": null,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/vehicles/16-seater-van/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/routes/hanoi-to-sapa/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/services/hanoi-airport-transfer/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  },
+  {
+    "width": 1440,
+    "route": "/contact/",
+    "columns": "776px 384px",
+    "mainWidth": 776,
+    "articleWidth": null,
+    "sidebarContent": 399,
+    "overflow": []
+  }
+]

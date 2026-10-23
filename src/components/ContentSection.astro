@@ -1,0 +1,9 @@
+---
+interface Props { title: string; note?: string }
+const { title, note } = Astro.props;
+---
+<section class="p-card p-detail-card">
+  <h2 class="p-detail-section-title">{title}</h2>
+  {note && <p class="p-detail-note">{note}</p>}
+  <slot />
+</section>
