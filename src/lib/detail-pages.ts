@@ -36,9 +36,10 @@ export function vehicleDetail(vehicle: (typeof vehicles)[number]): DetailPageDat
     models: vehicle.models,
     image: { src: vehicle.image, alt: vehicle.imageAlt, label: `${vehicle.shortTitle} - exterior` },
     gallery: [
-      { src: vehicle.interiorImage, alt: `${vehicle.shortTitle} seating and interior`, label: 'Seating & interior' },
-      { src: vehicle.luggageImage, alt: `${vehicle.shortTitle} luggage compartment`, label: 'Luggage space' },
-    ],
+      ...(vehicle.interiorImage ? [{ src: vehicle.interiorImage, alt: `${vehicle.shortTitle} seating and interior`, label: 'Seating & interior', aspect: 'portrait' as const }] : []),
+      ...(vehicle.luggageImage ? [{ src: vehicle.luggageImage, alt: `${vehicle.shortTitle} luggage compartment`, label: 'Luggage space', aspect: 'portrait' as const }] : []),
+      ...(((vehicle as any).gallery || []) as DetailImage[]),
+    ].filter(item => Boolean(item.src)),
     sections: [
       { type: 'specs', title: 'Vehicle Capacity & Specifications', items: [
         { label: 'Passenger Capacity', value: vehicle.capacity },

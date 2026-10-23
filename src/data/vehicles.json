@@ -40,8 +40,28 @@
     "suitability": "Ideal for groups of 6 to 12 travelers with luggage touring Northwest Vietnam.",
     "image": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
     "imageAlt": "16-Seater Van Rental with Driver in Hanoi - Ford Transit High-Roof",
-    "interiorImage": "",
-    "luggageImage": ""
+    "interiorImage": "/images/vehicles/16-seater-van-ford-transit-passenger-cabin-interior.webp",
+    "luggageImage": "/images/vehicles/16-seater-van-ford-transit-luggage-trunk-space.webp",
+    "gallery": [
+      {
+        "src": "/images/vehicles/16-seater-van-ford-transit-cabin-leather-reclining-seats.webp",
+        "alt": "16-Seater Van Rental - Ergonomic Leather Reclining Seats with Armrests",
+        "label": "Leather reclining seats",
+        "aspect": "portrait"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-ford-transit-driver-cockpit.webp",
+        "alt": "16-Seater Van Rental - Ford Transit Driver Cockpit and Boarding Entrance",
+        "label": "Driver cockpit & entrance",
+        "aspect": "portrait"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-ford-transit-exterior-high-roof.webp",
+        "alt": "16-Seater Van Rental with Driver - White Ford Transit High-Roof Exterior",
+        "label": "High-roof exterior profile",
+        "aspect": "portrait"
+      }
+    ]
   },
   {
     "slug": "7-seater-car",

@@ -2788,6 +2788,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-md);
 }
+.p-photo-pair > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - var(--space-md) / 2);
+    margin-inline: auto;
+}
 .p-hero-text-col > .p-image-slot,
 .entry-main > .p-image-slot,
 .site-main > .p-container > .p-image-slot {
@@ -2892,6 +2897,7 @@
     .p-hero-main-title { font-size: var(--type-mobile-page); }
     .p-hero-main-desc { font-size: var(--font-size-base); }
     .p-photo-pair { grid-template-columns: 1fr; }
+    .p-photo-pair > :last-child:nth-child(odd) { max-width: 100%; }
     .p-image-slot-label { max-width: 100%; }
     .site-main [data-booking-wizard] { scroll-margin-top: var(--mobile-header-height); }
 }
