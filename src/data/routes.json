@@ -45,19 +45,24 @@
     "imageAlt": "Hanoi to Sapa Mountain Highway & Valley (AI Illustration Concept)",
     "gallery": [
       {
-        "src": "/images/vehicles/9-seater-dcar-limousine-executive-seats-interior-01.webp",
-        "alt": "9-Seater DCar VIP Limousine First-Class Leather Reclining Massage Seats for Sapa Highway",
-        "label": "VIP Limousine Massage Seats"
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+        "alt": "9-Seater DCar VIP Limousine for Executive Hanoi to Sapa Mountain Transfer",
+        "label": "9-Seater VIP Limousine"
       },
       {
-        "src": "/images/vehicles/16-seater-van-ford-transit-exterior-high-roof.webp",
-        "alt": "16-Seater Van for Group and Family Transfers from Hanoi to Sapa",
-        "label": "16-Seater Group Minivan"
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+        "alt": "16-Seater Van Rental for Small Groups and Families Travelling to Sapa",
+        "label": "16-Seater Minivan"
       },
       {
-        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
+        "src": "/images/vehicles/29-seater-midi-bus-rental-hanoi-thaco-exterior.webp",
         "alt": "29-Seater Tourist Midi Bus with Pneumatic Air Suspension for Smooth Riding to Sapa",
         "label": "29-Seater Midi Bus"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-rental-hanoi-exterior.webp",
+        "alt": "45-Seater Hyundai Universe Coach for Large Tour Groups to Sapa",
+        "label": "45-Seater Tour Coach"
       }
     ],
     "sections": [
@@ -196,19 +201,24 @@
     "imageAlt": "Hanoi to Halong Bay Cruise Marina & Karsts (AI Illustration Concept)",
     "gallery": [
       {
-        "src": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
         "alt": "9-Seater DCar VIP Limousine for Executive Hanoi to Halong Bay Cruise Transfer",
         "label": "9-Seater VIP Limousine"
       },
       {
-        "src": "/images/vehicles/16-seater-van-ford-transit-exterior-high-roof.webp",
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
         "alt": "16-Seater Van Rental with Driver for Halong Bay Family Cruise Groups",
         "label": "16-Seater Minivan"
       },
       {
-        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
+        "src": "/images/vehicles/29-seater-midi-bus-rental-hanoi-thaco-exterior.webp",
         "alt": "29-Seater Tourist Midi Bus for Corporate Delegations to Ha Long Bay",
         "label": "29-Seater Midi Bus"
+      },
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-rental-hanoi-exterior.webp",
+        "alt": "45-Seater Hyundai Universe Coach for Large Tour Groups to Ha Long Bay",
+        "label": "45-Seater Tour Coach"
       }
     ],
     "sections": [

@@ -103,11 +103,16 @@
       }
     ],
     "suitability": "Ideal for business executives, VIP delegations, golf enthusiasts, and luxury family getaways.",
-    "image": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",
-    "imageAlt": "9-Seater DCar VIP Limousine Rental with Driver in Hanoi - Executive Black Exterior Profile",
+    "image": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+    "imageAlt": "9-Seater DCar VIP Limousine Rental with Driver in Hanoi - Executive Black Exterior Showcase",
     "interiorImage": "/images/vehicles/9-seater-dcar-limousine-executive-seats-interior-01.webp",
     "luggageImage": "/images/vehicles/9-seater-dcar-limousine-vip-luggage-trunk-space-01.webp",
     "gallery": [
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-front-exterior-01.webp",
+        "alt": "9-Seater DCar VIP Limousine Front Three-Quarter Profile and Sleek Metallic Exterior",
+        "label": "Front Three-Quarter Exterior"
+      },
       {
         "src": "/images/vehicles/9-seater-dcar-limousine-executive-cabin-overview-02.webp",
         "alt": "9-Seater DCar VIP Limousine Executive Passenger Cabin Suite with Diamond-Quilted Leather Seats",
@@ -208,11 +213,16 @@
       }
     ],
     "suitability": "Perfect for organized tour groups, foreign school trips, and corporate outings.",
-    "image": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
-    "imageAlt": "29-Seater Midi Bus Rental with Driver in Hanoi - Thaco Cruiser Panoramic Exterior Profile",
+    "image": "/images/vehicles/29-seater-midi-bus-rental-hanoi-thaco-exterior.webp",
+    "imageAlt": "29-Seater Midi Bus Rental with Driver in Hanoi - Thaco Tourist Coach Exterior Showcase",
     "interiorImage": "/images/vehicles/29-seater-midi-bus-thaco-passenger-cabin-interior-01.webp",
     "luggageImage": "",
     "gallery": [
+      {
+        "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-three-quarter-01.webp",
+        "alt": "29-Seater Midi Bus Rental with Driver in Hanoi - Thaco Cruiser Panoramic Exterior Profile",
+        "label": "Panoramic Exterior Profile"
+      },
       {
         "src": "/images/vehicles/29-seater-midi-bus-thaco-cruiser-front-exterior-02.webp",
         "alt": "29-Seater Tourist Midi Bus - High-Deck Aerodynamic Front Body & Tinted Windshield",
@@ -315,11 +325,16 @@
       }
     ],
     "suitability": "Large international congresses, incoming MICE tour groups, and university groups.",
-    "image": "/images/vehicles/45-seater-universe-coach-hyundai-noble-front-exterior-01.webp",
-    "imageAlt": "45-Seater Hyundai Universe Coach Rental with Driver in Hanoi - Front Exterior Profile",
+    "image": "/images/vehicles/45-seater-universe-coach-rental-hanoi-exterior.webp",
+    "imageAlt": "45-Seater Hyundai Universe Coach Rental with Driver in Hanoi - Flagship Luxury Coach Exterior",
     "interiorImage": "/images/vehicles/45-seater-universe-coach-hyundai-passenger-cabin-interior-01.webp",
     "luggageImage": "",
     "gallery": [
+      {
+        "src": "/images/vehicles/45-seater-universe-coach-hyundai-noble-front-exterior-01.webp",
+        "alt": "45-Seater Hyundai Universe Coach Rental with Driver in Hanoi - Noble Front Exterior Profile",
+        "label": "Noble Front Profile"
+      },
       {
         "src": "/images/vehicles/45-seater-universe-coach-hyundai-noble-rear-exterior-02.webp",
         "alt": "45-Seater Hyundai Universe Coach - Aerodynamic High-Deck Body and Rear Profile",
