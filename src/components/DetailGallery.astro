@@ -40,6 +40,7 @@ const hasMultiple = allPhotos.length > 1;
         alt={initialPhoto.alt}
         loading="eager"
         decoding="async"
+        class:list={[{ 'is-contain': initialPhoto.aspect === 'portrait' }]}
       />
       {hasMultiple && (
         <span class="p-badge p-badge-primary p-album-badge" id="album-counter-badge">
@@ -183,6 +184,11 @@ const hasMultiple = allPhotos.length > 1;
       if (mainImg) {
         mainImg.src = photo.src;
         mainImg.alt = photo.alt;
+        if (photo.aspect === 'portrait') {
+          mainImg.classList.add('is-contain');
+        } else {
+          mainImg.classList.remove('is-contain');
+        }
       }
       if (counterBadge) counterBadge.textContent = `${currentIndex + 1} / ${total} Photos`;
       if (captionTitle) captionTitle.textContent = photo.label || 'Vehicle Photo';
