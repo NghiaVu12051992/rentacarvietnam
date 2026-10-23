@@ -94,10 +94,46 @@
     "features": [
       "Modern fleet with air suspension (bầu hơi) ensuring smooth ride",
       "Professional B2B contracts, e-invoices (VAT), and dedicated dispatch coordinator",
-      "Backup bus replacement guarantee within 45 minutes in Hanoi area",
+      "Rapid backup bus dispatch network across the Hanoi metropolitan area",
       "Class D and E drivers with pristine safety records on northern expressways"
     ],
     "image": "",
     "imageAlt": "Private Bus Charter & Group Transportation"
+  },
+  {
+    "slug": "hanoi-golf-club-transfer",
+    "title": "Hanoi Golf Course VIP Transfers",
+    "subtitle": "Dedicated private chauffeur with generous golf bag space for 18 & 36-hole retreats",
+    "description": "Private door-to-door transportation connecting Hanoi hotels and residences directly to championship golf resorts across Northern Vietnam. Your chauffeur arrives early and remains on standby at the clubhouse until your round is completed.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV (1-3 Golfers + Bags)",
+        "golfDayTour": "$65 USD (Skylake / Kings Island)",
+        "dailyRate": "$75 USD (Phoenix / Heron Lake)"
+      },
+      {
+        "vehicle": "9-Seater DCar VIP Limousine (4-6 Golfers + Bags)",
+        "golfDayTour": "$110 USD (Skylake / Kings Island)",
+        "dailyRate": "$125 USD (Phoenix / Heron Lake)"
+      },
+      {
+        "vehicle": "16-Seater Van (6-10 Golfers + Bags)",
+        "golfDayTour": "$85 USD (Skylake / Kings Island)",
+        "dailyRate": "$95 USD (Phoenix / Heron Lake)"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus (Tournament Groups)",
+        "golfDayTour": "$130 USD (Skylake / Kings Island)",
+        "dailyRate": "$150 USD (Phoenix / Heron Lake)"
+      }
+    ],
+    "features": [
+      "Ample luggage capacity accommodating oversized golf bags, hard travel cases, and push carts",
+      "Driver stays on-site at the clubhouse parking area throughout your game with zero rush",
+      "Coverage across premier courses: Skylake, BRG Kings Island (Dong Mo), Phoenix (Luong Son), Heron Lake, and Van Tri",
+      "Flexible return timing accommodating clubhouse dining, trophy ceremonies, and post-round refreshments"
+    ],
+    "image": "",
+    "imageAlt": "Hanoi Golf Course VIP Transfers"
   }
 ]

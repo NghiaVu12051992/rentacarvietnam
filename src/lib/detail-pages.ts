@@ -93,7 +93,8 @@ export function serviceDetail(service: (typeof services)[number]): DetailPageDat
   // One mapping for the rate fields already displayed by the service pages.
   const rateLabels = {
     airportToCity: 'Airport to City:', cityToAirport: 'City to Airport:',
-    cityTour8h: 'City Tour (8h / 100km):', dailyRate: 'Daily Rate:',
+    cityTour8h: 'City Tour (8h / 100km):', suburb200km: 'Suburbs (200km):',
+    golfDayTour: 'Course Round-Trip:', dailyRate: 'Outer Provinces / Full Day:',
   } as const;
   return {
     title: service.title,
