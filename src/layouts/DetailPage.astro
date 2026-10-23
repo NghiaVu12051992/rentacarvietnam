@@ -19,11 +19,11 @@ const { page } = Astro.props;
       <h1>{page.title}</h1>
       {page.models && <p class="p-detail-models">Available Models: <strong>{page.models}</strong></p>}
       {page.subtitle && <p class="p-detail-subtitle">{page.subtitle}</p>}
-      <p class="p-detail-lead">{page.description}</p>
     </header>
     <PageFrame columns={2} sidebar="booking">
       <div class="p-detail-stack">
         <DetailGallery image={page.image} gallery={page.gallery} />
+        {page.description && <p class="p-detail-lead">{page.description}</p>}
         <DetailSections sections={page.sections} />
       </div>
       <BookingWizard slot="sidebar" {...page.booking} />

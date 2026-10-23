@@ -3141,12 +3141,12 @@
 .p-detail-page { padding-block: var(--space-md) var(--space-3xl); }
 .p-detail-breadcrumb { display: flex; flex-wrap: wrap; gap: var(--space-xs); font-size: var(--font-size-xs); color: var(--color-text-muted); margin-bottom: var(--space-xs); }
 .p-detail-breadcrumb a { color: var(--color-primary-dark); }
-.p-detail-header { margin-bottom: var(--space-xl); }
+.p-detail-header { margin-bottom: var(--space-md); }
 .p-detail-badges { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
-.p-detail-header h1 { font-size: var(--type-page-title); line-height: var(--line-height-tight); letter-spacing: var(--tracking-tight); margin-block: var(--space-sm) var(--space-md); }
-.p-detail-models { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-bottom: var(--space-xs); }
-.p-detail-subtitle { font-size: var(--font-size-base); color: var(--color-primary-dark); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-xs); }
-.p-detail-lead { font-size: var(--font-size-md); line-height: var(--line-height-comfortable); max-width: var(--content-width-sm); }
+.p-detail-header h1 { font-size: var(--type-page-title); line-height: var(--line-height-tight); letter-spacing: var(--tracking-tight); margin-block: var(--space-2xs) var(--space-2xs); }
+.p-detail-models { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-bottom: var(--space-2xs); }
+.p-detail-subtitle { font-size: var(--font-size-base); color: var(--color-primary-dark); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-2xs); }
+.p-detail-lead { font-size: var(--font-size-sm); line-height: var(--line-height-comfortable); color: var(--color-navy); background: var(--color-bg); padding: var(--space-md); border-radius: var(--radius-xs); border: 1px solid var(--color-border); }
 .p-detail-stack, .p-detail-gallery { display: flex; flex-direction: column; gap: var(--space-md); min-width: 0; }
 .p-detail-gallery > .p-image-slot { width: 100%; max-width: none; }
 .p-detail-card { padding: var(--space-md); border-radius: var(--radius-sm); }
