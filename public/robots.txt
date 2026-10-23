@@ -1,0 +1,4 @@
+# Staging / Development Mode - Temporary Disallow All Search Engine Crawlers
+# Che do khoa tam thoi: Chan toan bo Google, Bing, Yahoo index khi web dang hoan thien
+User-agent: *
+Disallow: /

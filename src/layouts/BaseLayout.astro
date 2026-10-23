@@ -18,7 +18,7 @@ const {
   title = "Hanoi Car & Bus Rental | Private Car, Van & Bus with Driver in Vietnam",
   description = "Reliable private car, minivan, and bus rental with professional English-speaking drivers in Hanoi and Northern Vietnam. Transparent rates, zero hidden fees.",
   canonical,
-  noindex = false,
+  noindex = true,
   hasBookingWizard = false,
 } = Astro.props;
 
@@ -32,7 +32,7 @@ const currentUrl = canonical || Astro.url.href;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={currentUrl} />
 
     <!-- Google Fonts: Inter & Outfit -->
