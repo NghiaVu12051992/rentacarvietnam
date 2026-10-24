@@ -16,13 +16,18 @@ const {
 <div class="p-card wizard-card" id={id} data-booking-wizard>
   <!-- Wizard Header (Matches reference layout, using exact website brand) -->
   <div class="wizard-header">
-      <div class="wizard-top-row">
+    <div class="wizard-top-row">
+      <div class="wizard-top-left">
+        <button type="button" class="wizard-top-back-btn js-back" id="w-top-back" style="display: none;" aria-label="Go to previous step">
+          &larr; Back
+        </button>
         <span class="wizard-brand">HANOI CAR & BUS</span>
-        <span class="wizard-step-label" id="wizard-step-label">Step 1 of 5</span>
       </div>
-      <h2 class="wizard-title">Plan Your Vietnam Trip</h2>
-      <p class="wizard-subtitle">Get a personalized itinerary & transport quote.</p>
+      <span class="wizard-step-label" id="wizard-step-label">Step 1 of 5</span>
     </div>
+    <h2 class="wizard-title">Plan Your Vietnam Trip</h2>
+    <p class="wizard-subtitle">Get a personalized itinerary & transport quote.</p>
+  </div>
 
   <!-- Segmented Progress Bar (5 bars) -->
   <div class="wizard-segments" id="wizard-segments" aria-hidden="true">
@@ -102,10 +107,7 @@ const {
 
     <!-- STEP 2: DURATION -->
     <div class="wizard-pane" data-step="2">
-      <div class="pane-nav">
-        <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">How many days will you travel?</h3>
-      </div>
+      <h3 class="pane-title">How many days will you travel?</h3>
       <p class="pane-desc">Select your travel duration.</p>
       <div class="card-grid">
         <button type="button" class="tap-card is-selected" data-group="days" data-val="1 Day (City / Airport)">
@@ -145,18 +147,20 @@ const {
         </button>
       </div>
 
-      <button type="button" class="wizard-continue-btn js-continue">
-        <span>Continue</span>
-        <span aria-hidden="true">&rarr;</span>
-      </button>
+      <div class="wizard-action-row">
+        <button type="button" class="wizard-back-btn js-back" aria-label="Go to previous step">
+          &larr; Back
+        </button>
+        <button type="button" class="wizard-continue-btn js-continue">
+          <span>Continue</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
     </div>
 
     <!-- STEP 3: DESTINATION -->
     <div class="wizard-pane" data-step="3">
-      <div class="pane-nav">
-        <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">Where is your destination?</h3>
-      </div>
+      <h3 class="pane-title">Where is your destination?</h3>
       <p class="pane-desc">Choose your pickup route or destination.</p>
       <div class="card-grid">
         <button type="button" class="tap-card is-selected" data-group="dest" data-val="Noi Bai Airport Transfer">
@@ -214,18 +218,20 @@ const {
         </button>
       </div>
 
-      <button type="button" class="wizard-continue-btn js-continue">
-        <span>Continue</span>
-        <span aria-hidden="true">&rarr;</span>
-      </button>
+      <div class="wizard-action-row">
+        <button type="button" class="wizard-back-btn js-back" aria-label="Go to previous step">
+          &larr; Back
+        </button>
+        <button type="button" class="wizard-continue-btn js-continue">
+          <span>Continue</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
     </div>
 
     <!-- STEP 4: DATE -->
     <div class="wizard-pane" data-step="4">
-      <div class="pane-nav">
-        <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">When do you need the vehicle?</h3>
-      </div>
+      <h3 class="pane-title">When do you need the vehicle?</h3>
       <p class="pane-desc">Select your timing or choose a specific date.</p>
 
       <div class="card-grid">
@@ -281,18 +287,20 @@ const {
         </div>
       </div>
 
-      <button type="button" class="wizard-continue-btn js-continue">
-        <span>Continue</span>
-        <span aria-hidden="true">&rarr;</span>
-      </button>
+      <div class="wizard-action-row">
+        <button type="button" class="wizard-back-btn js-back" aria-label="Go to previous step">
+          &larr; Back
+        </button>
+        <button type="button" class="wizard-continue-btn js-continue">
+          <span>Continue</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
     </div>
 
     <!-- STEP 5: CONTACT & DISPATCH -->
     <div class="wizard-pane" data-step="5">
-      <div class="pane-nav">
-        <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">Where should we send your quote?</h3>
-      </div>
+      <h3 class="pane-title">Where should we send your quote?</h3>
       <p class="pane-desc">Enter your contact to receive our all-inclusive rates.</p>
 
       <!-- Selection Summary Chip -->
@@ -338,9 +346,14 @@ const {
           />
         </div>
 
-        <button type="submit" class="submit-btn" id="w-submit-btn">
-          Get My All-Inclusive Quote &rarr;
-        </button>
+        <div class="wizard-action-row">
+          <button type="button" class="wizard-back-btn js-back" aria-label="Go to previous step">
+            &larr; Back
+          </button>
+          <button type="submit" class="submit-btn" id="w-submit-btn">
+            Get My Quote &rarr;
+          </button>
+        </div>
 
         <!-- Direct WhatsApp Dispatch Fallback (Shown on error or as 1-click alternative) -->
         <a
@@ -437,17 +450,33 @@ const {
           segments.forEach((seg, idx) => {
             if (idx < step) {
               seg.classList.add('is-active');
+              seg.classList.add('is-clickable');
             } else {
               seg.classList.remove('is-active');
+              seg.classList.remove('is-clickable');
             }
           });
           if (stepLabel) stepLabel.textContent = `Step ${step} of ${totalSteps}`;
+          const topBack = wizard.querySelector('#w-top-back');
+          if (topBack) {
+            topBack.style.display = step > 1 ? 'inline-flex' : 'none';
+          }
         }
 
         if (step === 5 && summaryBox) {
           summaryBox.textContent = `Trip Summary: ${bookingData.pax || '4-9 Pax'} • ${bookingData.days || '1 Day'} • To: ${bookingData.dest || 'Hanoi'} • Date: ${bookingData.date || 'Flexible'}`;
         }
       }
+
+      // Allow clicking earlier progress segments to jump back
+      segments.forEach((seg, idx) => {
+        seg.addEventListener('click', () => {
+          const targetStep = idx + 1;
+          if (typeof currentStep === 'number' && targetStep < currentStep) {
+            updateStep(targetStep);
+          }
+        });
+      });
 
       // Handle Tap Cards (Selection & Visual State)
       wizard.querySelectorAll('.tap-card').forEach(btn => {
