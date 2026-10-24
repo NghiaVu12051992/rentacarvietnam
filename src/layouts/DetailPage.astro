@@ -8,7 +8,11 @@ import type { DetailPageData } from '../lib/detail-pages';
 interface Props { page: DetailPageData }
 const { page } = Astro.props;
 ---
-<BaseLayout hasBookingWizard title={`${page.title} | Hanoi Car & Bus Rental`} description={page.metaDescription}>
+<BaseLayout hasBookingWizard title={`${page.title} | Hanoi Car & Bus Rental`} description={page.metaDescription} noindex={false}>
+  {page.jsonLd && page.jsonLd.map(schema => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+
   <div class="p-container p-detail-page">
     <nav class="p-detail-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>

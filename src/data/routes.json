@@ -9,28 +9,28 @@
     "pricing": [
       {
         "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
-        "oneWay": "$85 USD",
-        "roundTrip": "$160 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (3D2N Package)"
       },
       {
-        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
-        "oneWay": "$140 USD",
-        "roundTrip": "$260 USD"
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
       },
       {
         "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
-        "oneWay": "$105 USD",
-        "roundTrip": "$200 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (3D2N Package)"
       },
       {
         "vehicle": "29-Seater Midi Bus (Air Suspension)",
-        "oneWay": "$185 USD",
-        "roundTrip": "$350 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (3D2N Package)"
       },
       {
         "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
-        "oneWay": "$280 USD",
-        "roundTrip": "$520 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (3D2N Package)"
       }
     ],
     "highlights": [
@@ -70,12 +70,31 @@
         "type": "specs",
         "title": "Route Specifications & Mountain Travel Details",
         "items": [
-          { "label": "Total Distance", "value": "315 km from Hanoi Center / 285 km from Noi Bai Airport (HAN)" },
-          { "label": "Expressway & Infrastructure", "value": "CT05 Expressway (245 km) + Mong Sen Viaduct (Vietnam's tallest bridge, 83m height)" },
-          { "label": "Average Travel Time", "value": "4.5 to 5.0 hours door-to-door (including 15-20 min comfort rest stop)" },
-          { "label": "Mountain Incline Safety", "value": "Smooth gentle ascent via viaduct; bypasses the notorious 'Doc 3 Tang' hairpin curves" },
-          { "label": "Hotel Drop-off Coverage", "value": "All Sapa town center hotels, Sun Plaza, Fansipan cable car station, and valley resort gates" },
-          { "label": "Deep Valley Access (Ta Van / Lao Chai)", "value": "Accessible by private SUV or 16-seat van (large buses cannot enter narrow valley roads)", "full": true }
+          {
+            "label": "Total Distance",
+            "value": "315 km from Hanoi Center / 285 km from Noi Bai Airport (HAN)"
+          },
+          {
+            "label": "Expressway & Infrastructure",
+            "value": "CT05 Expressway (245 km) + Mong Sen Viaduct (Vietnam's tallest bridge, 83m height)"
+          },
+          {
+            "label": "Average Travel Time",
+            "value": "4.5 to 5.0 hours door-to-door (including 15-20 min comfort rest stop)"
+          },
+          {
+            "label": "Mountain Incline Safety",
+            "value": "Smooth gentle ascent via viaduct; bypasses the notorious 'Doc 3 Tang' hairpin curves"
+          },
+          {
+            "label": "Hotel Drop-off Coverage",
+            "value": "All Sapa town center hotels, Sun Plaza, Fansipan cable car station, and valley resort gates"
+          },
+          {
+            "label": "Deep Valley Access (Ta Van / Lao Chai)",
+            "value": "Accessible by private SUV or 16-seat van (large buses cannot enter narrow valley roads)",
+            "full": true
+          }
         ]
       },
       {
@@ -109,11 +128,76 @@
         "title": "Transparent Vehicle Rates for Hanoi to Sapa",
         "note": "All rates include electronic expressway tolls, Mong Sen viaduct fees, fuel, driver wage, and passenger insurance.",
         "rows": [
-          { "label": "7-Seater SUV (Toyota Fortuner / Innova / Xpander)", "values": [{ "label": "One-Way", "value": "$85 USD" }, { "label": "Round-Trip", "value": "$160 USD", "accent": true }] },
-          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "One-Way", "value": "$140 USD" }, { "label": "Round-Trip", "value": "$260 USD", "accent": true }] },
-          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "One-Way", "value": "$105 USD" }, { "label": "Round-Trip", "value": "$200 USD", "accent": true }] },
-          { "label": "29-Seater Midi Bus (Thaco Cruiser Pneumatic Air Suspension)", "values": [{ "label": "One-Way", "value": "$185 USD" }, { "label": "Round-Trip", "value": "$350 USD", "accent": true }] },
-          { "label": "45-Seater Coach (Hyundai Universe Flagship Luxury)", "values": [{ "label": "One-Way", "value": "$280 USD" }, { "label": "Round-Trip", "value": "$520 USD", "accent": true }] }
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (3D2N Package)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (3D2N Package)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (3D2N Package)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "45-Seater Coach (Hyundai Universe Luxury)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (3D2N Package)",
+                "accent": true
+              }
+            ]
+          }
         ]
       },
       {
@@ -152,8 +236,32 @@
             ]
           }
         ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Hanoi to Sapa)",
+        "items": [
+          {
+            "question": "How long does the private car take from Hanoi to Sapa via the expressway?",
+            "answer": "Door-to-door travel takes approximately 4.5 to 5.0 hours via the Noi Bai – Lao Cai Expressway (CT05) and Mong Sen Viaduct, including a 15-20 minute comfort break at Km117 rest station. This is roughly 3 hours faster than trains or older mountain roads."
+          },
+          {
+            "question": "Can the driver pick us up directly at Noi Bai Airport (HAN)?",
+            "answer": "Yes! Our chauffeur monitors your flight number live, meets your group at arrival gate A1/A2 with a personalized name placard, and takes you directly onto the CT05 expressway without needing to enter Hanoi downtown traffic."
+          },
+          {
+            "question": "Can large buses go all the way to valley resorts like Topas Ecolodge or Ta Van?",
+            "answer": "Large 29-seat and 45-seat coaches cannot navigate the steep, narrow roads into deep Muong Hoa valley (Ta Van, Ban Ho). For secluded eco-lodges like Topas Ecolodge, we recommend 7-seater SUVs or 16-seater vans which drop you directly at the reception gate."
+          },
+          {
+            "question": "Are CT05 expressway tolls and the Mong Sen Viaduct fee included in the price?",
+            "answer": "100% yes. All quoted prices are all-inclusive, covering electronic expressway toll tags (ETC), Mong Sen viaduct permits, fuel, mountain driver salary, and passenger insurance. There are zero hidden surcharges."
+          }
+        ]
       }
-    ]
+    ],
+    "category": "mountains",
+    "startingPrice": " USD (3D2N)"
   },
   {
     "slug": "hanoi-to-halong-bay",
@@ -165,28 +273,28 @@
     "pricing": [
       {
         "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
-        "oneWay": "$60 USD",
-        "roundTrip": "$110 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       },
       {
-        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
-        "oneWay": "$105 USD",
-        "roundTrip": "$195 USD"
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
       },
       {
         "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
-        "oneWay": "$75 USD",
-        "roundTrip": "$140 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       },
       {
         "vehicle": "29-Seater Midi Bus (Air Suspension)",
-        "oneWay": "$140 USD",
-        "roundTrip": "$260 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       },
       {
         "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
-        "oneWay": "$220 USD",
-        "roundTrip": "$410 USD"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       }
     ],
     "highlights": [
@@ -226,12 +334,31 @@
         "type": "specs",
         "title": "Route Specifications & Cruise Schedule Guide",
         "items": [
-          { "label": "Total Distance", "value": "155 km from Hanoi Center / 175 km from Noi Bai Airport (HAN)" },
-          { "label": "Expressway Routes Used", "value": "100% via CT04 (Hanoi – Hai Phong) & CT06 (Hai Phong – Ha Long) via Bach Dang Bridge" },
-          { "label": "Average Travel Time", "value": "2.0 to 2.5 hours door-to-door (avoids congested National Route 18)" },
-          { "label": "Recommended Departure Time", "value": "08:00 AM – 08:30 AM from Hanoi for standard 11:30 AM – 12:15 PM cruise embarkation" },
-          { "label": "Cruise Port Drop-off Coverage", "value": "Tuan Chau Marina, Ha Long Sun Port (Bai Chay), Hon Gai Vinashin Port, or Got/Dong Bai Wharf" },
-          { "label": "Return Pickup Coordination", "value": "11:30 AM – 12:00 PM at cruise terminal arrivals hall after luggage disembarkation", "full": true }
+          {
+            "label": "Total Distance",
+            "value": "155 km from Hanoi Center / 175 km from Noi Bai Airport (HAN)"
+          },
+          {
+            "label": "Expressway Routes Used",
+            "value": "100% via CT04 (Hanoi – Hai Phong) & CT06 (Hai Phong – Ha Long) via Bach Dang Bridge"
+          },
+          {
+            "label": "Average Travel Time",
+            "value": "2.0 to 2.5 hours door-to-door (avoids congested National Route 18)"
+          },
+          {
+            "label": "Recommended Departure Time",
+            "value": "08:00 AM – 08:30 AM from Hanoi for standard 11:30 AM – 12:15 PM cruise embarkation"
+          },
+          {
+            "label": "Cruise Port Drop-off Coverage",
+            "value": "Tuan Chau Marina, Ha Long Sun Port (Bai Chay), Hon Gai Vinashin Port, or Got/Dong Bai Wharf"
+          },
+          {
+            "label": "Return Pickup Coordination",
+            "value": "11:30 AM – 12:00 PM at cruise terminal arrivals hall after luggage disembarkation",
+            "full": true
+          }
         ]
       },
       {
@@ -265,11 +392,76 @@
         "title": "Transparent Vehicle Rates for Hanoi to Halong Bay",
         "note": "All rates include electronic expressway tolls, Bach Dang bridge fees, port parking tickets, fuel, driver wage, and passenger insurance.",
         "rows": [
-          { "label": "7-Seater SUV (Toyota Fortuner / Innova / Xpander)", "values": [{ "label": "One-Way", "value": "$60 USD" }, { "label": "Round-Trip", "value": "$110 USD", "accent": true }] },
-          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "One-Way", "value": "$105 USD" }, { "label": "Round-Trip", "value": "$195 USD", "accent": true }] },
-          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "One-Way", "value": "$75 USD" }, { "label": "Round-Trip", "value": "$140 USD", "accent": true }] },
-          { "label": "29-Seater Midi Bus (Thaco Cruiser Air Suspension)", "values": [{ "label": "One-Way", "value": "$140 USD" }, { "label": "Round-Trip", "value": "$260 USD", "accent": true }] },
-          { "label": "45-Seater Coach (Hyundai Universe Luxury)", "values": [{ "label": "One-Way", "value": "$220 USD" }, { "label": "Round-Trip", "value": "$410 USD", "accent": true }] }
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "45-Seater Coach (Hyundai Universe Luxury)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          }
         ]
       },
       {
@@ -308,8 +500,32 @@
             ]
           }
         ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Hanoi to Halong Bay)",
+        "items": [
+          {
+            "question": "What time should we leave Hanoi to catch an 11:30 AM cruise boarding?",
+            "answer": "We recommend departing Hanoi Old Quarter between 8:00 AM and 8:30 AM. Driving via the CT04 & CT06 expressways takes just 2.0 to 2.5 hours, ensuring you arrive calmly at Tuan Chau Marina or Ha Long Sun Port before 11:00 AM."
+          },
+          {
+            "question": "Which cruise ports do you service in Ha Long?",
+            "answer": "We provide direct curbside drop-off and pickup at all major ports: Tuan Chau International Marina (Paradise, Bhaya, Ambassador Day), Ha Long International Cruise Port / Sun Port (Heritage, Indochine, Grand Pioneers), and Hon Gai Vinashin Port."
+          },
+          {
+            "question": "Does the private transfer pick us up after our cruise returns?",
+            "answer": "Yes! For round-trip bookings, your driver awaits inside the port arrivals lounge at 11:30 AM with a name sign as you disembark. We can return you to Hanoi Old Quarter or take you directly to Noi Bai Airport (HAN) for an evening flight."
+          },
+          {
+            "question": "Are all highway tolls and port parking tickets included?",
+            "answer": "Yes, 100% of the CT04/CT06 electronic expressway toll fees (~280,000 VND) and cruise port parking tickets are included in your quote."
+          }
+        ]
       }
-    ]
+    ],
+    "category": "coastal",
+    "startingPrice": " USD"
   },
   {
     "slug": "hanoi-to-ninh-binh",
@@ -321,28 +537,28 @@
     "pricing": [
       {
         "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
-        "oneWay": "$48 USD",
-        "roundTrip": "$65 USD (Full Day 10h)"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       },
       {
-        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
-        "oneWay": "$85 USD",
-        "roundTrip": "$120 USD (Full Day 10h)"
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
       },
       {
         "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
-        "oneWay": "$65 USD",
-        "roundTrip": "$85 USD (Full Day 10h)"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       },
       {
         "vehicle": "29-Seater Midi Bus (Air Suspension)",
-        "oneWay": "$100 USD",
-        "roundTrip": "$135 USD (Full Day 10h)"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       },
       {
         "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
-        "oneWay": "$140 USD",
-        "roundTrip": "$170 USD (Full Day 10h)"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (Full Day 12h)"
       }
     ],
     "highlights": [
@@ -382,12 +598,31 @@
         "type": "specs",
         "title": "Route Specifications & Day Tour Parameters",
         "items": [
-          { "label": "Total Distance", "value": "95 km from Hanoi Center / 120 km from Noi Bai Airport (HAN)" },
-          { "label": "Expressway Infrastructure", "value": "CT01 North-South Expressway (Phap Van – Cau Gie – Cao Bo – Mai Son)" },
-          { "label": "Average Driving Time", "value": "1.25 to 1.5 hours each way (avoids congested National Highway 1A)" },
-          { "label": "Service Duration", "value": "Standard 10-hour full-day tour (e.g. 07:30 AM – 17:30 PM) or one-way private transfer" },
-          { "label": "Sightseeing Standby Policy", "value": "Your driver waits on-site at attraction parking gates while you enjoy boat rides and dining" },
-          { "label": "Attraction Coverage Area", "value": "Trang An, Tam Coc, Mua Cave, Bai Dinh Pagoda, Hoa Lu Ancient Capital, or Van Long Reserve", "full": true }
+          {
+            "label": "Total Distance",
+            "value": "95 km from Hanoi Center / 120 km from Noi Bai Airport (HAN)"
+          },
+          {
+            "label": "Expressway Infrastructure",
+            "value": "CT01 North-South Expressway (Phap Van – Cau Gie – Cao Bo – Mai Son)"
+          },
+          {
+            "label": "Average Driving Time",
+            "value": "1.25 to 1.5 hours each way (avoids congested National Highway 1A)"
+          },
+          {
+            "label": "Service Duration",
+            "value": "Standard 10-hour full-day tour (e.g. 07:30 AM – 17:30 PM) or one-way private transfer"
+          },
+          {
+            "label": "Sightseeing Standby Policy",
+            "value": "Your driver waits on-site at attraction parking gates while you enjoy boat rides and dining"
+          },
+          {
+            "label": "Attraction Coverage Area",
+            "value": "Trang An, Tam Coc, Mua Cave, Bai Dinh Pagoda, Hoa Lu Ancient Capital, or Van Long Reserve",
+            "full": true
+          }
         ]
       },
       {
@@ -421,11 +656,76 @@
         "title": "Transparent Vehicle Rates for Hanoi to Ninh Binh",
         "note": "All rates include electronic expressway tolls, fuel, vehicle parking fees, driver wage, and passenger insurance.",
         "rows": [
-          { "label": "7-Seater SUV (Toyota Fortuner / Innova / Xpander)", "values": [{ "label": "One-Way", "value": "$48 USD" }, { "label": "Full Day (10h)", "value": "$65 USD", "accent": true }] },
-          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "One-Way", "value": "$85 USD" }, { "label": "Full Day (10h)", "value": "$120 USD", "accent": true }] },
-          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "One-Way", "value": "$65 USD" }, { "label": "Full Day (10h)", "value": "$85 USD", "accent": true }] },
-          { "label": "29-Seater Midi Bus (Thaco Cruiser Pneumatic Air Suspension)", "values": [{ "label": "One-Way", "value": "$100 USD" }, { "label": "Full Day (10h)", "value": "$135 USD", "accent": true }] },
-          { "label": "45-Seater Coach (Hyundai Universe Flagship Luxury)", "values": [{ "label": "One-Way", "value": "$140 USD" }, { "label": "Full Day (10h)", "value": "$170 USD", "accent": true }] }
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "45-Seater Coach (Hyundai Universe Luxury)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (Full Day 12h)",
+                "accent": true
+              }
+            ]
+          }
         ]
       },
       {
@@ -465,8 +765,28 @@
             ]
           }
         ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Hanoi to Ninh Binh)",
+        "items": [
+          {
+            "question": "How does a full-day private car charter work in Ninh Binh?",
+            "answer": "Your dedicated chauffeur picks you up from Hanoi around 7:30 AM - 8:00 AM. After the 90-minute expressway drive, the driver stays on standby all day at each attraction (Trang An boat dock, Mua Cave, Bai Dinh) while you tour, and safely brings you back to Hanoi around 17:30 - 18:30 PM."
+          },
+          {
+            "question": "Can we customize our itinerary between Trang An, Tam Coc, and Mua Cave?",
+            "answer": "Absolutely. Unlike rigid bus tours, you have 100% flexibility. You decide how long to spend at each spot, which local goat meat restaurant to dine at, and what order to visit the sights."
+          },
+          {
+            "question": "Can we store all our luggage in the car during the tour?",
+            "answer": "Yes. All luggage remains securely locked inside the air-conditioned vehicle under the driver’s watchful supervision while you enjoy boat rides and mountain hikes."
+          }
+        ]
       }
-    ]
+    ],
+    "category": "day-trips",
+    "startingPrice": " USD"
   },
   {
     "slug": "hanoi-to-ha-giang",
@@ -477,24 +797,29 @@
     "description": "Private door-to-door multi-day vehicle charter navigating the legendary Ha Giang Loop and Dong Van Karst Plateau UNESCO Global Geopark. Ascend through dramatic alpine peaks, cruise the emerald waters of Nho Que River through Tu San Abyss, conquer the towering cliffs of Ma Pi Leng Pass, and stand at Lung Cu Northern Flag Tower with a licensed, mountain-certified private chauffeur.",
     "pricing": [
       {
-        "vehicle": "7-Seater 4WD SUV (Toyota Fortuner / Everest / Xpander)",
-        "oneWay": "N/A",
-        "roundTrip": "$90 USD / day ($270 USD for 3D2N)"
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (4D3N Package)"
       },
       {
-        "vehicle": "9-Seater DCar VIP Limousine (Massage Captain Seats)",
-        "oneWay": "N/A",
-        "roundTrip": "$145 USD / day ($435 USD for 3D2N)"
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
       },
       {
         "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
-        "oneWay": "N/A",
-        "roundTrip": "$105 USD / day ($315 USD for 3D2N)"
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (4D3N Package)"
       },
       {
-        "vehicle": "29-Seater Midi Bus (Thaco Cruiser Air Suspension)",
-        "oneWay": "N/A",
-        "roundTrip": "$155 USD / day ($465 USD for 3D2N)"
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
+        "oneWay": "Advise Later",
+        "roundTrip": " USD (4D3N Package)"
+      },
+      {
+        "vehicle": "45-Seater Coach (Hyundai Universe Luxury)",
+        "oneWay": "Advise Later",
+        "roundTrip": ",071 USD (4D3N Package)"
       }
     ],
     "highlights": [
@@ -534,12 +859,31 @@
         "type": "specs",
         "title": "Route Specifications & Alpine Mountain Parameters",
         "items": [
-          { "label": "Total Distance", "value": "285 km from Hanoi to Ha Giang City / 450+ km complete loop to Dong Van & Meo Vac" },
-          { "label": "Expressway & Highway Routes", "value": "CT05 (Noi Bai - Lao Cai) + CT02 (Phu Tho - Tuyen Quang expressway) + QL2 and QL4C" },
-          { "label": "Driving Time to Ha Giang City", "value": "5.5 to 6.0 hours via high-speed expressway linkages (bypasses older QL2 congestion)" },
-          { "label": "Mountain Incline & Terrain", "value": "Challenging 12–18% slopes, tight hairpin switchbacks, sheer limestone canyon drops" },
-          { "label": "Driver Qualification", "value": "Mountain-certified chauffeurs with a minimum of 5 years driving alpine switchbacks in Vietnam" },
-          { "label": "Vehicle Suitability Guidance", "value": "Private 7-seat SUVs, 9-seat Limousines, and 16-seat Vans are strongly recommended for tight village switchbacks; large 45-seat coaches cannot enter the inner Ma Pi Leng canyon loop.", "full": true }
+          {
+            "label": "Total Distance",
+            "value": "285 km from Hanoi to Ha Giang City / 450+ km complete loop to Dong Van & Meo Vac"
+          },
+          {
+            "label": "Expressway & Highway Routes",
+            "value": "CT05 (Noi Bai - Lao Cai) + CT02 (Phu Tho - Tuyen Quang expressway) + QL2 and QL4C"
+          },
+          {
+            "label": "Driving Time to Ha Giang City",
+            "value": "5.5 to 6.0 hours via high-speed expressway linkages (bypasses older QL2 congestion)"
+          },
+          {
+            "label": "Mountain Incline & Terrain",
+            "value": "Challenging 12–18% slopes, tight hairpin switchbacks, sheer limestone canyon drops"
+          },
+          {
+            "label": "Driver Qualification",
+            "value": "Mountain-certified chauffeurs with a minimum of 5 years driving alpine switchbacks in Vietnam"
+          },
+          {
+            "label": "Vehicle Suitability Guidance",
+            "value": "Private 7-seat SUVs, 9-seat Limousines, and 16-seat Vans are strongly recommended for tight village switchbacks; large 45-seat coaches cannot enter the inner Ma Pi Leng canyon loop.",
+            "full": true
+          }
         ]
       },
       {
@@ -569,10 +913,76 @@
         "title": "Transparent Multi-Day Charter Rates for Ha Giang",
         "note": "All rates are calculated per day and include vehicle, fuel, mountain road permits, driver salary, driver meals, and driver overnight lodging.",
         "rows": [
-          { "label": "7-Seater 4WD SUV (Toyota Fortuner / Ford Everest / Xpander)", "values": [{ "label": "Per Day", "value": "$90 USD" }, { "label": "3D2N Package", "value": "$270 USD", "accent": true }, { "label": "4D3N Package", "value": "$360 USD" }] },
-          { "label": "9-Seater DCar VIP Limousine (Massage Captain Seats & WiFi)", "values": [{ "label": "Per Day", "value": "$145 USD" }, { "label": "3D2N Package", "value": "$435 USD", "accent": true }, { "label": "4D3N Package", "value": "$580 USD" }] },
-          { "label": "16-Seater Van (Ford Transit / Hyundai Solati)", "values": [{ "label": "Per Day", "value": "$105 USD" }, { "label": "3D2N Package", "value": "$315 USD", "accent": true }, { "label": "4D3N Package", "value": "$420 USD" }] },
-          { "label": "29-Seater Midi Bus (Thaco Cruiser Pneumatic Air Suspension)", "values": [{ "label": "Per Day", "value": "$155 USD" }, { "label": "3D2N Package", "value": "$465 USD", "accent": true }, { "label": "4D3N Package", "value": "$620 USD" }] }
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (4D3N Package)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (4D3N Package)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": " USD (4D3N Package)",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "45-Seater Coach (Hyundai Universe Luxury)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": ",071 USD (4D3N Package)",
+                "accent": true
+              }
+            ]
+          }
         ]
       },
       {
@@ -611,6 +1021,583 @@
               "Passenger hotel accommodation and personal meals in Ha Giang",
               "Discretionary driver tip (optional based on satisfaction)"
             ]
+          }
+        ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Hanoi to Ha Giang)",
+        "items": [
+          {
+            "question": "Why choose a private car charter over motorbike rental for the Ha Giang Loop?",
+            "answer": "The Ha Giang Loop features narrow cliffs, 18% switchbacks, unpredictable weather, and heavy gravel. A private 4WD SUV or VIP Limousine with a mountain-certified driver provides complete safety, heated/air-conditioned comfort, luggage security, and zero riding fatigue."
+          },
+          {
+            "question": "Does the driver stay with us for the entire 3-day or 4-day loop?",
+            "answer": "Yes, your chauffeur and private vehicle are on 24/7 dedicated assignment with your group throughout the entire journey, staying overnight in Dong Van, Meo Vac, or Du Gia."
+          },
+          {
+            "question": "Are driver meals and overnight lodging included?",
+            "answer": "Yes, our multi-day charter quote includes 100% of driver meals, driver lodging, fuel, expressway tolls, and vehicle mountain permits."
+          }
+        ]
+      }
+    ],
+    "category": "mountains",
+    "startingPrice": " USD (4D3N)"
+  },
+  {
+    "slug": "noi-bai-airport-transfer",
+    "name": "Noi Bai Airport (HAN) to Hanoi Private Transfer",
+    "category": "airport",
+    "startingPrice": "Advise Later",
+    "distance": "28 km (17 miles)",
+    "duration": "40 to 50 Minutes",
+    "highway": "Vo Nguyen Giap Expressway & Nhat Tan Cable-Stayed Bridge",
+    "description": "Fast, hassle-free 24/7 private transfer between Noi Bai International Airport (Terminal 1 Domestic & Terminal 2 International) and Hanoi Old Quarter, West Lake, or business districts. Flight tracking, meet & greet arrival hall service with name placard, and airport toll fees fully covered.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "45-Seater Coach (Hyundai Universe)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      }
+    ],
+    "highlights": [
+      "Live flight tracking with 60 minutes complimentary waiting time after landing",
+      "Personalized name sign welcome inside Terminal 1 or Terminal 2 arrivals hall",
+      "100% airport entrance parking tickets and Nhat Tan expressway tolls included",
+      "Door-to-door drop-off at any hotel, apartment, or Airbnb in central Hanoi",
+      "Direct booking confirmation on WhatsApp with vehicle plate and driver contacts"
+    ],
+    "isAi": false,
+    "image": "/images/vehicles/7-seater-car-rental-hanoi-mitsubishi-xpander-exterior.webp",
+    "imageAlt": "7-Seater Mitsubishi Xpander for Noi Bai Airport Private Transfer",
+    "gallery": [
+      {
+        "src": "/images/vehicles/7-seater-car-rental-hanoi-mitsubishi-xpander-exterior.webp",
+        "alt": "7-Seater SUV for Fast Airport Transfer to Hanoi",
+        "label": "7-Seater SUV"
+      },
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+        "alt": "9-Seater VIP Limousine for VIP Airport Meet and Greet",
+        "label": "VIP Limousine"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+        "alt": "16-Seater Van for Group Airport Transfers",
+        "label": "16-Seater Van"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Airport Transfer Specifications & Timings",
+        "items": [
+          {
+            "label": "Total Distance",
+            "value": "28 km from HAN Terminal 2 to Hanoi Old Quarter / Hoan Kiem"
+          },
+          {
+            "label": "Expressway Corridors",
+            "value": "Vo Nguyen Giap Expressway & 8-lane Nhat Tan Bridge"
+          },
+          {
+            "label": "Average Driving Time",
+            "value": "40 to 50 minutes (non-peak) / 60 minutes (rush hour)"
+          },
+          {
+            "label": "Flight Delay Policy",
+            "value": "Live flight tracking; zero surcharge for delayed flights"
+          },
+          {
+            "label": "Complimentary Waiting",
+            "value": "60 mins for International flights / 45 mins for Domestic flights"
+          },
+          {
+            "label": "Late Night Service",
+            "value": "Available 24 hours / 7 days a week including red-eye arrivals",
+            "full": true
+          }
+        ]
+      },
+      {
+        "type": "journey",
+        "title": "Step-by-Step Arrival & Departure Process",
+        "items": [],
+        "steps": [
+          {
+            "label": "1. Chauffeur Meet & Greet",
+            "text": "After baggage claim and customs exit (Gate A1 or A2 at T2), locate your driver holding a personalized name sign."
+          },
+          {
+            "label": "2. Luggage Loading & Curbside Boarding",
+            "text": "Chauffeur assists with your suitcases and escorts your party directly to the waiting air-conditioned vehicle at curbside parking."
+          },
+          {
+            "label": "3. Nhat Tan Expressway Cruise",
+            "text": "Glide across the striking cable-stayed Nhat Tan Bridge over the Red River with scenic skyline views of Hanoi."
+          },
+          {
+            "label": "4. Direct Hotel Drop-off",
+            "text": "Seamless curbside arrival directly at your hotel lobby in the Old Quarter, West Lake, or business center."
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Fixed Airport Transfer Rates (No Surge Pricing)",
+        "note": "Rates are fixed per vehicle, not per person. All airport entrance fees, parking, and expressway tolls are included.",
+        "rows": [
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "45-Seater Coach (Hyundai Universe)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "inclusions",
+        "title": "What is Included in Your Airport Transfer?",
+        "groups": [
+          {
+            "title": "Included in Quoted Price",
+            "items": [
+              "Live flight monitoring & flight delay adaptation",
+              "Name placard welcome service at arrivals gate",
+              "Airport entrance toll & parking fees",
+              "Door-to-door private vehicle with cold AC",
+              "Chilled bottled mineral water and luggage assistance",
+              "24/7 bilingual dispatch assistance on WhatsApp"
+            ]
+          },
+          {
+            "title": "Not Included",
+            "items": [
+              "Excessive waiting time beyond 60 minutes after actual landing",
+              "Discretionary driver tip"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Noi Bai Airport)",
+        "items": [
+          {
+            "question": "What happens if my incoming flight is delayed?",
+            "answer": "Please provide your flight number when booking. Our operations team tracks flight radars continuously. If your flight is delayed or rescheduled, your chauffeur automatically adjusts pickup time without any additional fee."
+          },
+          {
+            "question": "Where will I find my driver at Terminal 2 (International)?",
+            "answer": "After collecting your bags and passing customs, walk out through the automatic doors into the main arrival hall. Your driver will be waiting in the arrival greeting area holding a white placard with your name clearly printed."
+          },
+          {
+            "question": "How far in advance should we depart Hanoi for a flight out of Noi Bai?",
+            "answer": "For international departures, we advise leaving Hanoi Old Quarter 3.0 to 3.5 hours before flight time. For domestic departures, 2.0 to 2.5 hours prior is standard."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hanoi-to-cat-ba",
+    "name": "Hanoi to Cat Ba Island Private Transfer & Ferry Connection",
+    "category": "coastal",
+    "startingPrice": "Advise Later",
+    "distance": "140 km (87 miles)",
+    "duration": "2.5 to 3.0 Hours",
+    "highway": "Hanoi - Hai Phong Expressway (CT04) & Dinh Vu - Cat Hai Bridge",
+    "description": "Private door-to-door vehicle transfer from Hanoi to Cat Ba Island via the 6-lane CT04 expressway and Dong Bai Ferry Terminal or Sun World Cat Ba Cable Car station. Direct drop-off at your hotel in Cat Ba Town, Lan Ha Bay resorts, or national park lodges.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      }
+    ],
+    "highlights": [
+      "Fast 1.5-hour expressway drive to Hai Phong coastal terminal via CT04",
+      "Cross Dinh Vu - Cat Hai bridge—one of Southeast Asia longest sea bridges",
+      "Coordination with Dong Bai Ferry or Sun World Cable Car across the bay",
+      "Door-to-door hotel delivery in Cat Ba Town avoiding crowded backpacker buses",
+      "All expressway ETC tolls and bridge fees included in one transparent price"
+    ],
+    "isAi": false,
+    "image": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+    "imageAlt": "16-Seater Ford Transit Minivan for Hanoi to Cat Ba Island Transfer",
+    "gallery": [
+      {
+        "src": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+        "alt": "9-Seater Limousine for Cat Ba Transfer",
+        "label": "VIP Limousine"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+        "alt": "16-Seater Van for Cat Ba Island Trip",
+        "label": "16-Seater Van"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Cat Ba Transfer Route Specifications",
+        "items": [
+          {
+            "label": "Total Distance",
+            "value": "140 km to Dong Bai Ferry Wharf / 165 km to Cat Ba Town"
+          },
+          {
+            "label": "Expressway Route",
+            "value": "CT04 Hanoi - Hai Phong Expressway (120 km/h) & Tan Vu - Lach Huyen sea bridge"
+          },
+          {
+            "label": "Average Travel Time",
+            "value": "2.5 to 3.0 hours including ferry crossing or cable car transfer"
+          },
+          {
+            "label": "Island Crossing Options",
+            "value": "Dong Bai public ferry (20 mins) or Sun World Cable Car (15 mins over Lan Ha Bay)"
+          },
+          {
+            "label": "Drop-off Coverage",
+            "value": "Cat Ba town center, Flamingo Cat Ba Beach Resort, Cat Ba National Park"
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Transparent Vehicle Rates for Hanoi to Cat Ba",
+        "note": "Rates include all CT04 expressway tolls and mainland terminal transfers.",
+        "rows": [
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Hanoi to Cat Ba)",
+        "items": [
+          {
+            "question": "How do we cross from the mainland to Cat Ba Island?",
+            "answer": "There are two convenient options: the Dong Bai car ferry (replaces old Got ferry, 20-minute crossing) or the Sun World Cable Car station which whisks you over the bay with panoramic views."
+          },
+          {
+            "question": "Can the vehicle take us directly to our hotel on Cat Ba Island?",
+            "answer": "Yes! We provide complete island transfer options where our vehicle boards the ferry or an island-based chauffeur meets you at Cai Vieng terminal to deliver you directly to your hotel lobby."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hanoi-to-mai-chau",
+    "name": "Hanoi to Mai Chau Valley & Pu Luong Private Car Transfer",
+    "category": "mountains",
+    "startingPrice": "Advise Later",
+    "distance": "145 km (90 miles)",
+    "duration": "3.5 Hours",
+    "highway": "Thang Long Boulevard, Hoa Lac - Hoa Binh Expressway & QL6 Thung Khe Pass",
+    "description": "Private chauffeur transfer from Hanoi to the scenic stilt-house villages of Mai Chau valley (Lac Village, Pom Coong) and onwards to Pu Luong Nature Reserve. Cruise past limestone bluffs and the mist-covered Thung Khe White Rock Pass with experienced mountain drivers.",
+    "pricing": [
+      {
+        "vehicle": "7-Seater SUV (Fortuner / Innova / Xpander)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "9-Seater DCar VIP Limousine (Captain Seats)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "16-Seater Van (Ford Transit / Hyundai Solati)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      },
+      {
+        "vehicle": "29-Seater Midi Bus (Air Suspension)",
+        "oneWay": "Advise Later",
+        "roundTrip": "Advise Later"
+      }
+    ],
+    "highlights": [
+      "Comfortable scenic drive through Hoa Binh countryside and Da River valley",
+      "Photo pause at Thung Khe White Rock Pass overlooking Mai Chau valley",
+      "Door-to-door drop-off at Mai Chau Ecolodge, Avana Retreat, or village homestays",
+      "Mountain-trained chauffeurs ensuring smooth driving across winding hill passes",
+      "All fuel, tolls, and driver allowances included"
+    ],
+    "isAi": false,
+    "image": "/images/vehicles/9-seater-dcar-limousine-vip-hanoi-exterior.webp",
+    "imageAlt": "9-Seater DCar VIP Limousine for Hanoi to Mai Chau Valley Transfer",
+    "gallery": [
+      {
+        "src": "/images/vehicles/7-seater-car-rental-hanoi-mitsubishi-xpander-exterior.webp",
+        "alt": "7-Seater SUV for Mai Chau Valley Trip",
+        "label": "7-Seater SUV"
+      },
+      {
+        "src": "/images/vehicles/16-seater-van-rental-hanoi-ford-transit-exterior.webp",
+        "alt": "16-Seater Van for Mai Chau Group Tour",
+        "label": "16-Seater Van"
+      }
+    ],
+    "sections": [
+      {
+        "type": "specs",
+        "title": "Mai Chau Route Specifications",
+        "items": [
+          {
+            "label": "Total Distance",
+            "value": "145 km from Hanoi center / 185 km to Pu Luong"
+          },
+          {
+            "label": "Route Taken",
+            "value": "Thang Long Boulevard + CT03 Expressway to Hoa Binh + QL6 via Thung Khe Pass"
+          },
+          {
+            "label": "Average Travel Time",
+            "value": "3.5 hours to Mai Chau / 4.5 hours to Pu Luong"
+          },
+          {
+            "label": "Scenic Lookout Pause",
+            "value": "Thung Khe Pass (White Rock Pass) local street food & panoramic valley vista"
+          },
+          {
+            "label": "Lodge Drop-off Coverage",
+            "value": "Mai Chau Ecolodge, Mai Chau Hideaway, Avana Retreat, Pu Luong Retreat"
+          }
+        ]
+      },
+      {
+        "type": "prices",
+        "title": "Transparent Vehicle Rates for Hanoi to Mai Chau",
+        "note": "Rates include fuel, highway tolls, driver meals, and drop-off at all valley accommodations.",
+        "rows": [
+          {
+            "label": "7-Seater SUV (Fortuner / Innova / Xpander)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "9-Seater DCar VIP Limousine (Captain Seats)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "16-Seater Van (Ford Transit / Hyundai Solati)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          },
+          {
+            "label": "29-Seater Midi Bus (Air Suspension)",
+            "values": [
+              {
+                "label": "One-Way",
+                "value": "Advise Later"
+              },
+              {
+                "label": "Round-Trip / Package",
+                "value": "Advise Later",
+                "accent": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "faqs",
+        "title": "Frequently Asked Questions (Hanoi to Mai Chau)",
+        "items": [
+          {
+            "question": "Can you take us directly to Avana Retreat or Pu Luong?",
+            "answer": "Yes! Our private cars can take you directly to luxury resorts tucked deep in the hills, including Avana Retreat (Mai Do) and Pu Luong nature reserve lodges (Don Village)."
+          },
+          {
+            "question": "Can we stop at Thung Khe Pass for photos?",
+            "answer": "Certainly. Your private chauffeur will happily pause at the famous White Rock Pass so you can enjoy mountain coffee, grilled corn, and stunning photos of the valley below."
           }
         ]
       }

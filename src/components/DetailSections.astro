@@ -20,5 +20,14 @@ const { sections } = Astro.props;
     {section.type === 'inclusions' && <div class="p-detail-inclusions">
       {section.groups.map(group => <div><h3>{group.title}</h3><ul class="p-detail-list">{group.items.map(item => <li>{item}</li>)}</ul></div>)}
     </div>}
+    {section.type === 'faqs' && <div class="p-detail-faqs">
+      {section.items.map(faq => (
+        <details class="p-faq-accordion">
+          <summary class="p-faq-summary">{faq.question}</summary>
+          <div class="p-faq-body">{faq.answer}</div>
+        </details>
+      ))}
+    </div>}
   </ContentSection>
 ))}
+

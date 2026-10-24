@@ -1,0 +1,462 @@
+---
+// src/pages/dev/pricing.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import rawPricingData from '../../data/car-pricing.json';
+import { calculateCarPrice, DEFAULT_EXCHANGE_RATE, DEFAULT_MARGIN_PERCENT } from '../../lib/pricing-calculator';
+
+// Chỉ lấy 28 tuyến Miền Bắc
+const northPricing = rawPricingData.filter(item => item.region === 'Bắc');
+---
+
+<BaseLayout title="Bảng Giá Xe Miền Bắc (Dev)" description="Bảng tính giá gốc và giá bán xe Miền Bắc" noindex={true}>
+  <div class="p-container dev-wrap">
+    <!-- Header -->
+    <div class="dev-header">
+      <h1 class="dev-title">Bảng Giá Miền Bắc ({northPricing.length} Tuyến)</h1>
+      <p class="dev-desc">Công thức: <strong>(Gốc × Margin) ÷ Tỷ giá</strong>. Giá 0 = <strong>Advise Later</strong>.</p>
+    </div>
+
+    <!-- Thanh công cụ chỉnh nhanh (Đẹp cả Desktop lẫn Mobile) -->
+    <div class="dev-toolbar">
+      <div class="toolbar-inputs">
+        <label class="tool-box">
+          <span class="tool-label">Margin:</span>
+          <input type="number" id="marginInput" value={DEFAULT_MARGIN_PERCENT} min="0" max="100" step="5" class="tool-num" />
+          <span class="tool-unit">% (+30%)</span>
+        </label>
+        <label class="tool-box">
+          <span class="tool-label">Tỷ giá:</span>
+          <input type="number" id="exchangeInput" value={DEFAULT_EXCHANGE_RATE} step="100" class="tool-num" />
+          <span class="tool-unit">đ/USD</span>
+        </label>
+      </div>
+      <div class="toolbar-search">
+        <input type="text" id="searchInput" class="search-input" placeholder="Lọc tuyến: Sapa, Halong, Ninh Binh..." />
+      </div>
+    </div>
+
+    <!-- Danh sách chuẩn: 8 cột thẳng tắp trên Desktop, tự thành lưới 3x2 trên Mobile -->
+    <div class="flat-list" id="listContainer">
+      <!-- Header hàng (chỉ Desktop) -->
+      <div class="flat-header">
+        <div class="c-name">Tuyến đường / Tour</div>
+        <div class="c-days">Ngày</div>
+        <div class="c-price">7 Chỗ</div>
+        <div class="c-price">16 Chỗ</div>
+        <div class="c-price">29 Chỗ</div>
+        <div class="c-price">35 Chỗ</div>
+        <div class="c-price">45 Chỗ</div>
+        <div class="c-price">9 Chỗ VIP</div>
+      </div>
+
+      <!-- Các hàng dữ liệu (Đúng 8 cột con, thẳng hàng tuyệt đối) -->
+      {northPricing.map((item, idx) => (
+        <div 
+          class="flat-row"
+          data-name={item.name.toLowerCase()}
+          data-seat7={item.seat7 || 0}
+          data-seat16={item.seat16 || 0}
+          data-seat29={item.seat29 || 0}
+          data-seat35={item.seat35 || 0}
+          data-seat45={item.seat45 || 0}
+          data-seat9={item.seat9 || 0}
+        >
+          <!-- 1. Tên tuyến -->
+          <div class="c-name">
+            <span class="row-num">{idx + 1}.</span>
+            <strong class="route-title">{item.name}</strong>
+            <span class="mobile-days-badge">{item.days} Ngày</span>
+          </div>
+
+          <!-- 2. Số ngày (Desktop) -->
+          <div class="c-days">{item.days}N</div>
+
+          <!-- 3. 7 Chỗ -->
+          <div class="c-price js-calc" data-seat="seat7">
+            <span class="mobile-seat-tag">7 Chỗ</span>
+            <span class="raw-val">{item.seat7 ? `${item.seat7}k` : '-'}</span>
+            <strong class="usd-val">{calculateCarPrice(item.seat7).display}</strong>
+          </div>
+
+          <!-- 4. 16 Chỗ -->
+          <div class="c-price js-calc" data-seat="seat16">
+            <span class="mobile-seat-tag">16 Chỗ</span>
+            <span class="raw-val">{item.seat16 ? `${item.seat16}k` : '-'}</span>
+            <strong class="usd-val">{calculateCarPrice(item.seat16).display}</strong>
+          </div>
+
+          <!-- 5. 29 Chỗ -->
+          <div class="c-price js-calc" data-seat="seat29">
+            <span class="mobile-seat-tag">29 Chỗ</span>
+            <span class="raw-val">{item.seat29 ? `${item.seat29}k` : '-'}</span>
+            <strong class="usd-val">{calculateCarPrice(item.seat29).display}</strong>
+          </div>
+
+          <!-- 6. 35 Chỗ -->
+          <div class="c-price js-calc" data-seat="seat35">
+            <span class="mobile-seat-tag">35 Chỗ</span>
+            <span class="raw-val">{item.seat35 ? `${item.seat35}k` : '-'}</span>
+            <strong class="usd-val">{calculateCarPrice(item.seat35).display}</strong>
+          </div>
+
+          <!-- 7. 45 Chỗ -->
+          <div class="c-price js-calc" data-seat="seat45">
+            <span class="mobile-seat-tag">45 Chỗ</span>
+            <span class="raw-val">{item.seat45 ? `${item.seat45}k` : '-'}</span>
+            <strong class="usd-val">{calculateCarPrice(item.seat45).display}</strong>
+          </div>
+
+          <!-- 8. 9 Chỗ VIP -->
+          <div class="c-price cell-advise js-calc" data-seat="seat9">
+            <span class="mobile-seat-tag">9 Chỗ VIP</span>
+            <span class="raw-val">0</span>
+            <strong class="usd-val">Advise Later</strong>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const marginInput = document.getElementById('marginInput') as HTMLInputElement;
+  const exchangeInput = document.getElementById('exchangeInput') as HTMLInputElement;
+  const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+  const rows = document.querySelectorAll<HTMLElement>('.flat-row');
+
+  function updatePrices() {
+    const margin = parseFloat(marginInput.value) || 30;
+    const rate = parseFloat(exchangeInput.value) || 25500;
+    const mult = 1 + (margin / 100);
+
+    rows.forEach(row => {
+      const calcEls = row.querySelectorAll<HTMLElement>('.js-calc');
+      calcEls.forEach(el => {
+        const seat = el.getAttribute('data-seat');
+        if (!seat) return;
+        const raw = parseFloat(row.getAttribute(`data-${seat}`) || '0');
+        const usdStrong = el.querySelector('.usd-val');
+
+        if (!raw || raw <= 0 || raw === 99000) {
+          if (usdStrong) usdStrong.textContent = 'Advise Later';
+          el.classList.add('cell-advise');
+        } else {
+          const usd = Math.round((raw * 1000 * mult) / rate);
+          if (usdStrong) usdStrong.textContent = `$${usd}`;
+          el.classList.remove('cell-advise');
+        }
+      });
+    });
+  }
+
+  function filterList() {
+    const q = (searchInput.value || '').trim().toLowerCase();
+    rows.forEach(row => {
+      const name = row.getAttribute('data-name') || '';
+      row.style.display = (!q || name.includes(q)) ? '' : 'none';
+    });
+  }
+
+  marginInput?.addEventListener('input', updatePrices);
+  exchangeInput?.addEventListener('input', updatePrices);
+  searchInput?.addEventListener('input', filterList);
+</script>
+
+<style>
+  .dev-wrap {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-2xl);
+  }
+  .dev-header {
+    margin-bottom: var(--space-sm);
+  }
+  .dev-title {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin: 0;
+  }
+  .dev-desc {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin: 4px 0 0 0;
+  }
+
+  /* Toolbar */
+  .dev-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xs);
+    padding: var(--space-xs) var(--space-sm);
+  }
+  .toolbar-inputs {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: center;
+  }
+  .tool-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xs);
+    padding: 3px 8px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .tool-label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-navy);
+    white-space: nowrap;
+  }
+  .tool-num {
+    width: 60px;
+    border: none;
+    background: transparent;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    text-align: center;
+    padding: 0;
+    outline: none;
+  }
+  .tool-unit {
+    font-size: 10px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+  .toolbar-search {
+    flex: 1;
+    max-width: 340px;
+  }
+  .search-input {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    padding: 5px 10px;
+    border-radius: var(--radius-xs);
+    font-size: var(--font-size-xs);
+    color: var(--color-navy);
+    outline: none;
+  }
+  .search-input:focus {
+    border-color: var(--color-primary);
+  }
+
+  /* ==========================================================================
+     DESKTOP LAYOUT (Mặc định): 8 CỘT THẲNG TẮP TUYỆT ĐỐI
+     ========================================================================== */
+  .flat-list {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+  }
+  .flat-header,
+  .flat-row {
+    display: grid;
+    grid-template-columns: 2.2fr 50px repeat(6, 1fr);
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    font-size: var(--font-size-xs);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .flat-header {
+    background: var(--color-navy);
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
+    border-bottom: none;
+  }
+  .flat-row:last-child {
+    border-bottom: none;
+  }
+  .flat-row:nth-child(even) {
+    background: var(--color-bg);
+  }
+  .flat-row:hover {
+    background: var(--color-primary-light);
+  }
+
+  .c-name {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    color: var(--color-navy);
+    min-width: 0;
+  }
+  .row-num {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-2xs);
+    min-width: 16px;
+  }
+  .route-title {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mobile-days-badge {
+    display: none;
+  }
+
+  .c-days {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-2xs);
+    text-align: center;
+  }
+
+  /* Các cột giá trên Desktop */
+  .c-price {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .flat-header .c-price {
+    text-align: right;
+    font-size: var(--font-size-xs);
+  }
+  .mobile-seat-tag {
+    display: none;
+  }
+  .raw-val {
+    font-size: 10px;
+    color: var(--color-text-muted);
+    line-height: 1;
+  }
+  .usd-val {
+    font-size: var(--font-size-xs);
+    color: var(--color-price);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .cell-advise .usd-val {
+    color: var(--color-caution);
+    font-size: var(--font-size-2xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  /* ==========================================================================
+     MOBILE RESPONSIVE (<= 768px): TỰ ĐỘNG THÀNH THẺ DỌC LƯỚI 3x2
+     ========================================================================== */
+  @media (max-width: 768px) {
+    .dev-wrap {
+      padding: var(--space-xs) 8px;
+    }
+    .dev-title {
+      font-size: var(--font-size-base);
+    }
+    .dev-desc {
+      font-size: 11px;
+    }
+
+    /* Toolbar mobile: 2 dòng */
+    .dev-toolbar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+      padding: 8px;
+    }
+    .toolbar-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      width: 100%;
+    }
+    .tool-box {
+      justify-content: space-between;
+      padding: 6px 8px;
+    }
+    .tool-num {
+      width: 48px;
+    }
+    .toolbar-search {
+      width: 100%;
+      max-width: 100%;
+    }
+    .search-input {
+      padding: 6px 10px;
+    }
+
+    /* Ẩn header desktop */
+    .flat-header {
+      display: none;
+    }
+
+    /* Hàng dữ liệu mobile: Lưới 3 cột */
+    .flat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Dòng 1 mobile: Tên tuyến chiếm full 3 cột */
+    .c-name {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3px;
+    }
+    .route-title {
+      white-space: normal;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+    .mobile-days-badge {
+      display: inline-block;
+      background: var(--color-navy);
+      color: var(--color-white);
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      font-size: 10px;
+      font-weight: var(--font-weight-semibold);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Ẩn cột ngày riêng vì đã có mobile-days-badge */
+    .c-days {
+      display: none;
+    }
+
+    /* 6 ô giá tự động xếp vào lưới 3 cột x 2 hàng */
+    .c-price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      background: var(--color-white);
+      border: 1px solid #e2e8f0;
+      border-radius: 3px;
+      padding: 4px 6px;
+    }
+    .mobile-seat-tag {
+      display: block;
+      font-size: 9px;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      font-weight: var(--font-weight-semibold);
+    }
+    .raw-val {
+      font-size: 9px;
+    }
+    .usd-val {
+      font-size: 11px;
+    }
+    .cell-advise .usd-val {
+      font-size: 9px;
+    }
+  }
+</style>

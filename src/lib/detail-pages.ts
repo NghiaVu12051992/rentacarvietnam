@@ -11,6 +11,7 @@ export type DetailSection = SectionBase & (
   | { type: 'prices'; rows: PriceRow[] }
   | { type: 'journey'; steps: { label: string; text: string }[] }
   | { type: 'inclusions'; groups: { title: string; items: string[] }[] }
+  | { type: 'faqs'; items: { question: string; answer: string }[] }
 );
 export interface DetailPageData {
   title: string;
@@ -24,6 +25,7 @@ export interface DetailPageData {
   gallery?: DetailImage[];
   sections: DetailSection[];
   booking: { defaultVehicle?: string; defaultDestination?: string };
+  jsonLd?: Record<string, any>[];
 }
 
 export function vehicleDetail(vehicle: (typeof vehicles)[number]): DetailPageData {
@@ -56,6 +58,80 @@ export function vehicleDetail(vehicle: (typeof vehicles)[number]): DetailPageDat
 
 export function routeDetail(route: (typeof routes)[number]): DetailPageData {
   const customSections = (route as any).sections as DetailSection[] | undefined;
+  const sections = customSections || [
+    { type: 'journey', title: 'Journey Details & Key Highlights', steps: [
+      { label: 'Departure', text: 'Door-to-door pickup from your hotel in Hanoi Old Quarter, West Lake, or Noi Bai Airport.' },
+      { label: 'En Route', text: `Smooth travel via modern expressway (${route.highway}). Rest stop available on request.` },
+      { label: 'Arrival', text: 'Direct drop-off at your destination hotel lobby, cruise port, or attraction gate.' },
+    ] },
+    { type: 'prices', title: 'Transparent Vehicle Rates for this Route', note: 'All rates include toll fees, fuel, driver wage, and passenger insurance.',
+      rows: route.pricing.map(rate => ({ label: rate.vehicle, values: [
+        { label: 'One-Way', value: rate.oneWay },
+        ...(rate.roundTrip !== 'N/A' ? [{ label: 'Round-Trip', value: rate.roundTrip, accent: true }] : []),
+      ] })) },
+    { type: 'inclusions', title: 'What is Included?', groups: [
+      { title: 'Included in Price', items: [
+        'Highway expressway toll fees', 'Fuel, parking, and airport entrance', 'Licensed professional driver',
+        'Bottled drinking water & cold towels', '24/7 bilingual dispatch assistance',
+      ] },
+      { title: 'Not Included', items: [
+        'Personal entrance attraction tickets', 'Meals, beverages, and hotel accommodation', 'Driver gratuity / tipping (discretionary)',
+      ] },
+    ] },
+  ];
+
+  // Extract FAQs for Schema.org JSON-LD
+  const faqSection = sections.find(s => s.type === 'faqs') as { type: 'faqs'; items: { question: string; answer: string }[] } | undefined;
+  const jsonLd: Record<string, any>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://rentacarvietnam.com/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Routes', 'item': 'https://rentacarvietnam.com/routes/' },
+        { '@type': 'ListItem', 'position': 3, 'name': route.name, 'item': `https://rentacarvietnam.com/routes/${route.slug}/` }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      'name': route.name,
+      'description': route.description,
+      'touristType': ['International Travelers', 'Families', 'Couples', 'Business Travelers'],
+      'provider': {
+        '@type': 'LocalBusiness',
+        'name': 'Hanoi Car & Bus Rental',
+        'url': 'https://rentacarvietnam.com'
+      },
+      'offers': route.pricing.map(p => {
+        const numPrice = p.oneWay.replace(/[^0-9]/g, '') || p.roundTrip.replace(/[^0-9]/g, '') || undefined;
+        return {
+          '@type': 'Offer',
+          'name': `${p.vehicle} - ${route.name}`,
+          ...(numPrice ? { 'price': numPrice, 'priceCurrency': 'USD' } : {}),
+          'availability': 'https://schema.org/InStock',
+          'validFrom': '2025-01-01'
+        };
+      })
+
+    }
+  ];
+
+  if (faqSection && faqSection.items.length > 0) {
+    jsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': faqSection.items.map(faq => ({
+        '@type': 'Question',
+        'name': faq.question,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': faq.answer
+        }
+      }))
+    });
+  }
+
   return {
     title: route.name,
     metaDescription: `${route.description} Distance: ${route.distance}, approx ${route.duration}. Transparent private transfer with toll fees and driver included.`,
@@ -64,28 +140,9 @@ export function routeDetail(route: (typeof routes)[number]): DetailPageData {
     badges: [route.distance, route.duration, route.highway],
     image: { src: route.image, alt: route.imageAlt, label: route.name, isAi: Boolean((route as any).isAi) },
     gallery: (((route as any).gallery || []) as DetailImage[]),
-    sections: customSections || [
-      { type: 'journey', title: 'Journey Details & Key Highlights', steps: [
-        { label: 'Departure', text: 'Door-to-door pickup from your hotel in Hanoi Old Quarter, West Lake, or Noi Bai Airport.' },
-        { label: 'En Route', text: `Smooth travel via modern expressway (${route.highway}). Rest stop available on request.` },
-        { label: 'Arrival', text: 'Direct drop-off at your destination hotel lobby, cruise port, or attraction gate.' },
-      ] },
-      { type: 'prices', title: 'Transparent Vehicle Rates for this Route', note: 'All rates include toll fees, fuel, driver wage, and passenger insurance.',
-        rows: route.pricing.map(rate => ({ label: rate.vehicle, values: [
-          { label: 'One-Way', value: rate.oneWay },
-          ...(rate.roundTrip !== 'N/A' ? [{ label: 'Round-Trip', value: rate.roundTrip, accent: true }] : []),
-        ] })) },
-      { type: 'inclusions', title: 'What is Included?', groups: [
-        { title: 'Included in Price', items: [
-          'Highway expressway toll fees', 'Fuel, parking, and airport entrance', 'Licensed professional driver',
-          'Bottled drinking water & cold towels', '24/7 bilingual dispatch assistance',
-        ] },
-        { title: 'Not Included', items: [
-          'Personal entrance attraction tickets', 'Meals, beverages, and hotel accommodation', 'Driver gratuity / tipping (discretionary)',
-        ] },
-      ] },
-    ],
+    sections,
     booking: { defaultDestination: route.name },
+    jsonLd,
   };
 }
 

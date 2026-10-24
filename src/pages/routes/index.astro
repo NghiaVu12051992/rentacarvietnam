@@ -5,35 +5,104 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import BookingWizard from '../../components/BookingWizard.astro';
 import routesData from '../../data/routes.json';
 
-const pageTitle = "Popular Intercity Transfer Routes | Hanoi Car & Bus Rental";
-const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halong Bay, Ninh Binh, Ha Giang, and Noi Bai Airport. Tolls, fuel, and driver included.";
+const pageTitle = "Northern Vietnam Private Car & Bus Routes Directory | Hanoi Car Rental";
+const pageDesc = "Explore private car and bus transfer routes from Hanoi to Noi Bai Airport, Sapa, Halong Bay, Ninh Binh, Ha Giang, Cat Ba, and Mai Chau. Fast expressway travel with transparent all-inclusive rates.";
+
+const regions = [
+  { id: 'all', label: 'All Routes (7)' },
+  { id: 'airport', label: 'Airport Express (HAN)' },
+  { id: 'coastal', label: 'Coastal & Bays' },
+  { id: 'mountains', label: 'Mountain Retreats' },
+  { id: 'day-trips', label: 'Heritage & Day Tours' },
+];
+
+const hubJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': 'Northern Vietnam Private Transfer Routes',
+  'description': pageDesc,
+  'itemListElement': routesData.map((r, index) => ({
+    '@type': 'ListItem',
+    'position': index + 1,
+    'name': r.name,
+    'url': `https://rentacarvietnam.com/routes/${r.slug}/`
+  }))
+};
 ---
 
-<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc}>
+<BaseLayout hasBookingWizard title={pageTitle} description={pageDesc} noindex={false}>
+  <script type="application/ld+json" set:html={JSON.stringify(hubJsonLd)} />
+
   <div class="p-container">
+    <!-- Hub Header -->
     <header class="page-header">
-      <span class="p-badge p-badge-primary">POPULAR ROUTES</span>
-      <h1 class="page-title">Northern Vietnam Private Transfers</h1>
+      <span class="p-badge p-badge-primary">ROUTE DIRECTORY</span>
+      <h1 class="page-title">Northern Vietnam Private Transfer Routes</h1>
       <p class="page-subtitle">
-        Fast, direct expressway travel with door-to-door hotel pickup and professional drivers. No crowded buses, no train transfers.
+        Direct expressway routes with door-to-door hotel pickup and professional English-speaking chauffeurs. Transparent rates with 100% tolls, fuel, and driver allowances pre-paid.
       </p>
     </header>
 
-    <div class="routes-list">
+    <!-- Trust Feature Bar -->
+    <div class="route-trust-bar">
+      <div class="p-card trust-item">
+        <span class="trust-title">100% Expressways</span>
+        <span class="trust-desc">CT04, CT05, CT01 & modern viaducts</span>
+      </div>
+      <div class="p-card trust-item">
+        <span class="trust-title">All Tolls Included</span>
+        <span class="trust-desc">ETC electronic tolls pre-paid</span>
+      </div>
+      <div class="p-card trust-item">
+        <span class="trust-title">Door-to-Door</span>
+        <span class="trust-desc">Hotel lobby to cruise port or lodge</span>
+      </div>
+      <div class="p-card trust-item">
+        <span class="trust-title">Flight Tracking</span>
+        <span class="trust-desc">Complimentary waiting for delays</span>
+      </div>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <nav class="region-filter-bar" aria-label="Route Categories">
+      <span class="filter-label">Filter by Region:</span>
+      <div class="filter-chips">
+        {regions.map((reg, idx) => (
+          <button 
+            type="button" 
+            class:list={['p-badge', idx === 0 ? 'p-badge-primary is-active' : 'p-badge-outline']}
+            data-filter={reg.id}
+          >
+            {reg.label}
+          </button>
+        ))}
+      </div>
+    </nav>
+
+    <!-- Route Cards Grid -->
+    <div class="routes-grid" id="routesContainer">
       {routesData.map((r) => (
-        <article class="p-card route-entry">
-          <div class="entry-main">
+        <article class="p-card route-card" data-category={r.category || 'other'}>
+          <div class="route-media">
             <ImageSlot src={r.image} alt={r.imageAlt} label={r.name} isAi={r.isAi} />
-            <h2 class="entry-title">{r.name}</h2>
-            <div class="metric-tags">
+            <span class="category-chip">{r.category ? r.category.toUpperCase() : 'ROUTE'}</span>
+          </div>
+
+          <div class="route-content">
+            <div class="route-tags">
               <span class="p-badge p-badge-primary">{r.distance}</span>
               <span class="p-badge p-badge-outline">{r.duration}</span>
-              <span class="highway-tag">{r.highway}</span>
             </div>
-            <p class="entry-desc">{r.description}</p>
 
-            <ul class="highlights-list">
-              {r.highlights.map((h) => (
+            <h2 class="route-name">
+              <a href={`/routes/${r.slug}/`} class="route-title-link">{r.name}</a>
+            </h2>
+
+            <p class="route-highway">{r.highway}</p>
+            <p class="route-description">{r.description}</p>
+
+            <ul class="route-highlights">
+              {r.highlights.slice(0, 3).map((h) => (
                 <li>
                   <span class="bullet">✓</span>
                   <span>{h}</span>
@@ -42,49 +111,104 @@ const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halon
             </ul>
           </div>
 
-          <div class="entry-pricing">
-            <div class="pricing-header">
-              <h3 class="pricing-title">Starting Rates</h3>
-              <span class="pricing-badge">All-Inclusive</span>
+          <div class="route-footer">
+            <div class="pricing-teaser">
+              <span class="teaser-label">Starting from</span>
+              <span class="teaser-price">{r.startingPrice || (r.pricing[0] && r.pricing[0].oneWay) || '$20 USD'}</span>
+              <span class="teaser-badge">All-Inclusive</span>
             </div>
-            <ul class="rate-list">
-              {r.pricing.map((p) => (
-                <li class="rate-row">
-                  <span class="rate-vehicle">{p.vehicle}</span>
-                  <span class="rate-quote">
-                    <strong class="rate-price">{p.oneWay}</strong>
-                    {p.roundTrip !== "N/A" && (
-                      <span class="rate-roundtrip">/ {p.roundTrip}</span>
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <a href={`/routes/${r.slug}/`} class="p-btn p-btn-primary full-width-btn">
-              View Itinerary & Book
+            <a href={`/routes/${r.slug}/`} class="p-btn p-btn-primary route-cta-btn">
+              View Guide & Prices
             </a>
           </div>
         </article>
       ))}
     </div>
 
+    <!-- Service Standards Section -->
+    <section class="standards-section">
+      <div class="standards-header">
+        <span class="p-badge p-badge-primary">WHY TRAVEL PRIVATE</span>
+        <h2 class="standards-title">The Hassle-Free Way to Travel Northern Vietnam</h2>
+        <p class="standards-subtitle">
+          Avoid crowded tourist shuttles, rigid train schedules, and roadside taxi haggling. Your vehicle departs on your exact timeline.
+        </p>
+      </div>
+
+      <div class="standards-grid">
+        <div class="p-card standard-card">
+          <h3 class="standard-title">Direct Hotel-to-Hotel</h3>
+          <p class="standard-text">
+            Chauffeur meets you inside your Hanoi Old Quarter hotel lobby, loads all suitcases, and drops you curbside at your Sapa resort, Ninh Binh lodge, or Halong cruise terminal.
+          </p>
+        </div>
+        <div class="p-card standard-card">
+          <h3 class="standard-title">Modern Expressways Only</h3>
+          <p class="standard-text">
+            We avoid slow, congested national highways. All journeys utilize high-speed expressways (CT01, CT04, CT05) with all electronic tolls and viaduct permits 100% pre-paid.
+          </p>
+        </div>
+        <div class="p-card standard-card">
+          <h3 class="standard-title">Mountain & Highway Certified</h3>
+          <p class="standard-text">
+            Every driver assigned to high-altitude passes in Sapa or Ha Giang holds at least 5 years of alpine experience, certified defensive driving training, and safe driving records.
+          </p>
+        </div>
+        <div class="p-card standard-card">
+          <h3 class="standard-title">Custom Rest Stops</h3>
+          <p class="standard-text">
+            Need a coffee break, hot bowl of pho, or photo stop at Thung Khe White Rock Pass or Mong Sen Viaduct? Your private driver gladly accommodates stops at your request.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Booking Form Section -->
     <section class="inquiry-section">
       <div class="inquiry-header">
-        <span class="p-badge p-badge-primary">CUSTOM ROUTES</span>
-        <h2 class="inquiry-title">Need a Custom Route or Multi-City Tour?</h2>
-        <p class="inquiry-subtitle">Tell us your schedule and our dispatch team will tailor an exact itinerary for your group.</p>
+        <span class="p-badge p-badge-primary">CUSTOM ROUTE INQUIRY</span>
+        <h2 class="inquiry-title">Need a Tailored Multi-City Route?</h2>
+        <p class="inquiry-subtitle">
+          Planning a combination itinerary (e.g., Hanoi → Halong Bay → Ninh Binh → Airport)? Let our dispatch team calculate a single seamless package.
+        </p>
       </div>
       <BookingWizard />
     </section>
   </div>
 </BaseLayout>
 
+<script>
+  // Simple client-side category filter for the directory
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('.region-filter-bar button');
+  const routeCards = document.querySelectorAll<HTMLElement>('.route-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('p-badge-primary', 'is-active');
+        b.classList.add('p-badge-outline');
+      });
+      button.classList.remove('p-badge-outline');
+      button.classList.add('p-badge-primary', 'is-active');
+
+      const filter = button.getAttribute('data-filter');
+      routeCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'grid';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
 <style>
   .page-header {
     text-align: center;
     max-width: 760px;
-    margin: var(--space-xl) auto var(--space-xl) auto;
+    margin: var(--space-xl) auto var(--space-md) auto;
   }
   .page-title {
     font-size: var(--font-size-3xl);
@@ -99,153 +223,235 @@ const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halon
     line-height: var(--line-height-comfortable);
   }
 
-  .routes-list {
+  /* Trust Bar */
+  .route-trust-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+  .trust-item {
+    padding: var(--space-sm);
+    text-align: center;
+    background: var(--color-white);
+  }
+  .trust-title {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-navy);
+  }
+  .trust-desc {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: 2px;
+  }
+
+  /* Filter Bar */
+  .region-filter-bar {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    padding: var(--space-xs) 0;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-navy);
+  }
+  .filter-chips {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+  .filter-chips button {
+    cursor: pointer;
+    border: 1px solid var(--color-border);
+    font-family: inherit;
+    transition: all 0.2s ease;
+  }
+  .filter-chips button.is-active {
+    border-color: var(--color-primary);
+  }
+
+  /* Routes Grid */
+  .routes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
-  .route-entry {
+  .route-card {
+    display: grid;
+    grid-template-columns: 320px 1fr 240px;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    align-items: stretch;
     background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
-    padding: var(--space-lg);
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: var(--space-xl);
-    align-items: start;
   }
-  .entry-title {
-    font-size: var(--font-size-xl);
-    color: var(--color-navy);
-    margin-bottom: var(--space-xs);
+  .route-media {
+    position: relative;
+    border-radius: var(--radius-xs);
+    overflow: hidden;
+  }
+  .category-chip {
+    position: absolute;
+    top: var(--space-xs);
+    left: var(--space-xs);
+    background: var(--color-navy);
+    color: var(--color-white);
+    font-size: var(--font-size-2xs);
     font-weight: var(--font-weight-bold);
+    padding: 3px 8px;
+    border-radius: var(--radius-xs);
+    letter-spacing: 0.5px;
   }
-  .metric-tags {
+
+  .route-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-    align-items: center;
-    margin-bottom: var(--space-sm);
+    flex-direction: column;
+    justify-content: flex-start;
   }
-  .highway-tag {
+  .route-tags {
+    display: flex;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-2xs);
+  }
+  .route-name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--space-3xs) 0;
+  }
+  .route-title-link {
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+  .route-title-link:hover {
+    color: var(--color-primary);
+  }
+  .route-highway {
+    font-size: var(--font-size-xs);
+    color: var(--color-primary-dark);
+    font-weight: var(--font-weight-medium);
+    margin: 0 0 var(--space-xs) 0;
+  }
+  .route-description {
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
-  }
-  .entry-desc {
-    font-size: var(--font-size-sm);
-    color: var(--color-navy);
     line-height: var(--line-height-comfortable);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
   }
-  .highlights-list {
+  .route-highlights {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xs);
+    gap: var(--space-3xs);
   }
-  .highlights-list li {
+  .route-highlights li {
     display: flex;
     gap: var(--space-xs);
     font-size: var(--font-size-xs);
-    color: var(--color-text-muted);
+    color: var(--color-navy);
   }
   .bullet {
     color: var(--color-success);
     font-weight: var(--font-weight-bold);
   }
 
-  .entry-pricing {
+  /* Route Footer */
+  .route-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xs);
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-md);
+    text-align: center;
+    gap: var(--space-sm);
+  }
+  .pricing-teaser {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
-  }
-  @media (max-width: 900px) {
-    .entry-pricing {
-      background: transparent;
-      border: none;
-      border-top: 1px solid var(--color-border);
-      border-radius: 0;
-      padding: var(--space-sm) 0 0 0;
-      gap: var(--space-xs);
-    }
-  }
-  .pricing-header {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-xs);
-    padding-bottom: var(--space-3xs);
-    border-bottom: 1px solid var(--color-border);
+    gap: 2px;
   }
-  .pricing-title {
-    font-size: var(--font-size-sm);
-    color: var(--color-navy);
-    font-weight: var(--font-weight-bold);
-    margin: 0;
-  }
-  .pricing-badge {
-    font-size: var(--font-size-2xs);
-    color: var(--color-primary-dark);
-    font-weight: var(--font-weight-semibold);
-    background: var(--color-primary-light);
-    padding: 2px 6px;
-    border-radius: var(--radius-full);
-  }
-  .rate-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .rate-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-xs);
-    padding: var(--space-2xs) 0;
-    border-bottom: 1px solid var(--color-border);
-    font-size: var(--font-size-xs);
-  }
-  .rate-row:last-child {
-    border-bottom: none;
-  }
-  .rate-vehicle {
-    color: var(--color-navy);
-    font-weight: var(--font-weight-medium);
-    flex: 1;
-    min-width: 0;
-  }
-  .rate-quote {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-3xs);
-    flex-shrink: 0;
-    white-space: nowrap;
-    text-align: right;
-  }
-  .rate-price {
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-price);
-  }
-  .rate-roundtrip {
+  .teaser-label {
     font-size: var(--font-size-2xs);
     color: var(--color-text-muted);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-semibold);
   }
-  .full-width-btn {
+  .teaser-price {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+    line-height: var(--line-height-snug);
+  }
+  .teaser-badge {
+    font-size: var(--font-size-2xs);
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-semibold);
+  }
+  .route-cta-btn {
     width: 100%;
-    margin-top: var(--space-2xs);
+    font-size: var(--font-size-xs);
   }
 
+  /* Standards Section */
+  .standards-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+  .standards-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto var(--space-lg) auto;
+  }
+  .standards-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-navy);
+    margin-top: var(--space-3xs);
+    margin-bottom: var(--space-xs);
+  }
+  .standards-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .standards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+  .standard-card {
+    padding: var(--space-md);
+    background: var(--color-white);
+  }
+  .standard-title {
+    font-size: var(--font-size-base);
+    color: var(--color-navy);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-xs);
+  }
+  .standard-text {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-comfortable);
+  }
+
+  /* Inquiry Section */
   .inquiry-section {
-    margin-top: var(--space-xl);
+    margin-top: var(--space-2xl);
     padding-top: var(--space-xl);
     border-top: 1px solid var(--color-border);
   }
@@ -265,10 +471,25 @@ const pageDesc = "Direct private car and bus transfers from Hanoi to Sapa, Halon
     color: var(--color-text-muted);
   }
 
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .route-card {
+      grid-template-columns: 260px 1fr 200px;
+    }
+    .standards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   @media (max-width: 860px) {
-    .route-entry {
+    .route-trust-bar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .route-card {
       grid-template-columns: 1fr;
-      gap: var(--space-md);
+    }
+    .standards-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
