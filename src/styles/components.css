@@ -2209,64 +2209,74 @@
     }
 }
 
-/* Booking wizard: shared typography and spacing, scoped to its root. */
+/* Booking wizard card: single clean card matching reference layout */
 :where([data-booking-wizard]).wizard-card {
-    background: var(--color-booking-bg);
-    border: var(--border-width) solid var(--color-booking-border);
-    border-radius: var(--radius-sm);
-    padding: var(--space-md);
-    box-shadow: var(--shadow-md);
+    background: var(--color-white);
+    border: 1.5px solid #ddecfa;
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-sm);
+    box-shadow: 0 4px 20px rgba(15, 39, 68, 0.06);
     width: 100%;
     box-sizing: border-box;
     line-height: var(--line-height-base);
 }
   :where([data-booking-wizard]) .wizard-header {
-    text-align: center;
-    background: var(--color-booking-header);
-    margin: calc(-1 * var(--space-md)) calc(-1 * var(--space-md)) var(--space-sm);
-    padding: var(--space-sm) var(--space-sm) var(--space-xs);
+    text-align: left;
+    background: transparent;
+    margin: 0 0 var(--space-xs) 0;
+    padding: 0;
   }
-  :where([data-booking-wizard]) .wizard-title {
-    font-size: clamp(0.875rem, 0.8rem + 0.35vw, 1.0625rem);
-    color: var(--color-white);
-    margin-top: var(--space-2xs);
-    margin-bottom: var(--space-2xs);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  :where([data-booking-wizard]) .wizard-subtitle {
-    display: none;
-  }
-
-  /* Progress Bar */
-  :where([data-booking-wizard]) .wizard-progress-wrap {
+  :where([data-booking-wizard]) .wizard-top-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: var(--space-xs);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-2xs);
   }
-  :where([data-booking-wizard]) .wizard-progress-track {
-    flex: 1;
-    height: var(--space-2xs);
-    background: var(--color-bg-alt);
-    border-radius: var(--radius-full);
-    overflow: hidden;
-  }
-  :where([data-booking-wizard]) .wizard-progress-bar {
-    height: 100%;
-    width: 20%;
-    background: var(--color-primary);
-    border-radius: var(--radius-full);
-    transition: width var(--transition-base);
+  :where([data-booking-wizard]) .wizard-brand {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
   :where([data-booking-wizard]) .wizard-step-label {
     font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-navy);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
     white-space: nowrap;
+  }
+  :where([data-booking-wizard]) .wizard-title {
+    font-size: var(--font-size-lg);
+    color: var(--color-navy);
+    margin: 0 0 var(--space-3xs) 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+  :where([data-booking-wizard]) .wizard-subtitle {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm) 0;
+    line-height: var(--line-height-normal);
+  }
+
+  /* Segmented Progress Bar (5 bars) */
+  :where([data-booking-wizard]) .wizard-segments {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    margin-bottom: var(--space-md);
+  }
+  :where([data-booking-wizard]) .wizard-segment {
+    flex: 1;
+    height: 4px;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    transition: background-color var(--transition-base);
+  }
+  :where([data-booking-wizard]) .wizard-segment.is-active {
+    background: var(--color-primary);
   }
 
   /* Step Panes */
@@ -2283,7 +2293,7 @@
   }
 
   :where([data-booking-wizard]) .pane-title {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-md);
     color: var(--color-navy);
     margin-bottom: var(--space-3xs);
     font-weight: var(--font-weight-bold);
@@ -2292,7 +2302,7 @@
   :where([data-booking-wizard]) .pane-desc {
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
   }
   :where([data-booking-wizard]) .pane-nav {
     display: flex;
@@ -2313,46 +2323,100 @@
     height: 1.875rem;
   }
 
-  /* Tap Cards */
+  /* 2-Column Card Grid matching image */
   :where([data-booking-wizard]) .card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xs);
   }
   :where([data-booking-wizard]) .tap-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     padding: var(--space-xs) var(--space-sm);
     background: var(--color-white);
-    border: var(--border-width) solid var(--color-border-strong);
+    border: 1.5px solid var(--color-border);
     border-radius: var(--radius-xs);
     text-align: left;
     cursor: pointer;
     transition: all var(--transition-fast);
     box-sizing: border-box;
-    min-height: 3.5rem;
+    min-height: 4.25rem;
   }
   :where([data-booking-wizard]) .tap-card:hover {
     border-color: var(--color-primary);
     background: var(--color-primary-light);
   }
+  :where([data-booking-wizard]) .tap-card.is-selected {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+    box-shadow: 0 0 0 1px var(--color-primary);
+  }
   :where([data-booking-wizard]) .tap-card.full-width {
     grid-column: 1 / -1;
   }
+  :where([data-booking-wizard]) .tap-card-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-3xs);
+    min-height: 1rem;
+  }
+  :where([data-booking-wizard]) .tap-card-icon {
+    color: var(--color-text-muted);
+    width: 14px;
+    height: 14px;
+  }
+  :where([data-booking-wizard]) .tap-card.is-selected .tap-card-icon {
+    color: var(--color-primary);
+  }
+  :where([data-booking-wizard]) .tap-card-check {
+    color: var(--color-primary);
+    width: 14px;
+    height: 14px;
+    display: none;
+  }
+  :where([data-booking-wizard]) .tap-card.is-selected .tap-card-check {
+    display: block;
+  }
   :where([data-booking-wizard]) .tap-card-primary {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     color: var(--color-navy);
     line-height: var(--line-height-tight);
     white-space: nowrap;
   }
   :where([data-booking-wizard]) .tap-card-secondary {
-    font-size: var(--font-size-2xs);
+    font-size: var(--font-size-xs);
     color: var(--color-text-muted);
     margin-top: 2px;
     line-height: var(--line-height-snug);
+  }
+
+  /* Continue Action Button */
+  :where([data-booking-wizard]) .wizard-continue-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2xs);
+    width: 100%;
+    background: #0f172a;
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-full);
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    margin-top: var(--space-md);
+    transition: background-color var(--transition-fast);
+    min-height: 2.75rem;
+  }
+  :where([data-booking-wizard]) .wizard-continue-btn:hover {
+    background: var(--color-primary);
   }
 
   /* Specific Date Box */
@@ -2369,9 +2433,8 @@
   :where([data-booking-wizard]) .date-input {
     flex: 1;
     height: auto;
-  
     min-height: var(--control-height);
-}
+  }
 
   /* Contact Step & Summary */
   :where([data-booking-wizard]) .summary-chip {
@@ -2405,14 +2468,20 @@
     gap: var(--space-xs);
   }
   :where([data-booking-wizard]) .submit-btn {
-    background: var(--color-primary-dark);
+    background: #0f172a;
+    color: var(--color-white);
+    border-radius: var(--radius-full);
     width: 100%;
     height: auto;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
     margin-top: var(--space-xs);
-  
-    min-height: var(--control-height-lg);
-}
+    min-height: 2.75rem;
+    transition: background-color var(--transition-fast);
+  }
+  :where([data-booking-wizard]) .submit-btn:hover {
+    background: var(--color-primary);
+  }
   :where([data-booking-wizard]) .whatsapp-fallback-btn {
     width: 100%;
     height: auto;
@@ -2423,11 +2492,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-  
     min-height: var(--control-height);
-
     padding: var(--space-xs) var(--space-sm);
-}
+    border-radius: var(--radius-full);
+  }
   :where([data-booking-wizard]) .trust-notice {
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
@@ -2453,23 +2521,18 @@
     line-height: var(--line-height-comfortable);
   }
 
-  /* Instant Messaging Channels */
+  /* Instant Messaging Channels matching image */
   :where([data-booking-wizard]) .wizard-instant-channels {
-    margin-top: var(--space-sm);
-    padding-top: var(--space-xs);
-    border-top: var(--border-width) solid var(--color-border);
+    margin-top: var(--space-md);
+    padding-top: 0;
     text-align: center;
   }
-  :where([data-booking-wizard]) .instant-channels-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-3xs);
-  }
   :where([data-booking-wizard]) .instant-channels-label {
+    display: block;
     font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-navy);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2xs);
+    font-weight: var(--font-weight-medium);
   }
   :where([data-booking-wizard]) .instant-channels-links {
     display: inline-flex;
@@ -2481,48 +2544,46 @@
   :where([data-booking-wizard]) .instant-channel-link {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 3px 8px;
+    justify-content: center;
+    padding: 5px 14px;
     border-radius: var(--radius-full);
     font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semibold);
     text-decoration: none;
     transition: all var(--transition-fast);
     background: var(--color-white);
-    border: var(--border-width) solid var(--color-border);
   }
   :where([data-booking-wizard]) .instant-channel-link.channel-whatsapp {
-    color: var(--color-whatsapp-dark);
-    border-color: rgba(37, 211, 102, 0.4);
+    color: #059669;
+    border: 1.5px solid #a7f3d0;
+    background: #f0fdf4;
   }
   :where([data-booking-wizard]) .instant-channel-link.channel-whatsapp:hover {
-    background: #eafaf1;
-    border-color: var(--color-whatsapp);
+    border-color: #059669;
+    background: #dcfce7;
   }
   :where([data-booking-wizard]) .instant-channel-link.channel-messenger {
-    color: #0070e0;
-    border-color: rgba(0, 132, 255, 0.4);
+    color: #0284c7;
+    border: 1.5px solid #bae6fd;
+    background: #f0f9ff;
   }
   :where([data-booking-wizard]) .instant-channel-link.channel-messenger:hover {
-    background: #eef6ff;
-    border-color: #0084ff;
+    border-color: #0284c7;
+    background: #e0f2fe;
   }
   :where([data-booking-wizard]) .instant-channel-link.channel-line {
-    color: #059b43;
-    border-color: rgba(6, 199, 85, 0.4);
+    color: #059669;
+    border: 1.5px solid #a7f3d0;
+    background: #f0fdf4;
   }
   :where([data-booking-wizard]) .instant-channel-link.channel-line:hover {
-    background: #e9fbf0;
-    border-color: #06c755;
-  }
-  :where([data-booking-wizard]) .channel-dot {
-    color: var(--color-text-muted);
-    font-size: var(--font-size-2xs);
+    border-color: #059669;
+    background: #dcfce7;
   }
   :where([data-booking-wizard]) .instant-channels-note {
     font-size: var(--font-size-2xs);
     color: var(--color-text-muted);
-    margin: var(--space-3xs) 0 0 0;
+    margin: var(--space-2xs) 0 0 0;
   }
 
   @media (max-width: 540px) {
@@ -3337,6 +3398,7 @@ html.p-quote-open, html.p-quote-open body { overflow: hidden; }
     border-radius: 0;
     box-shadow: none;
     padding: var(--space-2xs);
+    background: transparent;
 }
 .p-quote-dialog-body :where([data-booking-wizard]) .wizard-header { display: none; }
 

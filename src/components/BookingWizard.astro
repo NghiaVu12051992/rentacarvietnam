@@ -14,128 +14,255 @@ const {
 ---
 
 <div class="p-card wizard-card" id={id} data-booking-wizard>
-  <!-- Wizard Header -->
+  <!-- Wizard Header (Matches reference layout, using exact website brand) -->
   <div class="wizard-header">
-    <span class="p-badge p-badge-primary">QUICK INQUIRY</span>
-    <h2 class="wizard-title">Get Itinerary Advice & Car Quote</h2>
-  </div>
-
-  <!-- Progress Bar (Duolingo Style) -->
-  <div class="wizard-progress-wrap">
-    <div class="wizard-progress-track">
-      <div class="wizard-progress-bar" id="wizard-bar"></div>
+      <div class="wizard-top-row">
+        <span class="wizard-brand">HANOI CAR & BUS</span>
+        <span class="wizard-step-label" id="wizard-step-label">Step 1 of 5</span>
+      </div>
+      <h2 class="wizard-title">Plan Your Vietnam Trip</h2>
+      <p class="wizard-subtitle">Get a personalized itinerary & transport quote.</p>
     </div>
-    <span class="wizard-step-label" id="wizard-step-label">Step 1 of 5</span>
+
+  <!-- Segmented Progress Bar (5 bars) -->
+  <div class="wizard-segments" id="wizard-segments" aria-hidden="true">
+    <span class="wizard-segment is-active" data-seg="1"></span>
+    <span class="wizard-segment" data-seg="2"></span>
+    <span class="wizard-segment" data-seg="3"></span>
+    <span class="wizard-segment" data-seg="4"></span>
+    <span class="wizard-segment" data-seg="5"></span>
   </div>
 
   <form id="wizard-form" class="wizard-form" novalidate>
-    <!-- STEP 1: GROUP SIZE -->
+    <!-- STEP 1: GROUP SIZE (Exact layout as image) -->
     <div class="wizard-pane is-active" data-step="1">
-      <h3 class="pane-title">1. How many passengers in your group?</h3>
-      <p class="pane-desc">Tap to select your group size</p>
+      <h3 class="pane-title">How many people are traveling?</h3>
+      <p class="pane-desc">Select your group size to continue.</p>
       <div class="card-grid">
-        <button type="button" class="tap-card" data-group="pax" data-val="1-3 Pax (Sedan / SUV)">
-          <span class="tap-card-primary">1–3 Passengers</span>
-          <span class="tap-card-secondary">Sedan or SUV (3 bags)</span>
+        <button type="button" class="tap-card" data-group="pax" data-val="1-3 Pax (7-Seater Car)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">1–3</span>
+          <span class="tap-card-secondary">Passengers</span>
         </button>
-        <button type="button" class="tap-card" data-group="pax" data-val="4-7 Pax (SUV / MPV)">
-          <span class="tap-card-primary">4–7 Passengers</span>
-          <span class="tap-card-secondary">SUV or MPV (4 bags)</span>
+
+        <button type="button" class="tap-card is-selected" data-group="pax" data-val="4-9 Pax (16-Seater Van)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">4–9</span>
+          <span class="tap-card-secondary">Passengers</span>
         </button>
-        <button type="button" class="tap-card" data-group="pax" data-val="8-12 Pax (16-Seat Van)">
-          <span class="tap-card-primary">8–12 Passengers</span>
-          <span class="tap-card-secondary">16-Seater Van (8 bags)</span>
+
+        <button type="button" class="tap-card" data-group="pax" data-val="10-16 Pax (29-Seater Bus)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">10–16</span>
+          <span class="tap-card-secondary">Passengers</span>
         </button>
-        <button type="button" class="tap-card" data-group="pax" data-val="13-20 Pax (29-Seat Bus)">
-          <span class="tap-card-primary">13–20 Passengers</span>
-          <span class="tap-card-secondary">29-Seater Midi Bus (20 bags)</span>
+
+        <button type="button" class="tap-card" data-group="pax" data-val="17-24 Pax (35-Seater Bus)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">17–24</span>
+          <span class="tap-card-secondary">Passengers</span>
         </button>
-        <button type="button" class="tap-card full-width" data-group="pax" data-val="21-45 Pax (Universe Coach)">
-          <span class="tap-card-primary">21–45+ Passengers</span>
-          <span class="tap-card-secondary">Large Universe Tour Coach</span>
+
+        <button type="button" class="tap-card" data-group="pax" data-val="25-45 Pax (45-Seater Coach)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">25–45</span>
+          <span class="tap-card-secondary">Passengers</span>
+        </button>
+
+        <button type="button" class="tap-card" data-group="pax" data-val="45+ Pax (Multiple Coaches)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">45+</span>
+          <span class="tap-card-secondary">Passengers</span>
         </button>
       </div>
+
+      <button type="button" class="wizard-continue-btn js-continue">
+        <span>Continue</span>
+        <span aria-hidden="true">&rarr;</span>
+      </button>
     </div>
 
     <!-- STEP 2: DURATION -->
     <div class="wizard-pane" data-step="2">
       <div class="pane-nav">
         <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">2. How many days will you travel?</h3>
+        <h3 class="pane-title">How many days will you travel?</h3>
       </div>
+      <p class="pane-desc">Select your travel duration.</p>
       <div class="card-grid">
-        <button type="button" class="tap-card" data-group="days" data-val="1 Day (City / Airport)">
+        <button type="button" class="tap-card is-selected" data-group="days" data-val="1 Day (City / Airport)">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">1 Day</span>
-          <span class="tap-card-secondary">Airport Transfer or City Tour</span>
+          <span class="tap-card-secondary">Airport or City Tour</span>
         </button>
+
         <button type="button" class="tap-card" data-group="days" data-val="2 Days (1 Night)">
-          <span class="tap-card-primary">2 Days (1 Night)</span>
-          <span class="tap-card-secondary">Overnight Trip (e.g. Halong)</span>
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">2 Days</span>
+          <span class="tap-card-secondary">1 Night (e.g. Halong)</span>
         </button>
+
         <button type="button" class="tap-card" data-group="days" data-val="3 Days (2 Nights)">
-          <span class="tap-card-primary">3 Days (2 Nights)</span>
-          <span class="tap-card-secondary">Sapa or Ninh Binh Tour</span>
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">3 Days</span>
+          <span class="tap-card-secondary">Sapa or Ninh Binh</span>
         </button>
+
         <button type="button" class="tap-card" data-group="days" data-val="4+ Days Multi-Day Tour">
-          <span class="tap-card-primary">4+ Days (Tour)</span>
-          <span class="tap-card-secondary">Ha Giang Loop or Northwest</span>
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">4+ Days</span>
+          <span class="tap-card-secondary">Multi-Day Tour / Loop</span>
         </button>
       </div>
+
+      <button type="button" class="wizard-continue-btn js-continue">
+        <span>Continue</span>
+        <span aria-hidden="true">&rarr;</span>
+      </button>
     </div>
 
     <!-- STEP 3: DESTINATION -->
     <div class="wizard-pane" data-step="3">
       <div class="pane-nav">
         <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">3. Where is your destination?</h3>
+        <h3 class="pane-title">Where is your destination?</h3>
       </div>
+      <p class="pane-desc">Choose your pickup route or destination.</p>
       <div class="card-grid">
-        <button type="button" class="tap-card" data-group="dest" data-val="Noi Bai Airport Transfer">
-          <span class="tap-card-primary">Noi Bai Airport Transfer</span>
-          <span class="tap-card-secondary">Direct flight pickup with nameboard</span>
+        <button type="button" class="tap-card is-selected" data-group="dest" data-val="Noi Bai Airport Transfer">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">Noi Bai Airport</span>
+          <span class="tap-card-secondary">Flight Pickup / Transfer</span>
         </button>
+
         <button type="button" class="tap-card" data-group="dest" data-val="Hanoi to Sapa">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">Hanoi to Sapa</span>
-          <span class="tap-card-secondary">Expressway route (315 km)</span>
+          <span class="tap-card-secondary">315 km Expressway</span>
         </button>
+
         <button type="button" class="tap-card" data-group="dest" data-val="Hanoi to Halong Bay">
-          <span class="tap-card-primary">Hanoi to Halong Bay</span>
-          <span class="tap-card-secondary">Cruise port transfer (160 km)</span>
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">Hanoi to Halong</span>
+          <span class="tap-card-secondary">Cruise Port Transfer</span>
         </button>
+
         <button type="button" class="tap-card" data-group="dest" data-val="Hanoi to Ninh Binh">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">Hanoi to Ninh Binh</span>
-          <span class="tap-card-secondary">Trang An & Tam Coc Day Trip</span>
+          <span class="tap-card-secondary">Trang An & Tam Coc</span>
         </button>
-        <button type="button" class="tap-card full-width" data-group="dest" data-val="Ha Giang / Custom Route">
-          <span class="tap-card-primary">Ha Giang or Custom Route</span>
-          <span class="tap-card-secondary">Tailor-made multi-province itinerary</span>
+
+        <button type="button" class="tap-card" data-group="dest" data-val="Ha Giang Loop">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">Ha Giang Loop</span>
+          <span class="tap-card-secondary">Mountain Scenic Route</span>
+        </button>
+
+        <button type="button" class="tap-card" data-group="dest" data-val="Custom Route / Other">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <span class="tap-card-primary">Custom Route</span>
+          <span class="tap-card-secondary">Tailor-Made Route</span>
         </button>
       </div>
+
+      <button type="button" class="wizard-continue-btn js-continue">
+        <span>Continue</span>
+        <span aria-hidden="true">&rarr;</span>
+      </button>
     </div>
 
-    <!-- STEP 4: DATE (WITH SPECIFIC CALENDAR DATE SUPPORT) -->
+    <!-- STEP 4: DATE -->
     <div class="wizard-pane" data-step="4">
       <div class="pane-nav">
         <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">4. When do you need the vehicle?</h3>
+        <h3 class="pane-title">When do you need the vehicle?</h3>
       </div>
+      <p class="pane-desc">Select your timing or choose a specific date.</p>
 
       <div class="card-grid">
-        <button type="button" class="tap-card" data-group="date" data-val="Today">
+        <button type="button" class="tap-card is-selected" data-group="date" data-val="Today">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">Today</span>
-          <span class="tap-card-secondary">Urgent dispatch ready</span>
+          <span class="tap-card-secondary">Urgent Dispatch</span>
         </button>
+
         <button type="button" class="tap-card" data-group="date" data-val="Tomorrow">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">Tomorrow</span>
-          <span class="tap-card-secondary">Next day schedule</span>
+          <span class="tap-card-secondary">Next Day Schedule</span>
         </button>
+
         <button type="button" class="tap-card" data-group="date" data-val="This Weekend">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">This Weekend</span>
-          <span class="tap-card-secondary">Upcoming Saturday / Sunday</span>
+          <span class="tap-card-secondary">Saturday or Sunday</span>
         </button>
+
         <button type="button" class="tap-card" data-group="date" data-val="Flexible Dates">
+          <div class="tap-card-header">
+            <svg class="tap-card-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <svg class="tap-card-check" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
           <span class="tap-card-primary">Flexible Dates</span>
-          <span class="tap-card-secondary">Planning ahead</span>
+          <span class="tap-card-secondary">Planning Ahead</span>
         </button>
       </div>
 
@@ -153,14 +280,20 @@ const {
           </button>
         </div>
       </div>
+
+      <button type="button" class="wizard-continue-btn js-continue">
+        <span>Continue</span>
+        <span aria-hidden="true">&rarr;</span>
+      </button>
     </div>
 
     <!-- STEP 5: CONTACT & DISPATCH -->
     <div class="wizard-pane" data-step="5">
       <div class="pane-nav">
         <button type="button" class="back-btn js-back">Back</button>
-        <h3 class="pane-title">5. Where should we send your quote?</h3>
+        <h3 class="pane-title">Where should we send your quote?</h3>
       </div>
+      <p class="pane-desc">Enter your contact to receive our all-inclusive rates.</p>
 
       <!-- Selection Summary Chip -->
       <div class="summary-chip" id="wizard-summary">
@@ -205,8 +338,8 @@ const {
           />
         </div>
 
-        <button type="submit" class="p-btn p-btn-primary submit-btn" id="w-submit-btn">
-          Get My All-Inclusive Quote
+        <button type="submit" class="submit-btn" id="w-submit-btn">
+          Get My All-Inclusive Quote &rarr;
         </button>
 
         <!-- Direct WhatsApp Dispatch Fallback (Shown on error or as 1-click alternative) -->
@@ -242,203 +375,211 @@ const {
     </div>
   </form>
 
-  <!-- Instant Messaging Channels -->
+  <!-- Instant Messaging Channels (Matching layout in image) -->
   <div class="wizard-instant-channels">
-    <div class="instant-channels-row">
-      <span class="instant-channels-label">Need instant response?</span>
-      <div class="instant-channels-links">
-        <a href="https://wa.me/84934615595" target="_blank" rel="noopener noreferrer" class="instant-channel-link channel-whatsapp" aria-label="Chat on WhatsApp">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.11C8.94 7.11 8.66 7.18 8.42 7.44C8.18 7.7 7.5 8.34 7.5 9.64C7.5 10.94 8.45 12.19 8.58 12.36C8.71 12.54 10.45 15.22 13.11 16.37C15.32 17.33 15.77 17.14 16.25 17.1C16.73 17.05 17.79 16.47 18.01 15.85C18.23 15.24 18.23 14.71 18.16 14.6C18.1 14.49 17.93 14.43 17.68 14.3C17.43 14.18 16.2 13.57 15.97 13.49C15.74 13.4 15.58 13.36 15.41 13.61C15.25 13.85 14.77 14.43 14.63 14.6C14.48 14.76 14.34 14.78 14.09 14.66C13.84 14.53 12.79 14.19 11.54 13.07C10.57 12.21 9.92 11.14 9.73 10.82C9.55 10.5 9.71 10.33 9.84 10.2C9.95 10.09 10.09 9.91 10.22 9.76C10.34 9.61 10.39 9.5 10.47 9.34C10.55 9.17 10.51 9.03 10.45 8.91C10.38 8.78 9.89 7.58 9.68 7.11C9.48 6.64 9.28 6.71 9.11 6.71Z"/></svg>
-          WhatsApp
-        </a>
-        <span class="channel-dot">•</span>
-        <a href="https://m.me/104246472646256" target="_blank" rel="noopener noreferrer" class="instant-channel-link channel-messenger" aria-label="Chat on Messenger">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.145 2 11.258C2 14.17 3.447 16.737 5.714 18.39V22L9.179 20.098C10.081 20.35 11.026 20.516 12 20.516C17.523 20.516 22 16.371 22 11.258C22 6.145 17.523 2 12 2ZM13.067 14.398L10.505 11.664L5.511 14.398L10.999 8.568L13.593 11.302L18.52 8.568L13.067 14.398Z"/></svg>
-          Messenger
-        </a>
-        <span class="channel-dot">•</span>
-        <a href="https://line.me/R/ti/p/@olf8395f" target="_blank" rel="noopener noreferrer" class="instant-channel-link channel-line" aria-label="Chat on LINE">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M19.365 9.864c0-4.08-4.148-7.399-9.265-7.399C4.983 2.465.835 5.784.835 9.864c0 3.655 3.268 6.721 7.683 7.279.3.065.707.199.81.455.093.23.061.59.03.822-.047.35-.224 1.368-.246 1.512-.07.41-.32 1.602 1.403.874 1.723-.728 4.654-2.742 6.347-4.693 1.62-1.849 2.503-3.791 2.503-6.249zM6.92 12.06H5.21c-.24 0-.435-.195-.435-.435V8.125c0-.24.195-.435.435-.435h1.71c.24 0 .435.195.435.435v.435c0 .24-.195.435-.435.435H6.08v.87h.84c.24 0 .435.195.435.435v.435c0 .24-.195.435-.435.435H6.08v.87h.84c.24 0 .435.195.435.435v.435c0 .24-.195.435-.435.435zm2.84 0H8.05c-.24 0-.435-.195-.435-.435V8.125c0-.24.195-.435.435-.435h.87c.24 0 .435.195.435.435v3.065h.84c.24 0 .435.195.435.435v.435c0 .24-.195.435-.435.435zm3.18 0h-.87c-.24 0-.435-.195-.435-.435V8.125c0-.24.195-.435.435-.435h.87c.24 0 .435.195.435.435v3.5c0 .24-.195.435-.435.435zm4.84 0h-.87c-.24 0-.435-.195-.435-.435V9.45l-1.47 2.45c-.07.12-.19.16-.31.16h-.14c-.24 0-.435-.195-.435-.435V8.125c0-.24.195-.435.435-.435h.87c.24 0 .435.195.435.435v2.175l1.47-2.45c.07-.12.19-.16.31-.16h.14c.24 0 .435.195.435.435v3.5c0 .24-.195.435-.435.435z"/></svg>
-          LINE
-        </a>
-      </div>
+    <span class="instant-channels-label">Prefer to chat with us?</span>
+    <div class="instant-channels-links">
+      <a href="https://wa.me/84934615595" target="_blank" rel="noopener noreferrer" class="instant-channel-link channel-whatsapp" aria-label="Chat on WhatsApp">
+        WhatsApp
+      </a>
+      <a href="https://m.me/104246472646256" target="_blank" rel="noopener noreferrer" class="instant-channel-link channel-messenger" aria-label="Chat on Messenger">
+        Messenger
+      </a>
+      <a href="https://line.me/R/ti/p/@olf8395f" target="_blank" rel="noopener noreferrer" class="instant-channel-link channel-line" aria-label="Chat on LINE">
+        LINE
+      </a>
     </div>
-    <p class="instant-channels-note">Direct local operator • Reply in 2–12h</p>
+    <p class="instant-channels-note">Direct local operator in Vietnam</p>
   </div>
 </div>
-
-
 
 <script is:inline>
   (() => {
     document.querySelectorAll('[data-booking-wizard]').forEach((wizard) => {
       let currentStep = 1;
-    const totalSteps = 5;
-    const bookingData = {
-      pax: '',
-      days: '',
-      dest: '',
-      date: '',
-      contact: '',
-      email: '',
-      note: ''
-    };
+      const totalSteps = 5;
+      const bookingData = {
+        pax: '4-9 Pax (16-Seater Van)',
+        days: '1 Day (City / Airport)',
+        dest: 'Noi Bai Airport Transfer',
+        date: 'Today',
+        contact: '',
+        email: '',
+        note: ''
+      };
 
-    const bar = wizard.querySelector('#wizard-bar');
-    const stepLabel = wizard.querySelector('#wizard-step-label');
-    const panes = wizard.querySelectorAll('.wizard-pane');
-    const summaryBox = wizard.querySelector('#wizard-summary');
-    const exactDateInput = wizard.querySelector('#w-exact-date');
-    const confirmDateBtn = wizard.querySelector('#w-confirm-date-btn');
-    const errorBox = wizard.querySelector('#wizard-error');
-    const whatsappFallback = wizard.querySelector('#wizard-whatsapp-fallback');
+      const stepLabel = wizard.querySelector('#wizard-step-label');
+      const segments = wizard.querySelectorAll('.wizard-segment');
+      const panes = wizard.querySelectorAll('.wizard-pane');
+      const summaryBox = wizard.querySelector('#wizard-summary');
+      const exactDateInput = wizard.querySelector('#w-exact-date');
+      const confirmDateBtn = wizard.querySelector('#w-confirm-date-btn');
+      const errorBox = wizard.querySelector('#wizard-error');
+      const whatsappFallback = wizard.querySelector('#wizard-whatsapp-fallback');
 
-    // Initialize minimum calendar date to today
-    if (exactDateInput) {
-      const todayIso = new Date().toISOString().split('T')[0];
-      exactDateInput.min = todayIso;
-    }
-
-    function updateStep(step) {
-      currentStep = step;
-      panes.forEach(p => {
-        if (p.getAttribute('data-step') === String(step)) {
-          p.classList.add('is-active');
-        } else {
-          p.classList.remove('is-active');
-        }
-      });
-
-      if (typeof step === 'number' && step <= totalSteps) {
-        if (bar) bar.style.width = `${(step / totalSteps) * 100}%`;
-        if (stepLabel) stepLabel.textContent = `Step ${step} of ${totalSteps}`;
+      // Initialize minimum calendar date to today
+      if (exactDateInput) {
+        const todayIso = new Date().toISOString().split('T')[0];
+        exactDateInput.min = todayIso;
       }
 
-      if (step === 5 && summaryBox) {
-        summaryBox.textContent = `Trip Summary: ${bookingData.pax || '1-3 Pax'} • ${bookingData.days || '1 Day'} • To: ${bookingData.dest || 'Hanoi'} • Date: ${bookingData.date || 'Flexible'}`;
-      }
-    }
+      function updateStep(step) {
+        currentStep = step;
+        panes.forEach(p => {
+          if (p.getAttribute('data-step') === String(step)) {
+            p.classList.add('is-active');
+          } else {
+            p.classList.remove('is-active');
+          }
+        });
 
-    // Handle Tap Cards (Auto-Advance)
-    wizard.querySelectorAll('.tap-card').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const group = btn.getAttribute('data-group');
-        const val = btn.getAttribute('data-val');
-        if (group && val) {
-          bookingData[group] = val;
-        }
-        if (currentStep < totalSteps) {
-          updateStep(currentStep + 1);
-        }
-      });
-    });
-
-    // Handle Specific Date Selection
-    if (confirmDateBtn && exactDateInput) {
-      confirmDateBtn.addEventListener('click', () => {
-        if (exactDateInput.value) {
-          bookingData.date = exactDateInput.value;
-          updateStep(5);
-        } else {
-          exactDateInput.focus();
-        }
-      });
-    }
-
-    // Handle Back Buttons
-    wizard.querySelectorAll('.js-back').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (typeof currentStep === 'number' && currentStep > 1) {
-          updateStep(currentStep - 1);
-        }
-      });
-    });
-
-    // Handle Final Submit with Zero-Lead-Loss Architecture
-    const form = wizard.querySelector('#wizard-form');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const contactInput = wizard.querySelector('#w-contact');
-        if (!contactInput || !contactInput.value.trim()) {
-          contactInput?.focus();
-          return;
-        }
-
-        bookingData.contact = contactInput.value.trim();
-        bookingData.email = wizard.querySelector('#w-email')?.value.trim() || '';
-        bookingData.note = wizard.querySelector('#w-note')?.value.trim() || '';
-
-        const submitBtn = wizard.querySelector('#w-submit-btn');
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Submitting your request...';
-        }
-        if (errorBox) errorBox.style.display = 'none';
-        if (whatsappFallback) whatsappFallback.style.display = 'none';
-
-        try {
-          const res = await fetch('/api/quote', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(bookingData)
+        if (typeof step === 'number' && step <= totalSteps) {
+          segments.forEach((seg, idx) => {
+            if (idx < step) {
+              seg.classList.add('is-active');
+            } else {
+              seg.classList.remove('is-active');
+            }
           });
-
-          const data = await res.json().catch(() => null);
-
-          if (!res.ok || !data?.success) {
-            throw new Error(data?.error || `Server responded with status ${res.status}`);
-          }
-
-          // Verified success only
-          updateStep('success');
-        } catch (err) {
-          console.error('Quote submission error:', err);
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Retry Submission';
-          }
-
-          // Generate direct WhatsApp fallback link with complete trip details
-          const waText = encodeURIComponent(
-            `Hello Hanoi Car & Bus Rental! I would like to request an all-inclusive quote:\n` +
-            `• Group: ${bookingData.pax || 'N/A'}\n` +
-            `• Duration: ${bookingData.days || 'N/A'}\n` +
-            `• Destination: ${bookingData.dest || 'N/A'}\n` +
-            `• Date: ${bookingData.date || 'N/A'}\n` +
-            `• Contact: ${bookingData.contact}\n` +
-            (bookingData.note ? `• Special Notes: ${bookingData.note}\n` : '')
-          );
-          const fallbackUrl = `https://wa.me/84900000000?text=${waText}`;
-
-          if (errorBox) {
-            errorBox.textContent = 'Connection notice: Automatic server submission failed. Please click "Retry" or use the direct WhatsApp link below to ensure your booking inquiry is dispatched immediately.';
-            errorBox.style.display = 'block';
-          }
-
-          if (whatsappFallback) {
-            whatsappFallback.href = fallbackUrl;
-            whatsappFallback.style.display = 'inline-flex';
-          }
+          if (stepLabel) stepLabel.textContent = `Step ${step} of ${totalSteps}`;
         }
-      });
-    }
 
-    // Reset button
-    const resetBtn = wizard.querySelector('#w-reset-btn');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        form?.reset();
-        bookingData.pax = '';
-        bookingData.days = '';
-        bookingData.dest = '';
-        bookingData.date = '';
-        bookingData.contact = '';
-        bookingData.email = '';
-        bookingData.note = '';
-        updateStep(1);
+        if (step === 5 && summaryBox) {
+          summaryBox.textContent = `Trip Summary: ${bookingData.pax || '4-9 Pax'} • ${bookingData.days || '1 Day'} • To: ${bookingData.dest || 'Hanoi'} • Date: ${bookingData.date || 'Flexible'}`;
+        }
+      }
+
+      // Handle Tap Cards (Selection & Visual State)
+      wizard.querySelectorAll('.tap-card').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const group = btn.getAttribute('data-group');
+          const val = btn.getAttribute('data-val');
+          if (group && val) {
+            bookingData[group] = val;
+            const pane = btn.closest('.wizard-pane');
+            if (pane) {
+              pane.querySelectorAll('.tap-card').forEach(c => c.classList.remove('is-selected'));
+              btn.classList.add('is-selected');
+            }
+          }
+        });
       });
-    }
+
+      // Handle Continue Buttons
+      wizard.querySelectorAll('.js-continue').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (currentStep < totalSteps) {
+            updateStep(currentStep + 1);
+          }
+        });
+      });
+
+      // Handle Specific Date Selection
+      if (confirmDateBtn && exactDateInput) {
+        confirmDateBtn.addEventListener('click', () => {
+          if (exactDateInput.value) {
+            bookingData.date = exactDateInput.value;
+            updateStep(5);
+          } else {
+            exactDateInput.focus();
+          }
+        });
+      }
+
+      // Handle Back Buttons
+      wizard.querySelectorAll('.js-back').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (typeof currentStep === 'number' && currentStep > 1) {
+            updateStep(currentStep - 1);
+          }
+        });
+      });
+
+      // Handle Final Submit with Zero-Lead-Loss Architecture
+      const form = wizard.querySelector('#wizard-form');
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const contactInput = wizard.querySelector('#w-contact');
+          if (!contactInput || !contactInput.value.trim()) {
+            contactInput?.focus();
+            return;
+          }
+
+          bookingData.contact = contactInput.value.trim();
+          bookingData.email = wizard.querySelector('#w-email')?.value.trim() || '';
+          bookingData.note = wizard.querySelector('#w-note')?.value.trim() || '';
+
+          const submitBtn = wizard.querySelector('#w-submit-btn');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting your request...';
+          }
+          if (errorBox) errorBox.style.display = 'none';
+          if (whatsappFallback) whatsappFallback.style.display = 'none';
+
+          try {
+            const res = await fetch('/api/quote', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(bookingData)
+            });
+
+            const data = await res.json().catch(() => null);
+
+            if (!res.ok || !data?.success) {
+              throw new Error(data?.error || `Server responded with status ${res.status}`);
+            }
+
+            // Verified success only
+            updateStep('success');
+          } catch (err) {
+            console.error('Quote submission error:', err);
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Retry Submission';
+            }
+
+            // Generate direct WhatsApp fallback link with complete trip details
+            const waText = encodeURIComponent(
+              `Hello Hanoi Car & Bus Rental! I would like to request an all-inclusive quote:\n` +
+              `• Group: ${bookingData.pax || 'N/A'}\n` +
+              `• Duration: ${bookingData.days || 'N/A'}\n` +
+              `• Destination: ${bookingData.dest || 'N/A'}\n` +
+              `• Date: ${bookingData.date || 'N/A'}\n` +
+              `• Contact: ${bookingData.contact}\n` +
+              (bookingData.note ? `• Special Notes: ${bookingData.note}\n` : '')
+            );
+            const fallbackUrl = `https://wa.me/84934615595?text=${waText}`;
+
+            if (errorBox) {
+              errorBox.textContent = 'Connection notice: Automatic server submission failed. Please click "Retry" or use the direct WhatsApp link below to ensure your booking inquiry is dispatched immediately.';
+              errorBox.style.display = 'block';
+            }
+
+            if (whatsappFallback) {
+              whatsappFallback.href = fallbackUrl;
+              whatsappFallback.style.display = 'inline-flex';
+            }
+          }
+        });
+      }
+
+      // Reset button
+      const resetBtn = wizard.querySelector('#w-reset-btn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          form?.reset();
+          bookingData.pax = '4-7 Pax (SUV / MPV)';
+          bookingData.days = '1 Day (City / Airport)';
+          bookingData.dest = 'Noi Bai Airport Transfer';
+          bookingData.date = 'Today';
+          bookingData.contact = '';
+          bookingData.email = '';
+          bookingData.note = '';
+          updateStep(1);
+        });
+      }
     });
   })();
 </script>
